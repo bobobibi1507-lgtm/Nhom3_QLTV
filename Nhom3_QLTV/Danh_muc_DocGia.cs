@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Nhom3_QLTV
 {
-    public partial class frmDMSach : Form
+    public partial class frmDMDocGia : Form
     {
-        public frmDMSach()
+        public frmDMDocGia()
         {
             InitializeComponent();
         }
-
-        private void txtMaTL_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }
