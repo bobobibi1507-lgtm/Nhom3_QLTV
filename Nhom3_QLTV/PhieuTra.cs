@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Nhom3_QLTV
 {
-    public partial class Tuyet : Form
+    public partial class PhieuTra : Form
     {
-        public Tuyet()
+        public PhieuTra()
         {
             InitializeComponent();
         }
 
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-        }
-
-        private void ribbonControl1_Click(object sender, EventArgs e)
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
         {
 
         }
