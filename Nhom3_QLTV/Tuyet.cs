@@ -16,5 +16,10 @@ namespace Nhom3_QLTV
         {
             InitializeComponent();
         }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }

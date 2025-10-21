@@ -75,6 +75,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Tuyet.resx">
       <DependentUpon>Tuyet.cs</DependentUpon>
@@ -91,6 +92,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClosePane.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomeSolid.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomeSolid1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClosePane1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenPane.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cube_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cube_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People2.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bouser_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bouser_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MailForward.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MailReply.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z7135345034531_8203b19eed3ac5f0656af42d9d559bac.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refund.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhoneBook.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dictionary.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DictionaryAdd.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
