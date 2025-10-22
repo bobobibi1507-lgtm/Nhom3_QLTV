@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Nhom3_QLTV
 {
-    public partial class frmDMDG : Form
+    public partial class frmDMTG : Form
     {
-        public frmDMDG()
+        public frmDMTG()
         {
             InitializeComponent();
         }

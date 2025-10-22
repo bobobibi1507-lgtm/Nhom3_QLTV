@@ -1,6 +1,6 @@
 ﻿namespace Nhom3_QLTV
 {
-    partial class Danh_muc_doc_gia
+    partial class frmDMDG
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Danh_muc_doc_gia));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.guna2PanelDGHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDMDG));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.guna2PanelDGHeaderDG = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2DragControl1DG = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2ControlBox1DG = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox2DG = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2Panel1DG = new Guna.UI2.WinForms.Guna2Panel();
             this.bindingnavDG = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -53,8 +53,8 @@
             this.TenDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ngaycap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nghenghiep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2Panel2DG = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2GradientPanel1DG = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lblDMDG = new System.Windows.Forms.Label();
             this.btnThemDG = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDongDG = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -78,72 +78,75 @@
             this.comTentrgDG = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtGiatriDG = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6DG = new System.Windows.Forms.Label();
-            this.guna2PanelDGHeader.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
+            this.guna2PanelDGHeaderDG.SuspendLayout();
+            this.guna2Panel1DG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingnavDG)).BeginInit();
             this.bindingnavDG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDG)).BeginInit();
-            this.guna2Panel2.SuspendLayout();
-            this.guna2GradientPanel1.SuspendLayout();
+            this.guna2Panel2DG.SuspendLayout();
+            this.guna2GradientPanel1DG.SuspendLayout();
             this.guna2GroupBoxDG1.SuspendLayout();
             this.guna2GroupBoxLocDG.SuspendLayout();
             this.SuspendLayout();
             // 
-            // guna2PanelDGHeader
+            // guna2PanelDGHeaderDG
             // 
-            this.guna2PanelDGHeader.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2PanelDGHeader.Controls.Add(this.guna2ControlBox2);
-            this.guna2PanelDGHeader.Controls.Add(this.guna2ControlBox1);
-            this.guna2PanelDGHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2PanelDGHeader.Location = new System.Drawing.Point(0, 0);
-            this.guna2PanelDGHeader.Name = "guna2PanelDGHeader";
-            this.guna2PanelDGHeader.Size = new System.Drawing.Size(900, 30);
-            this.guna2PanelDGHeader.TabIndex = 0;
+            this.guna2PanelDGHeaderDG.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2PanelDGHeaderDG.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2PanelDGHeaderDG.Controls.Add(this.guna2ControlBox2DG);
+            this.guna2PanelDGHeaderDG.Controls.Add(this.guna2ControlBox1DG);
+            this.guna2PanelDGHeaderDG.CustomBorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2PanelDGHeaderDG.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2PanelDGHeaderDG.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2PanelDGHeaderDG.Location = new System.Drawing.Point(0, 0);
+            this.guna2PanelDGHeaderDG.Name = "guna2PanelDGHeaderDG";
+            this.guna2PanelDGHeaderDG.Size = new System.Drawing.Size(900, 30);
+            this.guna2PanelDGHeaderDG.TabIndex = 0;
             // 
-            // guna2DragControl1
+            // guna2DragControl1DG
             // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this.guna2PanelDGHeader;
-            this.guna2DragControl1.UseTransparentDrag = true;
+            this.guna2DragControl1DG.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1DG.TargetControl = this.guna2PanelDGHeaderDG;
+            this.guna2DragControl1DG.UseTransparentDrag = true;
             // 
-            // guna2ControlBox1
+            // guna2ControlBox1DG
             // 
-            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(846, 0);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(54, 30);
-            this.guna2ControlBox1.TabIndex = 0;
+            this.guna2ControlBox1DG.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox1DG.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1DG.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ControlBox1DG.IconColor = System.Drawing.Color.Brown;
+            this.guna2ControlBox1DG.Location = new System.Drawing.Point(846, 0);
+            this.guna2ControlBox1DG.Name = "guna2ControlBox1DG";
+            this.guna2ControlBox1DG.Size = new System.Drawing.Size(54, 30);
+            this.guna2ControlBox1DG.TabIndex = 0;
             // 
-            // guna2ControlBox2
+            // guna2ControlBox2DG
             // 
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.Brown;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(792, 0);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(54, 30);
-            this.guna2ControlBox2.TabIndex = 1;
+            this.guna2ControlBox2DG.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2DG.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox2DG.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2DG.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ControlBox2DG.IconColor = System.Drawing.Color.Brown;
+            this.guna2ControlBox2DG.Location = new System.Drawing.Point(792, 0);
+            this.guna2ControlBox2DG.Name = "guna2ControlBox2DG";
+            this.guna2ControlBox2DG.Size = new System.Drawing.Size(54, 30);
+            this.guna2ControlBox2DG.TabIndex = 1;
             // 
-            // guna2Panel1
+            // guna2Panel1DG
             // 
-            this.guna2Panel1.Controls.Add(this.btnSuaDG);
-            this.guna2Panel1.Controls.Add(this.btnLuuDG);
-            this.guna2Panel1.Controls.Add(this.btnXoaDG);
-            this.guna2Panel1.Controls.Add(this.btnDongDG);
-            this.guna2Panel1.Controls.Add(this.btnThemDG);
-            this.guna2Panel1.Controls.Add(this.grdDG);
-            this.guna2Panel1.Controls.Add(this.bindingnavDG);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 311);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(900, 339);
-            this.guna2Panel1.TabIndex = 1;
+            this.guna2Panel1DG.Controls.Add(this.btnSuaDG);
+            this.guna2Panel1DG.Controls.Add(this.btnLuuDG);
+            this.guna2Panel1DG.Controls.Add(this.btnXoaDG);
+            this.guna2Panel1DG.Controls.Add(this.btnDongDG);
+            this.guna2Panel1DG.Controls.Add(this.btnThemDG);
+            this.guna2Panel1DG.Controls.Add(this.grdDG);
+            this.guna2Panel1DG.Controls.Add(this.bindingnavDG);
+            this.guna2Panel1DG.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel1DG.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Panel1DG.Location = new System.Drawing.Point(0, 311);
+            this.guna2Panel1DG.Name = "guna2Panel1DG";
+            this.guna2Panel1DG.Size = new System.Drawing.Size(900, 339);
+            this.guna2Panel1DG.TabIndex = 1;
             // 
             // bindingnavDG
             // 
@@ -169,14 +172,14 @@
             this.bindingnavDG.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingnavDG.Name = "bindingnavDG";
             this.bindingnavDG.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingnavDG.Size = new System.Drawing.Size(280, 38);
+            this.bindingnavDG.Size = new System.Drawing.Size(280, 33);
             this.bindingnavDG.TabIndex = 7;
             this.bindingnavDG.Text = "bindingNaviDG";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 33);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -186,7 +189,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -195,13 +198,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -216,7 +219,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -224,7 +227,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -233,44 +236,45 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
             // 
             // grdDG
             // 
             this.grdDG.AllowUserToAddRows = false;
             this.grdDG.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.grdDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.grdDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdDG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grdDG.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Brown;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.RosyBrown;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Brown;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RosyBrown;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grdDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdDG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Sothe,
             this.TenDG,
             this.Ngaycap,
             this.Nghenghiep});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.RosyBrown;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdDG.DefaultCellStyle = dataGridViewCellStyle6;
-            this.grdDG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RosyBrown;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdDG.DefaultCellStyle = dataGridViewCellStyle3;
+            this.grdDG.GridColor = System.Drawing.Color.Black;
             this.grdDG.Location = new System.Drawing.Point(17, 74);
             this.grdDG.Name = "grdDG";
             this.grdDG.RowHeadersVisible = false;
@@ -284,7 +288,7 @@
             this.grdDG.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.grdDG.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.grdDG.ThemeStyle.BackColor = System.Drawing.Color.Gainsboro;
-            this.grdDG.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.grdDG.ThemeStyle.GridColor = System.Drawing.Color.Black;
             this.grdDG.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Brown;
             this.grdDG.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.grdDG.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -334,28 +338,28 @@
             this.Nghenghiep.Name = "Nghenghiep";
             this.Nghenghiep.Width = 156;
             // 
-            // guna2Panel2
+            // guna2Panel2DG
             // 
-            this.guna2Panel2.Controls.Add(this.guna2GroupBoxLocDG);
-            this.guna2Panel2.Controls.Add(this.guna2GroupBoxDG1);
-            this.guna2Panel2.Controls.Add(this.guna2GradientPanel1);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 30);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(900, 281);
-            this.guna2Panel2.TabIndex = 2;
+            this.guna2Panel2DG.Controls.Add(this.guna2GroupBoxLocDG);
+            this.guna2Panel2DG.Controls.Add(this.guna2GroupBoxDG1);
+            this.guna2Panel2DG.Controls.Add(this.guna2GradientPanel1DG);
+            this.guna2Panel2DG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel2DG.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Panel2DG.Location = new System.Drawing.Point(0, 30);
+            this.guna2Panel2DG.Name = "guna2Panel2DG";
+            this.guna2Panel2DG.Size = new System.Drawing.Size(900, 281);
+            this.guna2Panel2DG.TabIndex = 2;
             // 
-            // guna2GradientPanel1
+            // guna2GradientPanel1DG
             // 
-            this.guna2GradientPanel1.Controls.Add(this.lblDMDG);
-            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.Brown;
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.LightCoral;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(900, 49);
-            this.guna2GradientPanel1.TabIndex = 0;
+            this.guna2GradientPanel1DG.Controls.Add(this.lblDMDG);
+            this.guna2GradientPanel1DG.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2GradientPanel1DG.FillColor = System.Drawing.Color.Brown;
+            this.guna2GradientPanel1DG.FillColor2 = System.Drawing.Color.LightCoral;
+            this.guna2GradientPanel1DG.Location = new System.Drawing.Point(0, 0);
+            this.guna2GradientPanel1DG.Name = "guna2GradientPanel1DG";
+            this.guna2GradientPanel1DG.Size = new System.Drawing.Size(900, 49);
+            this.guna2GradientPanel1DG.TabIndex = 0;
             // 
             // lblDMDG
             // 
@@ -722,29 +726,29 @@
             this.label6DG.TabIndex = 32;
             this.label6DG.Text = "=";
             // 
-            // Danh_muc_doc_gia
+            // frmDMDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 650);
-            this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.guna2PanelDGHeader);
+            this.Controls.Add(this.guna2Panel2DG);
+            this.Controls.Add(this.guna2Panel1DG);
+            this.Controls.Add(this.guna2PanelDGHeaderDG);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Danh_muc_doc_gia";
+            this.Name = "frmDMDG";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh_muc_doc_gia";
-            this.guna2PanelDGHeader.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
+            this.guna2PanelDGHeaderDG.ResumeLayout(false);
+            this.guna2Panel1DG.ResumeLayout(false);
+            this.guna2Panel1DG.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingnavDG)).EndInit();
             this.bindingnavDG.ResumeLayout(false);
             this.bindingnavDG.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDG)).EndInit();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2GradientPanel1.ResumeLayout(false);
-            this.guna2GradientPanel1.PerformLayout();
+            this.guna2Panel2DG.ResumeLayout(false);
+            this.guna2GradientPanel1DG.ResumeLayout(false);
+            this.guna2GradientPanel1DG.PerformLayout();
             this.guna2GroupBoxDG1.ResumeLayout(false);
             this.guna2GroupBoxDG1.PerformLayout();
             this.guna2GroupBoxLocDG.ResumeLayout(false);
@@ -755,11 +759,11 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2PanelDGHeader;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2PanelDGHeaderDG;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1DG;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1DG;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2DG;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1DG;
         private System.Windows.Forms.BindingNavigator bindingnavDG;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
@@ -775,8 +779,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDG;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ngaycap;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nghenghiep;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2DG;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1DG;
         private System.Windows.Forms.Label lblDMDG;
         private Guna.UI2.WinForms.Guna2GradientButton btnThemDG;
         private Guna.UI2.WinForms.Guna2GradientButton btnNaplaiDG;

@@ -67,6 +67,12 @@
     <Compile Include="Danh_muc_sach.Designer.cs">
       <DependentUpon>Danh_muc_sach.cs</DependentUpon>
     </Compile>
+    <Compile Include="Danh_muc_tac_gia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Danh_muc_tac_gia.Designer.cs">
+      <DependentUpon>Danh_muc_tac_gia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Danh_muc_sach.resx">
       <DependentUpon>Danh_muc_sach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Danh_muc_tac_gia.resx">
+      <DependentUpon>Danh_muc_tac_gia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -34,15 +34,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDMSach));
             this.panelheaderDMS = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox2TL = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1TL = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lblDMS = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.grdDSTL = new Guna.UI2.WinForms.Guna2DataGridView();
             this.MaTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelInput = new Guna.UI2.WinForms.Guna2Panel();
+            this.panelInputTL = new Guna.UI2.WinForms.Guna2Panel();
             this.bindingnavTL = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -58,7 +58,7 @@
             this.txtTenTL = new Guna.UI2.WinForms.Guna2TextBox();
             this.comLoaiTL = new Guna.UI2.WinForms.Guna2ComboBox();
             this.comTG = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel1TL = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GroupBoxLocTL = new Guna.UI2.WinForms.Guna2GroupBox();
             this.comTentrgTL = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label6TL = new System.Windows.Forms.Label();
@@ -69,8 +69,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2GradientPanel1TL = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2DragControl2TL = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.btnThemTL1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSuaTL1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnXoaTL1 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -80,20 +80,20 @@
             this.btnNaplai = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelheaderDMS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDSTL)).BeginInit();
-            this.panelInput.SuspendLayout();
+            this.panelInputTL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingnavTL)).BeginInit();
             this.bindingnavTL.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel1TL.SuspendLayout();
             this.guna2GroupBoxLocTL.SuspendLayout();
             this.guna2GroupBoxTL.SuspendLayout();
-            this.guna2GradientPanel1.SuspendLayout();
+            this.guna2GradientPanel1TL.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelheaderDMS
             // 
             this.panelheaderDMS.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelheaderDMS.Controls.Add(this.guna2ControlBox2);
-            this.panelheaderDMS.Controls.Add(this.guna2ControlBox1);
+            this.panelheaderDMS.Controls.Add(this.guna2ControlBox2TL);
+            this.panelheaderDMS.Controls.Add(this.guna2ControlBox1TL);
             this.panelheaderDMS.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelheaderDMS.Location = new System.Drawing.Point(0, 0);
             this.panelheaderDMS.Name = "panelheaderDMS";
@@ -101,34 +101,34 @@
             this.panelheaderDMS.TabIndex = 0;
             this.panelheaderDMS.Paint += new System.Windows.Forms.PaintEventHandler(this.panelheaderDMS_Paint);
             // 
-            // guna2ControlBox2
+            // guna2ControlBox2TL
             // 
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ControlBox2.ForeColor = System.Drawing.Color.Brown;
-            this.guna2ControlBox2.HoverState.FillColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.HoverState.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.Brown;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(792, 0);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(54, 30);
-            this.guna2ControlBox2.TabIndex = 1;
+            this.guna2ControlBox2TL.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2TL.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox2TL.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2TL.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ControlBox2TL.ForeColor = System.Drawing.Color.Brown;
+            this.guna2ControlBox2TL.HoverState.FillColor = System.Drawing.Color.Black;
+            this.guna2ControlBox2TL.HoverState.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox2TL.IconColor = System.Drawing.Color.Brown;
+            this.guna2ControlBox2TL.Location = new System.Drawing.Point(792, 0);
+            this.guna2ControlBox2TL.Name = "guna2ControlBox2TL";
+            this.guna2ControlBox2TL.Size = new System.Drawing.Size(54, 30);
+            this.guna2ControlBox2TL.TabIndex = 1;
             // 
-            // guna2ControlBox1
+            // guna2ControlBox1TL
             // 
-            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ControlBox1.ForeColor = System.Drawing.Color.Brown;
-            this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.HoverState.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(846, 0);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(54, 30);
-            this.guna2ControlBox1.TabIndex = 0;
+            this.guna2ControlBox1TL.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox1TL.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1TL.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ControlBox1TL.ForeColor = System.Drawing.Color.Brown;
+            this.guna2ControlBox1TL.HoverState.FillColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1TL.HoverState.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1TL.IconColor = System.Drawing.Color.Brown;
+            this.guna2ControlBox1TL.Location = new System.Drawing.Point(846, 0);
+            this.guna2ControlBox1TL.Name = "guna2ControlBox1TL";
+            this.guna2ControlBox1TL.Size = new System.Drawing.Size(54, 30);
+            this.guna2ControlBox1TL.TabIndex = 0;
             // 
             // lblDMS
             // 
@@ -148,6 +148,7 @@
             this.grdDSTL.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.grdDSTL.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdDSTL.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grdDSTL.BackgroundColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Brown;
@@ -172,7 +173,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdDSTL.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdDSTL.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.grdDSTL.GridColor = System.Drawing.Color.Black;
             this.grdDSTL.Location = new System.Drawing.Point(32, 83);
             this.grdDSTL.Name = "grdDSTL";
             this.grdDSTL.RowHeadersVisible = false;
@@ -186,7 +187,7 @@
             this.grdDSTL.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.grdDSTL.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.grdDSTL.ThemeStyle.BackColor = System.Drawing.Color.Gainsboro;
-            this.grdDSTL.ThemeStyle.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.grdDSTL.ThemeStyle.GridColor = System.Drawing.Color.Black;
             this.grdDSTL.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.grdDSTL.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.grdDSTL.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -237,22 +238,22 @@
             this.TenTG.Name = "TenTG";
             this.TenTG.Width = 105;
             // 
-            // panelInput
+            // panelInputTL
             // 
-            this.panelInput.BackColor = System.Drawing.Color.White;
-            this.panelInput.Controls.Add(this.btnDongTL1);
-            this.panelInput.Controls.Add(this.btnLuuTL1);
-            this.panelInput.Controls.Add(this.btnXoaTL1);
-            this.panelInput.Controls.Add(this.btnSuaTL1);
-            this.panelInput.Controls.Add(this.btnThemTL1);
-            this.panelInput.Controls.Add(this.bindingnavTL);
-            this.panelInput.Controls.Add(this.grdDSTL);
-            this.panelInput.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelInput.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panelInput.Location = new System.Drawing.Point(0, 311);
-            this.panelInput.Name = "panelInput";
-            this.panelInput.Size = new System.Drawing.Size(900, 339);
-            this.panelInput.TabIndex = 2;
+            this.panelInputTL.BackColor = System.Drawing.Color.White;
+            this.panelInputTL.Controls.Add(this.btnDongTL1);
+            this.panelInputTL.Controls.Add(this.btnLuuTL1);
+            this.panelInputTL.Controls.Add(this.btnXoaTL1);
+            this.panelInputTL.Controls.Add(this.btnSuaTL1);
+            this.panelInputTL.Controls.Add(this.btnThemTL1);
+            this.panelInputTL.Controls.Add(this.bindingnavTL);
+            this.panelInputTL.Controls.Add(this.grdDSTL);
+            this.panelInputTL.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelInputTL.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panelInputTL.Location = new System.Drawing.Point(0, 311);
+            this.panelInputTL.Name = "panelInputTL";
+            this.panelInputTL.Size = new System.Drawing.Size(900, 339);
+            this.panelInputTL.TabIndex = 2;
             // 
             // bindingnavTL
             // 
@@ -442,17 +443,20 @@
             this.comTG.Size = new System.Drawing.Size(202, 36);
             this.comTG.TabIndex = 14;
             // 
-            // guna2Panel1
+            // guna2Panel1TL
             // 
-            this.guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.guna2Panel1.Controls.Add(this.guna2GroupBoxLocTL);
-            this.guna2Panel1.Controls.Add(this.guna2GroupBoxTL);
-            this.guna2Panel1.Controls.Add(this.guna2GradientPanel1);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 30);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(900, 281);
-            this.guna2Panel1.TabIndex = 19;
+            this.guna2Panel1TL.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel1TL.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.guna2Panel1TL.Controls.Add(this.guna2GroupBoxLocTL);
+            this.guna2Panel1TL.Controls.Add(this.guna2GroupBoxTL);
+            this.guna2Panel1TL.Controls.Add(this.guna2GradientPanel1TL);
+            this.guna2Panel1TL.CustomBorderColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel1TL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel1TL.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel1TL.Location = new System.Drawing.Point(0, 30);
+            this.guna2Panel1TL.Name = "guna2Panel1TL";
+            this.guna2Panel1TL.Size = new System.Drawing.Size(900, 281);
+            this.guna2Panel1TL.TabIndex = 19;
             // 
             // guna2GroupBoxLocTL
             // 
@@ -577,23 +581,23 @@
             this.label3.TabIndex = 22;
             this.label3.Text = "Loại tài liệu";
             // 
-            // guna2GradientPanel1
+            // guna2GradientPanel1TL
             // 
-            this.guna2GradientPanel1.BackColor = System.Drawing.Color.Brown;
-            this.guna2GradientPanel1.Controls.Add(this.lblDMS);
-            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.Brown;
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.LightCoral;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(900, 49);
-            this.guna2GradientPanel1.TabIndex = 24;
+            this.guna2GradientPanel1TL.BackColor = System.Drawing.Color.Brown;
+            this.guna2GradientPanel1TL.Controls.Add(this.lblDMS);
+            this.guna2GradientPanel1TL.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2GradientPanel1TL.FillColor = System.Drawing.Color.Brown;
+            this.guna2GradientPanel1TL.FillColor2 = System.Drawing.Color.LightCoral;
+            this.guna2GradientPanel1TL.Location = new System.Drawing.Point(0, 0);
+            this.guna2GradientPanel1TL.Name = "guna2GradientPanel1TL";
+            this.guna2GradientPanel1TL.Size = new System.Drawing.Size(900, 49);
+            this.guna2GradientPanel1TL.TabIndex = 24;
             // 
-            // guna2DragControl2
+            // guna2DragControl2TL
             // 
-            this.guna2DragControl2.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl2.TargetControl = this.panelheaderDMS;
-            this.guna2DragControl2.UseTransparentDrag = true;
+            this.guna2DragControl2TL.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl2TL.TargetControl = this.panelheaderDMS;
+            this.guna2DragControl2TL.UseTransparentDrag = true;
             // 
             // btnThemTL1
             // 
@@ -734,8 +738,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 650);
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.panelInput);
+            this.Controls.Add(this.guna2Panel1TL);
+            this.Controls.Add(this.panelInputTL);
             this.Controls.Add(this.panelheaderDMS);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDMSach";
@@ -743,18 +747,18 @@
             this.Text = "Danh_muc_sach";
             this.panelheaderDMS.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdDSTL)).EndInit();
-            this.panelInput.ResumeLayout(false);
-            this.panelInput.PerformLayout();
+            this.panelInputTL.ResumeLayout(false);
+            this.panelInputTL.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingnavTL)).EndInit();
             this.bindingnavTL.ResumeLayout(false);
             this.bindingnavTL.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1TL.ResumeLayout(false);
             this.guna2GroupBoxLocTL.ResumeLayout(false);
             this.guna2GroupBoxLocTL.PerformLayout();
             this.guna2GroupBoxTL.ResumeLayout(false);
             this.guna2GroupBoxTL.PerformLayout();
-            this.guna2GradientPanel1.ResumeLayout(false);
-            this.guna2GradientPanel1.PerformLayout();
+            this.guna2GradientPanel1TL.ResumeLayout(false);
+            this.guna2GradientPanel1TL.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -764,7 +768,7 @@
         private Guna.UI2.WinForms.Guna2Panel panelheaderDMS;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblDMS;
         private Guna.UI2.WinForms.Guna2DataGridView grdDSTL;
-        private Guna.UI2.WinForms.Guna2Panel panelInput;
+        private Guna.UI2.WinForms.Guna2Panel panelInputTL;
         private Guna.UI2.WinForms.Guna2TextBox txtMaTL;
         private Guna.UI2.WinForms.Guna2TextBox txtTenTL;
         private Guna.UI2.WinForms.Guna2ComboBox comLoaiTL;
@@ -780,15 +784,15 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private Guna.UI2.WinForms.Guna2TextBox txtGiatriTL;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1TL;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1TL;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1TL;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2TL;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2TL;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBoxTL;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBoxLocTL;
         private Guna.UI2.WinForms.Guna2ComboBox comTentrgTL;
