@@ -22,6 +22,9 @@ namespace Nhom3_QLTV
 
         }
 
-        
+        private void panelheaderDMS_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
