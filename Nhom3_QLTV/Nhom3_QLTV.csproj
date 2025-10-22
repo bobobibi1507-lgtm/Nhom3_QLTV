@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Danh_muc_doc_gia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Danh_muc_doc_gia.Designer.cs">
+      <DependentUpon>Danh_muc_doc_gia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Danh_muc_sach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Danh_muc_doc_gia.resx">
+      <DependentUpon>Danh_muc_doc_gia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Danh_muc_sach.resx">
       <DependentUpon>Danh_muc_sach.cs</DependentUpon>
     </EmbeddedResource>
