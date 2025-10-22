@@ -60,9 +60,12 @@
             // 
             // ribbonControl1
             // 
-            this.ribbonControl1.BackColor = System.Drawing.Color.Red;
+            this.ribbonControl1.AutoUpdateMergedRibbons = DevExpress.Utils.DefaultBoolean.True;
+            this.ribbonControl1.BackColor = System.Drawing.Color.Brown;
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ribbonControl1.ForeColor = System.Drawing.Color.Brown;
+            this.ribbonControl1.ItemPanelStyle = DevExpress.XtraBars.Ribbon.RibbonItemPanelStyle.Skin;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
             this.barButtonItem1,
@@ -86,7 +89,6 @@
             this.ribbonPage4,
             this.ribbonPage5});
             this.ribbonControl1.RibbonCaptionAlignment = DevExpress.XtraBars.Ribbon.RibbonCaptionAlignment.Left;
-            this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office365;
             this.ribbonControl1.Size = new System.Drawing.Size(800, 183);
             this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
             // 
