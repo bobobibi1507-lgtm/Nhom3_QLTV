@@ -26,5 +26,20 @@ namespace Nhom3_QLTV
         {
 
         }
+
+        private void comTentrgTL1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6TL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGiatriTL_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

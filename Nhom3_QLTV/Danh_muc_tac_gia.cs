@@ -16,5 +16,10 @@ namespace Nhom3_QLTV
         {
             InitializeComponent();
         }
+
+        private void lblTentrgTG_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
