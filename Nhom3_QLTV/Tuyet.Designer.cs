@@ -120,7 +120,7 @@
             // 
             this.barButtonItem4.Caption = "Quản lý người dùng";
             this.barButtonItem4.Id = 4;
-            this.barButtonItem4.ImageOptions.SvgImage = global::Nhom3_QLTV.Properties.Resources.People;
+            this.barButtonItem4.ImageOptions.SvgImage = global::Nhom3_QLTV.Properties.Resources.People1;
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             // 

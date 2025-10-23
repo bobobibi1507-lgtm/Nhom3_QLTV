@@ -56,5 +56,15 @@ namespace Nhom3_QLTV
         {
 
         }
+
+        private void Form2_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
