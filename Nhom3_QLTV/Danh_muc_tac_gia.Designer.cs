@@ -159,7 +159,7 @@
             this.grdTG.BackgroundColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Brown;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RosyBrown;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -216,7 +216,7 @@
             this.MaTG.HeaderText = "Mã tác giả";
             this.MaTG.MinimumWidth = 8;
             this.MaTG.Name = "MaTG";
-            this.MaTG.Width = 135;
+            this.MaTG.Width = 128;
             // 
             // TenTG
             // 
@@ -233,7 +233,7 @@
             this.NamSinh.HeaderText = "Năm sinh";
             this.NamSinh.MinimumWidth = 8;
             this.NamSinh.Name = "NamSinh";
-            this.NamSinh.Width = 126;
+            this.NamSinh.Width = 121;
             // 
             // btnSuaTG
             // 
