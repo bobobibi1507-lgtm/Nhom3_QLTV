@@ -620,7 +620,7 @@
             this.bindingNavigator2.MovePreviousItem = this.toolStripButton2;
             this.bindingNavigator2.Name = "bindingNavigator2";
             this.bindingNavigator2.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigator2.Size = new System.Drawing.Size(238, 27);
+            this.bindingNavigator2.Size = new System.Drawing.Size(238, 31);
             this.bindingNavigator2.TabIndex = 40;
             this.bindingNavigator2.Text = "bindingNavigator2";
             // 
@@ -797,7 +797,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(238, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(238, 31);
             this.bindingNavigator1.TabIndex = 3;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 

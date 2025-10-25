@@ -343,12 +343,14 @@
             // 
             // Form2
             // 
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::Nhom3_QLTV.Properties.Resources.z7135345034531_8203b19eed3ac5f0656af42d9d559bac;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(723, 442);
             this.Controls.Add(this.statusStrip2);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.menuStrip2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip2;
             this.Name = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load_1);
