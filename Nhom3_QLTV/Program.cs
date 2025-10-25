@@ -16,7 +16,7 @@ namespace Nhom3_QLTV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDMDG());
+            Application.Run(new frmDMTG());
         }
     }
 }
