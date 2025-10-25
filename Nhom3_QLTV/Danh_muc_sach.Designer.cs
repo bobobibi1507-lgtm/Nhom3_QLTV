@@ -62,7 +62,6 @@
             this.grbLocTL = new System.Windows.Forms.GroupBox();
             this.btnTimTL1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lblTentrgTL = new System.Windows.Forms.Label();
-            this.txtGiatriTL = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblGiatriTL = new System.Windows.Forms.Label();
             this.btnNaplai = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label6TL = new System.Windows.Forms.Label();
@@ -78,6 +77,7 @@
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientPanel1TL = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2DragControl2TL = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.comGTTL = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panelheaderDMS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDSTL)).BeginInit();
             this.panelInputTL.SuspendLayout();
@@ -479,9 +479,9 @@
             // 
             // grbLocTL
             // 
+            this.grbLocTL.Controls.Add(this.comGTTL);
             this.grbLocTL.Controls.Add(this.btnTimTL1);
             this.grbLocTL.Controls.Add(this.lblTentrgTL);
-            this.grbLocTL.Controls.Add(this.txtGiatriTL);
             this.grbLocTL.Controls.Add(this.lblGiatriTL);
             this.grbLocTL.Controls.Add(this.btnNaplai);
             this.grbLocTL.Controls.Add(this.label6TL);
@@ -527,26 +527,6 @@
             this.lblTentrgTL.TabIndex = 18;
             this.lblTentrgTL.Text = "Tên trường";
             // 
-            // txtGiatriTL
-            // 
-            this.txtGiatriTL.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGiatriTL.DefaultText = "";
-            this.txtGiatriTL.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtGiatriTL.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtGiatriTL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtGiatriTL.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtGiatriTL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGiatriTL.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtGiatriTL.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtGiatriTL.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGiatriTL.Location = new System.Drawing.Point(254, 101);
-            this.txtGiatriTL.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtGiatriTL.Name = "txtGiatriTL";
-            this.txtGiatriTL.PlaceholderText = "";
-            this.txtGiatriTL.SelectedText = "";
-            this.txtGiatriTL.Size = new System.Drawing.Size(202, 36);
-            this.txtGiatriTL.TabIndex = 24;
-            // 
             // lblGiatriTL
             // 
             this.lblGiatriTL.AutoSize = true;
@@ -582,7 +562,7 @@
             // label6TL
             // 
             this.label6TL.AutoSize = true;
-            this.label6TL.Location = new System.Drawing.Point(199, 101);
+            this.label6TL.Location = new System.Drawing.Point(188, 101);
             this.label6TL.Name = "label6TL";
             this.label6TL.Size = new System.Drawing.Size(25, 25);
             this.label6TL.TabIndex = 20;
@@ -756,6 +736,21 @@
             this.guna2DragControl2TL.TargetControl = this.panelheaderDMS;
             this.guna2DragControl2TL.UseTransparentDrag = true;
             // 
+            // comGTTL
+            // 
+            this.comGTTL.BackColor = System.Drawing.Color.Transparent;
+            this.comGTTL.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comGTTL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comGTTL.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comGTTL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comGTTL.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comGTTL.ForeColor = System.Drawing.Color.DarkGray;
+            this.comGTTL.ItemHeight = 18;
+            this.comGTTL.Location = new System.Drawing.Point(235, 101);
+            this.comGTTL.Name = "comGTTL";
+            this.comGTTL.Size = new System.Drawing.Size(231, 24);
+            this.comGTTL.TabIndex = 28;
+            // 
             // frmDMSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -822,7 +817,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTL;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiTL;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTG;
-        private Guna.UI2.WinForms.Guna2TextBox txtGiatriTL;
         private Guna.UI2.WinForms.Guna2ComboBox comTentrgTL1;
         private System.Windows.Forms.GroupBox grbLocTL;
         private System.Windows.Forms.GroupBox groupBox1TL;
@@ -834,5 +828,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox comGTTL;
     }
 }
