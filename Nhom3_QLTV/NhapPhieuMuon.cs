@@ -76,5 +76,15 @@ namespace Nhom3_QLTV
         {
 
         }
+
+        private void guna2HtmlLabel11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -21,5 +21,10 @@ namespace Nhom3_QLTV
         {
 
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
