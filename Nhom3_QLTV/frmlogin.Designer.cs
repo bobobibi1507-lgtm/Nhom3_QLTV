@@ -32,17 +32,17 @@
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.btnlogin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2AnimateWindow2 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -68,7 +68,39 @@
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel1.ShadowDepth = 255;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(717, 861);
-            this.guna2ShadowPanel1.TabIndex = 2;
+            this.guna2ShadowPanel1.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(197, 637);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(203, 37);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Nhớ đăng nhập";
+            // 
+            // guna2ToggleSwitch1
+            // 
+            this.guna2ToggleSwitch1.AutoRoundedCorners = true;
+            this.guna2ToggleSwitch1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ToggleSwitch1.CheckedState.BorderRadius = 19;
+            this.guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.guna2ToggleSwitch1.CheckedState.InnerBorderRadius = 15;
+            this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(114, 637);
+            this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
+            this.guna2ToggleSwitch1.Size = new System.Drawing.Size(74, 40);
+            this.guna2ToggleSwitch1.TabIndex = 3;
+            this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2ToggleSwitch1.UncheckedState.BorderRadius = 19;
+            this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.guna2ToggleSwitch1.UncheckedState.InnerBorderRadius = 15;
+            this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
             // 
             // btnlogin
             // 
@@ -107,12 +139,12 @@
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpassword.IconLeft = global::Nhom3_QLTV.Properties.Resources.padlock__1_;
             this.txtpassword.Location = new System.Drawing.Point(114, 534);
-            this.txtpassword.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(6);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PlaceholderText = "Mật khẩu";
             this.txtpassword.SelectedText = "";
             this.txtpassword.Size = new System.Drawing.Size(505, 76);
-            this.txtpassword.TabIndex = 3;
+            this.txtpassword.TabIndex = 2;
             this.txtpassword.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
             // label1
@@ -123,7 +155,7 @@
             this.label1.Location = new System.Drawing.Point(107, 335);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(512, 54);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 13;
             this.label1.Text = "ĐĂNG NHẬP NGƯỜI DÙNG";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -143,7 +175,7 @@
             this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtusername.IconLeft = global::Nhom3_QLTV.Properties.Resources.user;
             this.txtusername.Location = new System.Drawing.Point(114, 418);
-            this.txtusername.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtusername.Margin = new System.Windows.Forms.Padding(6);
             this.txtusername.Name = "txtusername";
             this.txtusername.PlaceholderText = "Tài khoản";
             this.txtusername.SelectedText = "";
@@ -158,44 +190,12 @@
             this.guna2Panel2.Location = new System.Drawing.Point(12, 3);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(696, 301);
-            this.guna2Panel2.TabIndex = 0;
+            this.guna2Panel2.TabIndex = 12;
             this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
             // guna2AnimateWindow2
             // 
             this.guna2AnimateWindow2.TargetForm = this;
-            // 
-            // guna2ToggleSwitch1
-            // 
-            this.guna2ToggleSwitch1.AutoRoundedCorners = true;
-            this.guna2ToggleSwitch1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ToggleSwitch1.CheckedState.BorderRadius = 19;
-            this.guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.CheckedState.InnerBorderRadius = 15;
-            this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(114, 637);
-            this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
-            this.guna2ToggleSwitch1.Size = new System.Drawing.Size(74, 40);
-            this.guna2ToggleSwitch1.TabIndex = 5;
-            this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.BorderRadius = 19;
-            this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.UncheckedState.InnerBorderRadius = 15;
-            this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(197, 637);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 37);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Nhớ đăng nhập";
             // 
             // guna2Panel1
             // 
@@ -208,16 +208,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1536, 48);
             this.guna2Panel1.TabIndex = 3;
             // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.DarkRed;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1481, 0);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(55, 48);
-            this.guna2ControlBox1.TabIndex = 0;
-            // 
             // guna2ControlBox2
             // 
             this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -229,8 +219,19 @@
             this.guna2ControlBox2.Size = new System.Drawing.Size(55, 48);
             this.guna2ControlBox2.TabIndex = 1;
             // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.DarkRed;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1481, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(55, 48);
+            this.guna2ControlBox1.TabIndex = 0;
+            // 
             // guna2DragControl1
             // 
+            this.guna2DragControl1.DockIndicatorColor = System.Drawing.Color.Transparent;
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.guna2Panel1;
             this.guna2DragControl1.UseTransparentDrag = true;
