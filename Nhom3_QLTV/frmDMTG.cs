@@ -16,10 +16,5 @@ namespace Nhom3_QLTV
         {
             InitializeComponent();
         }
-
-        private void guna2ControlBox1TG_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

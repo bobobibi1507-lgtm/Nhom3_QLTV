@@ -110,8 +110,32 @@ namespace Nhom3_QLTV
         private void tácGiảToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             status1.Text = "Xem hoặc thêm mới tác giả!";
-            frmDMDG frmDMDG = new frmDMDG();
-            frmDMDG.ShowDialog();
+            frmDMTG frmDMTG = new frmDMTG();
+            frmDMTG.ShowDialog();
+            status1.Text = "Ready!";
+        }
+
+        private void tácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            status1.Text = "Xem hoặc thêm mới tác giả!";
+            frmDMTG frmDMTG = new frmDMTG();
+            frmDMTG.ShowDialog();
+            status1.Text = "Ready!";
+        }
+
+        private void tàiLiệuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            status1.Text = "Xem hoặc thêm mới tài liệu!";
+            frmDMSach frmDMSach = new frmDMSach();
+            frmDMSach.ShowDialog();
+            status1.Text = "Ready!";
+        }
+
+        private void tàiLiệuToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            status1.Text = "Xem hoặc thêm mới tài liệu!";
+            frmDMSach frmDMSach = new frmDMSach();
+            frmDMSach.ShowDialog();
             status1.Text = "Ready!";
         }
     }
