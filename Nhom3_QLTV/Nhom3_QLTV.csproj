@@ -64,6 +64,12 @@
     <Compile Include="DMPhieuMuon.Designer.cs">
       <DependentUpon>DMPhieuMuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="DMPhieuTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMPhieuTra.Designer.cs">
+      <DependentUpon>DMPhieuTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="DMPhieuMuon.resx">
       <DependentUpon>DMPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DMPhieuTra.resx">
+      <DependentUpon>DMPhieuTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
