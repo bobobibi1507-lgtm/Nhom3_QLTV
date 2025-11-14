@@ -82,6 +82,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhapPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapPhieuMuon.Designer.cs">
+      <DependentUpon>NhapPhieuMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmlogin.cs">
@@ -111,6 +117,10 @@
     <EmbeddedResource Include="frmUserAccount.resx">
       <DependentUpon>frmUserAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhapPhieuMuon.resx">
+      <DependentUpon>NhapPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
