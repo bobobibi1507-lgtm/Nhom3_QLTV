@@ -16,5 +16,10 @@ namespace Nhom3_QLTV
         {
             InitializeComponent();
         }
+
+        private void frmDMSach_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

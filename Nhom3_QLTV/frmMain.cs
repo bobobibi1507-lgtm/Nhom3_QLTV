@@ -131,6 +131,8 @@ namespace Nhom3_QLTV
         {
             status1.Text = "Xem hoặc thêm mới tài liệu!";
             frmDMSach frmDMSach = new frmDMSach();
+            frmDMSach.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width);
+            frmDMSach.Height = (int)(Screen.PrimaryScreen.WorkingArea.Height * 0.85);
             frmDMSach.ShowDialog();
             status1.Text = "Ready!";
         }
@@ -139,6 +141,8 @@ namespace Nhom3_QLTV
         {
             status1.Text = "Xem hoặc thêm mới tài liệu!";
             frmDMSach frmDMSach = new frmDMSach();
+            frmDMSach.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width);
+            frmDMSach.Height = (int)(Screen.PrimaryScreen.WorkingArea.Height * 0.85);
             frmDMSach.ShowDialog();
             status1.Text = "Ready!";
         }
