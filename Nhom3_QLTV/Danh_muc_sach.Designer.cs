@@ -60,6 +60,7 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.guna2Panel1TL = new Guna.UI2.WinForms.Guna2Panel();
             this.grbLocTL = new System.Windows.Forms.GroupBox();
+            this.comGTTL = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnTimTL1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lblTentrgTL = new System.Windows.Forms.Label();
             this.lblGiatriTL = new System.Windows.Forms.Label();
@@ -77,7 +78,7 @@
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientPanel1TL = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2DragControl2TL = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.comGTTL = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnUpdateDMTL = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelheaderDMS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDSTL)).BeginInit();
             this.panelInputTL.SuspendLayout();
@@ -179,7 +180,7 @@
             this.grdDSTL.RowHeadersVisible = false;
             this.grdDSTL.RowHeadersWidth = 62;
             this.grdDSTL.RowTemplate.Height = 28;
-            this.grdDSTL.Size = new System.Drawing.Size(856, 187);
+            this.grdDSTL.Size = new System.Drawing.Size(822, 187);
             this.grdDSTL.TabIndex = 1;
             this.grdDSTL.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.grdDSTL.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -242,6 +243,7 @@
             // 
             this.panelInputTL.BackColor = System.Drawing.Color.White;
             this.panelInputTL.BorderColor = System.Drawing.Color.LightGray;
+            this.panelInputTL.Controls.Add(this.btnUpdateDMTL);
             this.panelInputTL.Controls.Add(this.btnThemTL1);
             this.panelInputTL.Controls.Add(this.btnDongTL1);
             this.panelInputTL.Controls.Add(this.btnLuuTL1);
@@ -270,11 +272,11 @@
             this.btnThemTL1.ForeColor = System.Drawing.Color.White;
             this.btnThemTL1.HoverState.FillColor = System.Drawing.Color.DarkRed;
             this.btnThemTL1.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnThemTL1.Location = new System.Drawing.Point(317, 18);
+            this.btnThemTL1.Location = new System.Drawing.Point(303, 23);
             this.btnThemTL1.Name = "btnThemTL1";
             this.btnThemTL1.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnThemTL1.ShadowDecoration.Enabled = true;
-            this.btnThemTL1.Size = new System.Drawing.Size(102, 43);
+            this.btnThemTL1.Size = new System.Drawing.Size(102, 34);
             this.btnThemTL1.TabIndex = 20;
             this.btnThemTL1.Text = "Thêm";
             // 
@@ -292,11 +294,11 @@
             this.btnDongTL1.ForeColor = System.Drawing.Color.White;
             this.btnDongTL1.HoverState.FillColor = System.Drawing.Color.DarkRed;
             this.btnDongTL1.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnDongTL1.Location = new System.Drawing.Point(734, 278);
+            this.btnDongTL1.Location = new System.Drawing.Point(744, 287);
             this.btnDongTL1.Name = "btnDongTL1";
             this.btnDongTL1.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnDongTL1.ShadowDecoration.Enabled = true;
-            this.btnDongTL1.Size = new System.Drawing.Size(102, 43);
+            this.btnDongTL1.Size = new System.Drawing.Size(102, 34);
             this.btnDongTL1.TabIndex = 24;
             this.btnDongTL1.Text = "Đóng";
             // 
@@ -314,11 +316,11 @@
             this.btnLuuTL1.ForeColor = System.Drawing.Color.White;
             this.btnLuuTL1.HoverState.FillColor = System.Drawing.Color.DarkRed;
             this.btnLuuTL1.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnLuuTL1.Location = new System.Drawing.Point(731, 18);
+            this.btnLuuTL1.Location = new System.Drawing.Point(615, 287);
             this.btnLuuTL1.Name = "btnLuuTL1";
             this.btnLuuTL1.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnLuuTL1.ShadowDecoration.Enabled = true;
-            this.btnLuuTL1.Size = new System.Drawing.Size(102, 43);
+            this.btnLuuTL1.Size = new System.Drawing.Size(102, 34);
             this.btnLuuTL1.TabIndex = 23;
             this.btnLuuTL1.Text = "Lưu";
             // 
@@ -336,11 +338,11 @@
             this.btnXoaTL1.ForeColor = System.Drawing.Color.White;
             this.btnXoaTL1.HoverState.FillColor = System.Drawing.Color.DarkRed;
             this.btnXoaTL1.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnXoaTL1.Location = new System.Drawing.Point(593, 18);
+            this.btnXoaTL1.Location = new System.Drawing.Point(752, 23);
             this.btnXoaTL1.Name = "btnXoaTL1";
             this.btnXoaTL1.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnXoaTL1.ShadowDecoration.Enabled = true;
-            this.btnXoaTL1.Size = new System.Drawing.Size(102, 43);
+            this.btnXoaTL1.Size = new System.Drawing.Size(102, 34);
             this.btnXoaTL1.TabIndex = 22;
             this.btnXoaTL1.Text = "Xóa";
             // 
@@ -358,11 +360,11 @@
             this.btnSuaTL1.ForeColor = System.Drawing.Color.White;
             this.btnSuaTL1.HoverState.FillColor = System.Drawing.Color.DarkRed;
             this.btnSuaTL1.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnSuaTL1.Location = new System.Drawing.Point(455, 18);
+            this.btnSuaTL1.Location = new System.Drawing.Point(441, 23);
             this.btnSuaTL1.Name = "btnSuaTL1";
             this.btnSuaTL1.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnSuaTL1.ShadowDecoration.Enabled = true;
-            this.btnSuaTL1.Size = new System.Drawing.Size(102, 43);
+            this.btnSuaTL1.Size = new System.Drawing.Size(102, 34);
             this.btnSuaTL1.TabIndex = 21;
             this.btnSuaTL1.Text = "Sửa";
             // 
@@ -495,6 +497,21 @@
             this.grbLocTL.TabStop = false;
             this.grbLocTL.Text = "Lọc dữ liệu";
             // 
+            // comGTTL
+            // 
+            this.comGTTL.BackColor = System.Drawing.Color.Transparent;
+            this.comGTTL.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comGTTL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comGTTL.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comGTTL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comGTTL.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comGTTL.ForeColor = System.Drawing.Color.DarkGray;
+            this.comGTTL.ItemHeight = 18;
+            this.comGTTL.Location = new System.Drawing.Point(235, 101);
+            this.comGTTL.Name = "comGTTL";
+            this.comGTTL.Size = new System.Drawing.Size(231, 24);
+            this.comGTTL.TabIndex = 28;
+            // 
             // btnTimTL1
             // 
             this.btnTimTL1.BackColor = System.Drawing.Color.Brown;
@@ -513,7 +530,7 @@
             this.btnTimTL1.Name = "btnTimTL1";
             this.btnTimTL1.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnTimTL1.ShadowDecoration.Enabled = true;
-            this.btnTimTL1.Size = new System.Drawing.Size(102, 43);
+            this.btnTimTL1.Size = new System.Drawing.Size(102, 34);
             this.btnTimTL1.TabIndex = 26;
             this.btnTimTL1.Text = "Lọc";
             // 
@@ -555,7 +572,7 @@
             this.btnNaplai.Name = "btnNaplai";
             this.btnNaplai.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnNaplai.ShadowDecoration.Enabled = true;
-            this.btnNaplai.Size = new System.Drawing.Size(102, 43);
+            this.btnNaplai.Size = new System.Drawing.Size(102, 34);
             this.btnNaplai.TabIndex = 27;
             this.btnNaplai.Text = "Nạp lại";
             // 
@@ -736,20 +753,27 @@
             this.guna2DragControl2TL.TargetControl = this.panelheaderDMS;
             this.guna2DragControl2TL.UseTransparentDrag = true;
             // 
-            // comGTTL
+            // btnUpdateDMTL
             // 
-            this.comGTTL.BackColor = System.Drawing.Color.Transparent;
-            this.comGTTL.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comGTTL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comGTTL.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comGTTL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comGTTL.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comGTTL.ForeColor = System.Drawing.Color.DarkGray;
-            this.comGTTL.ItemHeight = 18;
-            this.comGTTL.Location = new System.Drawing.Point(235, 101);
-            this.comGTTL.Name = "comGTTL";
-            this.comGTTL.Size = new System.Drawing.Size(231, 24);
-            this.comGTTL.TabIndex = 28;
+            this.btnUpdateDMTL.BackColor = System.Drawing.Color.Brown;
+            this.btnUpdateDMTL.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateDMTL.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateDMTL.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateDMTL.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateDMTL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdateDMTL.FillColor = System.Drawing.Color.Brown;
+            this.btnUpdateDMTL.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnUpdateDMTL.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateDMTL.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateDMTL.HoverState.FillColor = System.Drawing.Color.DarkRed;
+            this.btnUpdateDMTL.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
+            this.btnUpdateDMTL.Location = new System.Drawing.Point(583, 23);
+            this.btnUpdateDMTL.Name = "btnUpdateDMTL";
+            this.btnUpdateDMTL.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
+            this.btnUpdateDMTL.ShadowDecoration.Enabled = true;
+            this.btnUpdateDMTL.Size = new System.Drawing.Size(138, 34);
+            this.btnUpdateDMTL.TabIndex = 25;
+            this.btnUpdateDMTL.Text = "Cập nhật";
             // 
             // frmDMSach
             // 
@@ -829,5 +853,6 @@
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
         private Guna.UI2.WinForms.Guna2ComboBox comGTTL;
+        private Guna.UI2.WinForms.Guna2GradientButton btnUpdateDMTL;
     }
 }

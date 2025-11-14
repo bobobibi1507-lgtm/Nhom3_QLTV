@@ -37,7 +37,7 @@
             this.guna2ControlBox2DG = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1DG = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1DG = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2Panel1DG = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnUpdateDMDG = new Guna.UI2.WinForms.Guna2Panel();
             this.grdDG123 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Sothe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +60,7 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.guna2Panel2DG = new Guna.UI2.WinForms.Guna2Panel();
             this.groupBox1DG2 = new System.Windows.Forms.GroupBox();
+            this.comGTDG = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label6DG = new System.Windows.Forms.Label();
             this.lblTentrgDG = new System.Windows.Forms.Label();
             this.btnTimDG = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -77,9 +78,9 @@
             this.txtTenDG = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1DG = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lblDMDG = new System.Windows.Forms.Label();
-            this.comGTDG = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnUpdateDMTG = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2PanelDGHeaderDG.SuspendLayout();
-            this.guna2Panel1DG.SuspendLayout();
+            this.btnUpdateDMDG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDG123)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingnavDG)).BeginInit();
             this.bindingnavDG.SuspendLayout();
@@ -132,24 +133,25 @@
             this.guna2DragControl1DG.TargetControl = this.guna2PanelDGHeaderDG;
             this.guna2DragControl1DG.UseTransparentDrag = true;
             // 
-            // guna2Panel1DG
+            // btnUpdateDMDG
             // 
-            this.guna2Panel1DG.BorderColor = System.Drawing.Color.LightGray;
-            this.guna2Panel1DG.Controls.Add(this.grdDG123);
-            this.guna2Panel1DG.Controls.Add(this.btnSuaDG);
-            this.guna2Panel1DG.Controls.Add(this.btnLuuDG);
-            this.guna2Panel1DG.Controls.Add(this.btnXoaDG);
-            this.guna2Panel1DG.Controls.Add(this.btnDongDG);
-            this.guna2Panel1DG.Controls.Add(this.btnThemDG);
-            this.guna2Panel1DG.Controls.Add(this.bindingnavDG);
-            this.guna2Panel1DG.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel1DG.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Panel1DG.Location = new System.Drawing.Point(0, 311);
-            this.guna2Panel1DG.Name = "guna2Panel1DG";
-            this.guna2Panel1DG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
-            this.guna2Panel1DG.ShadowDecoration.Enabled = true;
-            this.guna2Panel1DG.Size = new System.Drawing.Size(900, 339);
-            this.guna2Panel1DG.TabIndex = 1;
+            this.btnUpdateDMDG.BorderColor = System.Drawing.Color.LightGray;
+            this.btnUpdateDMDG.Controls.Add(this.btnUpdateDMTG);
+            this.btnUpdateDMDG.Controls.Add(this.grdDG123);
+            this.btnUpdateDMDG.Controls.Add(this.btnSuaDG);
+            this.btnUpdateDMDG.Controls.Add(this.btnLuuDG);
+            this.btnUpdateDMDG.Controls.Add(this.btnXoaDG);
+            this.btnUpdateDMDG.Controls.Add(this.btnDongDG);
+            this.btnUpdateDMDG.Controls.Add(this.btnThemDG);
+            this.btnUpdateDMDG.Controls.Add(this.bindingnavDG);
+            this.btnUpdateDMDG.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnUpdateDMDG.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateDMDG.Location = new System.Drawing.Point(0, 311);
+            this.btnUpdateDMDG.Name = "btnUpdateDMDG";
+            this.btnUpdateDMDG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
+            this.btnUpdateDMDG.ShadowDecoration.Enabled = true;
+            this.btnUpdateDMDG.Size = new System.Drawing.Size(900, 339);
+            this.btnUpdateDMDG.TabIndex = 1;
             // 
             // grdDG123
             // 
@@ -161,9 +163,10 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RosyBrown;
             this.grdDG123.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grdDG123.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.grdDG123.BackgroundColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Brown;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RosyBrown;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -177,7 +180,7 @@
             this.NgayCap,
             this.NgheNghiep});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RosyBrown;
@@ -197,7 +200,7 @@
             this.grdDG123.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.grdDG123.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.grdDG123.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.grdDG123.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.grdDG123.ThemeStyle.BackColor = System.Drawing.Color.Gainsboro;
             this.grdDG123.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.grdDG123.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.grdDG123.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -221,7 +224,6 @@
             this.Sothe.HeaderText = "Số thẻ";
             this.Sothe.MinimumWidth = 8;
             this.Sothe.Name = "Sothe";
-            this.Sothe.Width = 88;
             // 
             // TenDG
             // 
@@ -238,7 +240,7 @@
             this.NgayCap.HeaderText = "Ngày cấp";
             this.NgayCap.MinimumWidth = 8;
             this.NgayCap.Name = "NgayCap";
-            this.NgayCap.Width = 109;
+            this.NgayCap.Width = 126;
             // 
             // NgheNghiep
             // 
@@ -247,7 +249,7 @@
             this.NgheNghiep.HeaderText = "Nghề nghiệp";
             this.NgheNghiep.MinimumWidth = 8;
             this.NgheNghiep.Name = "NgheNghiep";
-            this.NgheNghiep.Width = 134;
+            this.NgheNghiep.Width = 156;
             // 
             // btnSuaDG
             // 
@@ -263,11 +265,11 @@
             this.btnSuaDG.ForeColor = System.Drawing.Color.White;
             this.btnSuaDG.HoverState.FillColor = System.Drawing.Color.DarkRed;
             this.btnSuaDG.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnSuaDG.Location = new System.Drawing.Point(489, 15);
+            this.btnSuaDG.Location = new System.Drawing.Point(428, 27);
             this.btnSuaDG.Name = "btnSuaDG";
             this.btnSuaDG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnSuaDG.ShadowDecoration.Enabled = true;
-            this.btnSuaDG.Size = new System.Drawing.Size(102, 43);
+            this.btnSuaDG.Size = new System.Drawing.Size(102, 34);
             this.btnSuaDG.TabIndex = 25;
             this.btnSuaDG.Text = "Sửa";
             // 
@@ -285,11 +287,11 @@
             this.btnLuuDG.ForeColor = System.Drawing.Color.White;
             this.btnLuuDG.HoverState.FillColor = System.Drawing.Color.DarkRed;
             this.btnLuuDG.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnLuuDG.Location = new System.Drawing.Point(751, 15);
+            this.btnLuuDG.Location = new System.Drawing.Point(619, 274);
             this.btnLuuDG.Name = "btnLuuDG";
             this.btnLuuDG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnLuuDG.ShadowDecoration.Enabled = true;
-            this.btnLuuDG.Size = new System.Drawing.Size(102, 43);
+            this.btnLuuDG.Size = new System.Drawing.Size(102, 34);
             this.btnLuuDG.TabIndex = 24;
             this.btnLuuDG.Text = "Lưu";
             // 
@@ -307,11 +309,11 @@
             this.btnXoaDG.ForeColor = System.Drawing.Color.White;
             this.btnXoaDG.HoverState.FillColor = System.Drawing.Color.DarkRed;
             this.btnXoaDG.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnXoaDG.Location = new System.Drawing.Point(620, 15);
+            this.btnXoaDG.Location = new System.Drawing.Point(743, 27);
             this.btnXoaDG.Name = "btnXoaDG";
             this.btnXoaDG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnXoaDG.ShadowDecoration.Enabled = true;
-            this.btnXoaDG.Size = new System.Drawing.Size(102, 43);
+            this.btnXoaDG.Size = new System.Drawing.Size(102, 34);
             this.btnXoaDG.TabIndex = 23;
             this.btnXoaDG.Text = "Xóa";
             // 
@@ -329,11 +331,11 @@
             this.btnDongDG.ForeColor = System.Drawing.Color.White;
             this.btnDongDG.HoverState.FillColor = System.Drawing.Color.DarkRed;
             this.btnDongDG.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnDongDG.Location = new System.Drawing.Point(744, 287);
+            this.btnDongDG.Location = new System.Drawing.Point(743, 274);
             this.btnDongDG.Name = "btnDongDG";
             this.btnDongDG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnDongDG.ShadowDecoration.Enabled = true;
-            this.btnDongDG.Size = new System.Drawing.Size(102, 43);
+            this.btnDongDG.Size = new System.Drawing.Size(102, 34);
             this.btnDongDG.TabIndex = 22;
             this.btnDongDG.Text = "Đóng";
             // 
@@ -351,11 +353,11 @@
             this.btnThemDG.ForeColor = System.Drawing.Color.White;
             this.btnThemDG.HoverState.FillColor = System.Drawing.Color.DarkRed;
             this.btnThemDG.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnThemDG.Location = new System.Drawing.Point(358, 15);
+            this.btnThemDG.Location = new System.Drawing.Point(292, 27);
             this.btnThemDG.Name = "btnThemDG";
             this.btnThemDG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnThemDG.ShadowDecoration.Enabled = true;
-            this.btnThemDG.Size = new System.Drawing.Size(102, 43);
+            this.btnThemDG.Size = new System.Drawing.Size(102, 34);
             this.btnThemDG.TabIndex = 21;
             this.btnThemDG.Text = "Thêm";
             // 
@@ -485,6 +487,21 @@
             this.groupBox1DG2.TabStop = false;
             this.groupBox1DG2.Text = "Lọc dữ liệu";
             // 
+            // comGTDG
+            // 
+            this.comGTDG.BackColor = System.Drawing.Color.Transparent;
+            this.comGTDG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comGTDG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comGTDG.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comGTDG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comGTDG.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comGTDG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comGTDG.ItemHeight = 18;
+            this.comGTDG.Location = new System.Drawing.Point(202, 92);
+            this.comGTDG.Name = "comGTDG";
+            this.comGTDG.Size = new System.Drawing.Size(239, 24);
+            this.comGTDG.TabIndex = 33;
+            // 
             // label6DG
             // 
             this.label6DG.AutoSize = true;
@@ -523,7 +540,7 @@
             this.btnTimDG.Name = "btnTimDG";
             this.btnTimDG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnTimDG.ShadowDecoration.Enabled = true;
-            this.btnTimDG.Size = new System.Drawing.Size(102, 43);
+            this.btnTimDG.Size = new System.Drawing.Size(102, 34);
             this.btnTimDG.TabIndex = 26;
             this.btnTimDG.Text = "Lọc";
             // 
@@ -560,7 +577,7 @@
             this.btnNaplaiDG.Name = "btnNaplaiDG";
             this.btnNaplaiDG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnNaplaiDG.ShadowDecoration.Enabled = true;
-            this.btnNaplaiDG.Size = new System.Drawing.Size(102, 43);
+            this.btnNaplaiDG.Size = new System.Drawing.Size(102, 34);
             this.btnNaplaiDG.TabIndex = 27;
             this.btnNaplaiDG.Text = "Nạp lại";
             // 
@@ -731,20 +748,27 @@
             this.lblDMDG.TabIndex = 0;
             this.lblDMDG.Text = "Danh mục độc giả";
             // 
-            // comGTDG
+            // btnUpdateDMTG
             // 
-            this.comGTDG.BackColor = System.Drawing.Color.Transparent;
-            this.comGTDG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comGTDG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comGTDG.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comGTDG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comGTDG.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comGTDG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comGTDG.ItemHeight = 18;
-            this.comGTDG.Location = new System.Drawing.Point(202, 92);
-            this.comGTDG.Name = "comGTDG";
-            this.comGTDG.Size = new System.Drawing.Size(239, 24);
-            this.comGTDG.TabIndex = 33;
+            this.btnUpdateDMTG.BackColor = System.Drawing.Color.Brown;
+            this.btnUpdateDMTG.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateDMTG.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateDMTG.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateDMTG.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateDMTG.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdateDMTG.FillColor = System.Drawing.Color.Brown;
+            this.btnUpdateDMTG.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnUpdateDMTG.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateDMTG.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateDMTG.HoverState.FillColor = System.Drawing.Color.DarkRed;
+            this.btnUpdateDMTG.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
+            this.btnUpdateDMTG.Location = new System.Drawing.Point(564, 27);
+            this.btnUpdateDMTG.Name = "btnUpdateDMTG";
+            this.btnUpdateDMTG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
+            this.btnUpdateDMTG.ShadowDecoration.Enabled = true;
+            this.btnUpdateDMTG.Size = new System.Drawing.Size(145, 34);
+            this.btnUpdateDMTG.TabIndex = 29;
+            this.btnUpdateDMTG.Text = "Cập nhật";
             // 
             // frmDMDG
             // 
@@ -753,15 +777,15 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 650);
             this.Controls.Add(this.guna2Panel2DG);
-            this.Controls.Add(this.guna2Panel1DG);
+            this.Controls.Add(this.btnUpdateDMDG);
             this.Controls.Add(this.guna2PanelDGHeaderDG);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDMDG";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh_muc_doc_gia";
             this.guna2PanelDGHeaderDG.ResumeLayout(false);
-            this.guna2Panel1DG.ResumeLayout(false);
-            this.guna2Panel1DG.PerformLayout();
+            this.btnUpdateDMDG.ResumeLayout(false);
+            this.btnUpdateDMDG.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDG123)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingnavDG)).EndInit();
             this.bindingnavDG.ResumeLayout(false);
@@ -783,7 +807,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1DG;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1DG;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2DG;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1DG;
+        private Guna.UI2.WinForms.Guna2Panel btnUpdateDMDG;
         private System.Windows.Forms.BindingNavigator bindingnavDG;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
@@ -824,5 +848,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayCap;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgheNghiep;
         private Guna.UI2.WinForms.Guna2ComboBox comGTDG;
+        private Guna.UI2.WinForms.Guna2GradientButton btnUpdateDMTG;
     }
 }

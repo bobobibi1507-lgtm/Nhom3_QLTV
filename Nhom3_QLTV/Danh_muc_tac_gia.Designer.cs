@@ -61,6 +61,7 @@
             this.btnNaplaiTG = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel3TG = new Guna.UI2.WinForms.Guna2Panel();
             this.groupBox2TG = new System.Windows.Forms.GroupBox();
+            this.comGTTG = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label6TG = new System.Windows.Forms.Label();
             this.lblTentrgTG = new System.Windows.Forms.Label();
             this.lblGiatriTG = new System.Windows.Forms.Label();
@@ -74,7 +75,7 @@
             this.txtMaTG = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lblDMTG = new System.Windows.Forms.Label();
-            this.comGTTG = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnUpdateDMTG = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1TG.SuspendLayout();
             this.guna2Panel2TG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -135,6 +136,7 @@
             // guna2Panel2TG
             // 
             this.guna2Panel2TG.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Panel2TG.Controls.Add(this.btnUpdateDMTG);
             this.guna2Panel2TG.Controls.Add(this.guna2DataGridView1);
             this.guna2Panel2TG.Controls.Add(this.btnSuaTG);
             this.guna2Panel2TG.Controls.Add(this.btnXoaTG);
@@ -155,9 +157,10 @@
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RosyBrown;
             this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Brown;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RosyBrown;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -170,7 +173,7 @@
             this.TenTG,
             this.NamSinh});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RosyBrown;
@@ -190,7 +193,7 @@
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.Gainsboro;
             this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -214,7 +217,7 @@
             this.MaTG.HeaderText = "Mã tác giả";
             this.MaTG.MinimumWidth = 8;
             this.MaTG.Name = "MaTG";
-            this.MaTG.Width = 128;
+            this.MaTG.Width = 135;
             // 
             // TenTG
             // 
@@ -231,7 +234,7 @@
             this.NamSinh.HeaderText = "Năm sinh";
             this.NamSinh.MinimumWidth = 8;
             this.NamSinh.Name = "NamSinh";
-            this.NamSinh.Width = 121;
+            this.NamSinh.Width = 126;
             // 
             // btnSuaTG
             // 
@@ -246,11 +249,11 @@
             this.btnSuaTG.ForeColor = System.Drawing.Color.White;
             this.btnSuaTG.HoverState.FillColor = System.Drawing.Color.DarkRed;
             this.btnSuaTG.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnSuaTG.Location = new System.Drawing.Point(502, 18);
+            this.btnSuaTG.Location = new System.Drawing.Point(434, 26);
             this.btnSuaTG.Name = "btnSuaTG";
             this.btnSuaTG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnSuaTG.ShadowDecoration.Enabled = true;
-            this.btnSuaTG.Size = new System.Drawing.Size(102, 43);
+            this.btnSuaTG.Size = new System.Drawing.Size(102, 34);
             this.btnSuaTG.TabIndex = 26;
             this.btnSuaTG.Text = "Sửa";
             // 
@@ -267,11 +270,11 @@
             this.btnXoaTG.ForeColor = System.Drawing.Color.White;
             this.btnXoaTG.HoverState.FillColor = System.Drawing.Color.DarkRed;
             this.btnXoaTG.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnXoaTG.Location = new System.Drawing.Point(638, 18);
+            this.btnXoaTG.Location = new System.Drawing.Point(756, 26);
             this.btnXoaTG.Name = "btnXoaTG";
             this.btnXoaTG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnXoaTG.ShadowDecoration.Enabled = true;
-            this.btnXoaTG.Size = new System.Drawing.Size(102, 43);
+            this.btnXoaTG.Size = new System.Drawing.Size(102, 34);
             this.btnXoaTG.TabIndex = 25;
             this.btnXoaTG.Text = "Xóa";
             // 
@@ -288,11 +291,11 @@
             this.btnLuuTG.ForeColor = System.Drawing.Color.White;
             this.btnLuuTG.HoverState.FillColor = System.Drawing.Color.DarkRed;
             this.btnLuuTG.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnLuuTG.Location = new System.Drawing.Point(774, 18);
+            this.btnLuuTG.Location = new System.Drawing.Point(638, 293);
             this.btnLuuTG.Name = "btnLuuTG";
             this.btnLuuTG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnLuuTG.ShadowDecoration.Enabled = true;
-            this.btnLuuTG.Size = new System.Drawing.Size(102, 43);
+            this.btnLuuTG.Size = new System.Drawing.Size(102, 34);
             this.btnLuuTG.TabIndex = 24;
             this.btnLuuTG.Text = "Lưu";
             // 
@@ -313,7 +316,7 @@
             this.btnDongTG.Name = "btnDongTG";
             this.btnDongTG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnDongTG.ShadowDecoration.Enabled = true;
-            this.btnDongTG.Size = new System.Drawing.Size(102, 43);
+            this.btnDongTG.Size = new System.Drawing.Size(102, 34);
             this.btnDongTG.TabIndex = 23;
             this.btnDongTG.Text = "Đóng";
             // 
@@ -330,11 +333,11 @@
             this.btnThemTG.ForeColor = System.Drawing.Color.White;
             this.btnThemTG.HoverState.FillColor = System.Drawing.Color.DarkRed;
             this.btnThemTG.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnThemTG.Location = new System.Drawing.Point(366, 18);
+            this.btnThemTG.Location = new System.Drawing.Point(292, 26);
             this.btnThemTG.Name = "btnThemTG";
             this.btnThemTG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnThemTG.ShadowDecoration.Enabled = true;
-            this.btnThemTG.Size = new System.Drawing.Size(102, 43);
+            this.btnThemTG.Size = new System.Drawing.Size(102, 34);
             this.btnThemTG.TabIndex = 22;
             this.btnThemTG.Text = "Thêm";
             // 
@@ -451,7 +454,7 @@
             this.btnTimTG.Name = "btnTimTG";
             this.btnTimTG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnTimTG.ShadowDecoration.Enabled = true;
-            this.btnTimTG.Size = new System.Drawing.Size(102, 43);
+            this.btnTimTG.Size = new System.Drawing.Size(102, 34);
             this.btnTimTG.TabIndex = 27;
             this.btnTimTG.Text = "Lọc";
             // 
@@ -472,7 +475,7 @@
             this.btnNaplaiTG.Name = "btnNaplaiTG";
             this.btnNaplaiTG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
             this.btnNaplaiTG.ShadowDecoration.Enabled = true;
-            this.btnNaplaiTG.Size = new System.Drawing.Size(102, 43);
+            this.btnNaplaiTG.Size = new System.Drawing.Size(102, 34);
             this.btnNaplaiTG.TabIndex = 28;
             this.btnNaplaiTG.Text = "Nạp lại";
             // 
@@ -507,6 +510,21 @@
             this.groupBox2TG.TabIndex = 31;
             this.groupBox2TG.TabStop = false;
             this.groupBox2TG.Text = "Lọc dữ liệu";
+            // 
+            // comGTTG
+            // 
+            this.comGTTG.BackColor = System.Drawing.Color.Transparent;
+            this.comGTTG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comGTTG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comGTTG.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comGTTG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comGTTG.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comGTTG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comGTTG.ItemHeight = 18;
+            this.comGTTG.Location = new System.Drawing.Point(224, 87);
+            this.comGTTG.Name = "comGTTG";
+            this.comGTTG.Size = new System.Drawing.Size(219, 24);
+            this.comGTTG.TabIndex = 34;
             // 
             // label6TG
             // 
@@ -680,20 +698,27 @@
             this.lblDMTG.TabIndex = 0;
             this.lblDMTG.Text = "Danh mục tác giả";
             // 
-            // comGTTG
+            // btnUpdateDMTG
             // 
-            this.comGTTG.BackColor = System.Drawing.Color.Transparent;
-            this.comGTTG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comGTTG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comGTTG.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comGTTG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comGTTG.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comGTTG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comGTTG.ItemHeight = 18;
-            this.comGTTG.Location = new System.Drawing.Point(224, 87);
-            this.comGTTG.Name = "comGTTG";
-            this.comGTTG.Size = new System.Drawing.Size(219, 24);
-            this.comGTTG.TabIndex = 34;
+            this.btnUpdateDMTG.BackColor = System.Drawing.Color.Brown;
+            this.btnUpdateDMTG.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateDMTG.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateDMTG.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateDMTG.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateDMTG.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdateDMTG.FillColor = System.Drawing.Color.Brown;
+            this.btnUpdateDMTG.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnUpdateDMTG.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateDMTG.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateDMTG.HoverState.FillColor = System.Drawing.Color.DarkRed;
+            this.btnUpdateDMTG.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
+            this.btnUpdateDMTG.Location = new System.Drawing.Point(576, 26);
+            this.btnUpdateDMTG.Name = "btnUpdateDMTG";
+            this.btnUpdateDMTG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
+            this.btnUpdateDMTG.ShadowDecoration.Enabled = true;
+            this.btnUpdateDMTG.Size = new System.Drawing.Size(140, 34);
+            this.btnUpdateDMTG.TabIndex = 28;
+            this.btnUpdateDMTG.Text = "Cập nhật";
             // 
             // frmDMTG
             // 
@@ -770,5 +795,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NamSinh;
         private Guna.UI2.WinForms.Guna2TextBox txtNamSinh;
         private Guna.UI2.WinForms.Guna2ComboBox comGTTG;
+        private Guna.UI2.WinForms.Guna2GradientButton btnUpdateDMTG;
     }
 }
