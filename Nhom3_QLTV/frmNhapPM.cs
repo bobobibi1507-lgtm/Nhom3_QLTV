@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Nhom3_QLTV
 {
-    public partial class NhapPhieuMuon : Form
+    public partial class frmNhapPM : Form
     {
-        public NhapPhieuMuon()
+        public frmNhapPM()
         {
             InitializeComponent();
         }

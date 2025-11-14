@@ -230,7 +230,6 @@ namespace Nhom3_QLTV
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1200, 80);
             this.guna2Panel3.TabIndex = 1;
-            this.guna2Panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel3_Paint);
             // 
             // guna2HtmlLabel1
             // 
@@ -434,10 +433,6 @@ namespace Nhom3_QLTV
 
         }
 
-        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
         #endregion
 

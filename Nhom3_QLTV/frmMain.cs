@@ -155,5 +155,25 @@ namespace Nhom3_QLTV
         {
 
         }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            status1.Text = "Xem hoặc thêm mới phiếu mượn!";
+            frmNhapPM nhapPhieuMuon = new frmNhapPM();
+            nhapPhieuMuon.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width);
+            nhapPhieuMuon.Height = (int)(Screen.PrimaryScreen.WorkingArea.Height * 0.85);
+            nhapPhieuMuon.ShowDialog();
+            status1.Text = "Ready!";
+        }
+
+        private void quảnLýMượnTrảToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            status1.Text = "Xem hoặc thêm mới phiếu mượn!";
+            frmNhapPM nhapPhieuMuon = new frmNhapPM();
+            nhapPhieuMuon.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width);
+            nhapPhieuMuon.Height = (int)(Screen.PrimaryScreen.WorkingArea.Height * 0.85);
+            nhapPhieuMuon.ShowDialog();
+            status1.Text = "Ready!";
+        }
     }
 }
