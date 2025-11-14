@@ -43,6 +43,7 @@
             this.LoaiTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelInputTL = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnUpdateDMTL = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnThemTL1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDongTL1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnLuuTL1 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -78,7 +79,6 @@
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientPanel1TL = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2DragControl2TL = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.btnUpdateDMTL = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelheaderDMS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDSTL)).BeginInit();
             this.panelInputTL.SuspendLayout();
@@ -257,6 +257,28 @@
             this.panelInputTL.Name = "panelInputTL";
             this.panelInputTL.Size = new System.Drawing.Size(900, 333);
             this.panelInputTL.TabIndex = 2;
+            // 
+            // btnUpdateDMTL
+            // 
+            this.btnUpdateDMTL.BackColor = System.Drawing.Color.Brown;
+            this.btnUpdateDMTL.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateDMTL.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateDMTL.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateDMTL.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateDMTL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdateDMTL.FillColor = System.Drawing.Color.Brown;
+            this.btnUpdateDMTL.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnUpdateDMTL.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateDMTL.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateDMTL.HoverState.FillColor = System.Drawing.Color.DarkRed;
+            this.btnUpdateDMTL.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
+            this.btnUpdateDMTL.Location = new System.Drawing.Point(583, 23);
+            this.btnUpdateDMTL.Name = "btnUpdateDMTL";
+            this.btnUpdateDMTL.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
+            this.btnUpdateDMTL.ShadowDecoration.Enabled = true;
+            this.btnUpdateDMTL.Size = new System.Drawing.Size(138, 34);
+            this.btnUpdateDMTL.TabIndex = 25;
+            this.btnUpdateDMTL.Text = "Cập nhật";
             // 
             // btnThemTL1
             // 
@@ -752,28 +774,6 @@
             this.guna2DragControl2TL.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl2TL.TargetControl = this.panelheaderDMS;
             this.guna2DragControl2TL.UseTransparentDrag = true;
-            // 
-            // btnUpdateDMTL
-            // 
-            this.btnUpdateDMTL.BackColor = System.Drawing.Color.Brown;
-            this.btnUpdateDMTL.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateDMTL.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdateDMTL.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdateDMTL.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdateDMTL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUpdateDMTL.FillColor = System.Drawing.Color.Brown;
-            this.btnUpdateDMTL.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnUpdateDMTL.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateDMTL.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateDMTL.HoverState.FillColor = System.Drawing.Color.DarkRed;
-            this.btnUpdateDMTL.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnUpdateDMTL.Location = new System.Drawing.Point(583, 23);
-            this.btnUpdateDMTL.Name = "btnUpdateDMTL";
-            this.btnUpdateDMTL.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
-            this.btnUpdateDMTL.ShadowDecoration.Enabled = true;
-            this.btnUpdateDMTL.Size = new System.Drawing.Size(138, 34);
-            this.btnUpdateDMTL.TabIndex = 25;
-            this.btnUpdateDMTL.Text = "Cập nhật";
             // 
             // frmDMSach
             // 
