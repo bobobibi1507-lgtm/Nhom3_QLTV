@@ -95,6 +95,8 @@ namespace Nhom3_QLTV
         {
             status1.Text = "Xem hoặc thêm mới độc giả!";
             frmDMDG frmDMDG = new frmDMDG();
+            frmDMDG.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width);
+            frmDMDG.Height = (int)(Screen.PrimaryScreen.WorkingArea.Height * 0.85);
             frmDMDG.ShowDialog();
             status1.Text = "Ready!";
         }
@@ -103,6 +105,8 @@ namespace Nhom3_QLTV
         {
             status1.Text = "Xem hoặc thêm mới độc giả!";
             frmDMDG frmDMDG = new frmDMDG();
+            frmDMDG.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width);
+            frmDMDG.Height = (int)(Screen.PrimaryScreen.WorkingArea.Height * 0.85);
             frmDMDG.ShowDialog();
             status1.Text = "Ready!";
         }
