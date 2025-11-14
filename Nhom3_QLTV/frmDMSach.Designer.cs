@@ -38,15 +38,27 @@ namespace Nhom3_QLTV
             this.lblDMS = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6DG = new System.Windows.Forms.Label();
-            this.btnNaplaiDG = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.comGTDG = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.lblTentrgDG = new System.Windows.Forms.Label();
-            this.btnTimDG = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.lblGiatriDG = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.comTentrgDG = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblGiatriDG = new System.Windows.Forms.Label();
+            this.btnTimDG = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.lblTentrgDG = new System.Windows.Forms.Label();
+            this.comGTDG = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnNaplaiDG = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.label6DG = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblNghe = new System.Windows.Forms.Label();
+            this.lblNgaycap = new System.Windows.Forms.Label();
+            this.lblTenDG = new System.Windows.Forms.Label();
+            this.lblSothe = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.bindingnavDG = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -66,35 +78,24 @@ namespace Nhom3_QLTV
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.lblSothe = new System.Windows.Forms.Label();
-            this.lblTenDG = new System.Windows.Forms.Label();
-            this.lblNgaycap = new System.Windows.Forms.Label();
-            this.lblNghe = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.guna2GradientPanel1TL.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingnavDG)).BeginInit();
             this.bindingnavDG.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2DragControl2TL
             // 
             this.guna2DragControl2TL.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl2TL.TargetControl = this.guna2GradientPanel1TL;
             this.guna2DragControl2TL.UseTransparentDrag = true;
             // 
             // guna2GradientPanel1TL
@@ -176,74 +177,47 @@ namespace Nhom3_QLTV
             this.tableLayoutPanel2.Size = new System.Drawing.Size(821, 263);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // label6DG
+            // comTentrgDG
             // 
-            this.label6DG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comTentrgDG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6DG.AutoSize = true;
-            this.label6DG.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6DG.Location = new System.Drawing.Point(377, 97);
-            this.label6DG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6DG.Name = "label6DG";
-            this.label6DG.Size = new System.Drawing.Size(55, 32);
-            this.label6DG.TabIndex = 78;
-            this.label6DG.Text = "=";
-            this.label6DG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.comTentrgDG.BackColor = System.Drawing.Color.Transparent;
+            this.comTentrgDG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comTentrgDG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comTentrgDG.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comTentrgDG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comTentrgDG.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.comTentrgDG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comTentrgDG.ItemHeight = 18;
+            this.comTentrgDG.Location = new System.Drawing.Point(4, 101);
+            this.comTentrgDG.Margin = new System.Windows.Forms.Padding(4);
+            this.comTentrgDG.Name = "comTentrgDG";
+            this.comTentrgDG.Size = new System.Drawing.Size(365, 24);
+            this.comTentrgDG.TabIndex = 76;
             // 
-            // btnNaplaiDG
+            // label2
             // 
-            this.btnNaplaiDG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNaplaiDG.BackColor = System.Drawing.Color.Brown;
-            this.btnNaplaiDG.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNaplaiDG.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNaplaiDG.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNaplaiDG.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNaplaiDG.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNaplaiDG.FillColor = System.Drawing.Color.Brown;
-            this.btnNaplaiDG.FillColor2 = System.Drawing.Color.Brown;
-            this.btnNaplaiDG.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNaplaiDG.ForeColor = System.Drawing.Color.White;
-            this.btnNaplaiDG.HoverState.FillColor = System.Drawing.Color.DarkRed;
-            this.btnNaplaiDG.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
-            this.btnNaplaiDG.Location = new System.Drawing.Point(440, 182);
-            this.btnNaplaiDG.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNaplaiDG.Name = "btnNaplaiDG";
-            this.btnNaplaiDG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
-            this.btnNaplaiDG.ShadowDecoration.Enabled = true;
-            this.btnNaplaiDG.Size = new System.Drawing.Size(377, 50);
-            this.btnNaplaiDG.TabIndex = 72;
-            this.btnNaplaiDG.Text = "Nạp lại";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(4, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(179, 45);
+            this.label2.TabIndex = 75;
+            this.label2.Text = "Lọc dữ liệu";
             // 
-            // comGTDG
+            // lblGiatriDG
             // 
-            this.comGTDG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblGiatriDG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comGTDG.BackColor = System.Drawing.Color.Transparent;
-            this.comGTDG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comGTDG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comGTDG.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comGTDG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comGTDG.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.comGTDG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comGTDG.ItemHeight = 18;
-            this.comGTDG.Location = new System.Drawing.Point(440, 101);
-            this.comGTDG.Margin = new System.Windows.Forms.Padding(4);
-            this.comGTDG.Name = "comGTDG";
-            this.comGTDG.Size = new System.Drawing.Size(377, 24);
-            this.comGTDG.TabIndex = 77;
-            // 
-            // lblTentrgDG
-            // 
-            this.lblTentrgDG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTentrgDG.AutoSize = true;
-            this.lblTentrgDG.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTentrgDG.Location = new System.Drawing.Point(440, 51);
-            this.lblTentrgDG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTentrgDG.Name = "lblTentrgDG";
-            this.lblTentrgDG.Size = new System.Drawing.Size(377, 45);
-            this.lblTentrgDG.TabIndex = 73;
-            this.lblTentrgDG.Text = "Tên trường";
+            this.lblGiatriDG.AutoSize = true;
+            this.lblGiatriDG.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiatriDG.Location = new System.Drawing.Point(4, 51);
+            this.lblGiatriDG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGiatriDG.Name = "lblGiatriDG";
+            this.lblGiatriDG.Size = new System.Drawing.Size(365, 45);
+            this.lblGiatriDG.TabIndex = 74;
+            this.lblGiatriDG.Text = "Giá trị";
             // 
             // btnTimDG
             // 
@@ -269,47 +243,74 @@ namespace Nhom3_QLTV
             this.btnTimDG.TabIndex = 71;
             this.btnTimDG.Text = "Lọc";
             // 
-            // lblGiatriDG
+            // lblTentrgDG
             // 
-            this.lblGiatriDG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblTentrgDG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblGiatriDG.AutoSize = true;
-            this.lblGiatriDG.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiatriDG.Location = new System.Drawing.Point(4, 51);
-            this.lblGiatriDG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblGiatriDG.Name = "lblGiatriDG";
-            this.lblGiatriDG.Size = new System.Drawing.Size(365, 45);
-            this.lblGiatriDG.TabIndex = 74;
-            this.lblGiatriDG.Text = "Giá trị";
+            this.lblTentrgDG.AutoSize = true;
+            this.lblTentrgDG.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTentrgDG.Location = new System.Drawing.Point(440, 51);
+            this.lblTentrgDG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTentrgDG.Name = "lblTentrgDG";
+            this.lblTentrgDG.Size = new System.Drawing.Size(377, 45);
+            this.lblTentrgDG.TabIndex = 73;
+            this.lblTentrgDG.Text = "Tên trường";
             // 
-            // label2
+            // comGTDG
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 45);
-            this.label2.TabIndex = 75;
-            this.label2.Text = "Lọc dữ liệu";
-            // 
-            // comTentrgDG
-            // 
-            this.comTentrgDG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comGTDG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comTentrgDG.BackColor = System.Drawing.Color.Transparent;
-            this.comTentrgDG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comTentrgDG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comTentrgDG.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comTentrgDG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comTentrgDG.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.comTentrgDG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comTentrgDG.ItemHeight = 18;
-            this.comTentrgDG.Location = new System.Drawing.Point(4, 101);
-            this.comTentrgDG.Margin = new System.Windows.Forms.Padding(4);
-            this.comTentrgDG.Name = "comTentrgDG";
-            this.comTentrgDG.Size = new System.Drawing.Size(365, 24);
-            this.comTentrgDG.TabIndex = 76;
+            this.comGTDG.BackColor = System.Drawing.Color.Transparent;
+            this.comGTDG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comGTDG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comGTDG.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comGTDG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comGTDG.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.comGTDG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comGTDG.ItemHeight = 18;
+            this.comGTDG.Location = new System.Drawing.Point(440, 101);
+            this.comGTDG.Margin = new System.Windows.Forms.Padding(4);
+            this.comGTDG.Name = "comGTDG";
+            this.comGTDG.Size = new System.Drawing.Size(377, 24);
+            this.comGTDG.TabIndex = 77;
+            // 
+            // btnNaplaiDG
+            // 
+            this.btnNaplaiDG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNaplaiDG.BackColor = System.Drawing.Color.Brown;
+            this.btnNaplaiDG.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNaplaiDG.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNaplaiDG.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNaplaiDG.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNaplaiDG.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNaplaiDG.FillColor = System.Drawing.Color.Brown;
+            this.btnNaplaiDG.FillColor2 = System.Drawing.Color.Brown;
+            this.btnNaplaiDG.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNaplaiDG.ForeColor = System.Drawing.Color.White;
+            this.btnNaplaiDG.HoverState.FillColor = System.Drawing.Color.DarkRed;
+            this.btnNaplaiDG.HoverState.FillColor2 = System.Drawing.Color.DarkRed;
+            this.btnNaplaiDG.Location = new System.Drawing.Point(440, 182);
+            this.btnNaplaiDG.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNaplaiDG.Name = "btnNaplaiDG";
+            this.btnNaplaiDG.ShadowDecoration.Color = System.Drawing.Color.RosyBrown;
+            this.btnNaplaiDG.ShadowDecoration.Enabled = true;
+            this.btnNaplaiDG.Size = new System.Drawing.Size(377, 50);
+            this.btnNaplaiDG.TabIndex = 72;
+            this.btnNaplaiDG.Text = "Nạp lại";
+            // 
+            // label6DG
+            // 
+            this.label6DG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6DG.AutoSize = true;
+            this.label6DG.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6DG.Location = new System.Drawing.Point(377, 97);
+            this.label6DG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6DG.Name = "label6DG";
+            this.label6DG.Size = new System.Drawing.Size(55, 32);
+            this.label6DG.TabIndex = 78;
+            this.label6DG.Text = "=";
+            this.label6DG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // splitContainer2
             // 
@@ -327,6 +328,162 @@ namespace Nhom3_QLTV
             this.splitContainer2.Size = new System.Drawing.Size(1736, 358);
             this.splitContainer2.SplitterDistance = 925;
             this.splitContainer2.TabIndex = 26;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox4, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox3, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblNghe, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lblNgaycap, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblTenDG, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblSothe, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 2);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(925, 358);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textBox3.Location = new System.Drawing.Point(282, 163);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(1250, 50);
+            this.textBox3.TabIndex = 97;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(282, 278);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(1250, 53);
+            this.comboBox4.TabIndex = 94;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(282, 219);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(1250, 53);
+            this.comboBox3.TabIndex = 92;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(4, 275);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(271, 83);
+            this.label4.TabIndex = 81;
+            this.label4.Text = "Tác giả";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(271, 45);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Thông tin chi tiết";
+            // 
+            // lblNghe
+            // 
+            this.lblNghe.AutoSize = true;
+            this.lblNghe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblNghe.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNghe.Location = new System.Drawing.Point(4, 216);
+            this.lblNghe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNghe.Name = "lblNghe";
+            this.lblNghe.Size = new System.Drawing.Size(271, 59);
+            this.lblNghe.TabIndex = 36;
+            this.lblNghe.Text = "Loại tài liệu";
+            // 
+            // lblNgaycap
+            // 
+            this.lblNgaycap.AutoSize = true;
+            this.lblNgaycap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblNgaycap.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgaycap.Location = new System.Drawing.Point(4, 160);
+            this.lblNgaycap.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNgaycap.Name = "lblNgaycap";
+            this.lblNgaycap.Size = new System.Drawing.Size(271, 56);
+            this.lblNgaycap.TabIndex = 35;
+            this.lblNgaycap.Text = "Tên tài liệu";
+            // 
+            // lblTenDG
+            // 
+            this.lblTenDG.AutoSize = true;
+            this.lblTenDG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTenDG.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenDG.Location = new System.Drawing.Point(4, 104);
+            this.lblTenDG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTenDG.Name = "lblTenDG";
+            this.lblTenDG.Size = new System.Drawing.Size(271, 56);
+            this.lblTenDG.TabIndex = 34;
+            this.lblTenDG.Text = "Mã tài liệu";
+            // 
+            // lblSothe
+            // 
+            this.lblSothe.AutoSize = true;
+            this.lblSothe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblSothe.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSothe.Location = new System.Drawing.Point(4, 45);
+            this.lblSothe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSothe.Name = "lblSothe";
+            this.lblSothe.Size = new System.Drawing.Size(271, 59);
+            this.lblSothe.TabIndex = 33;
+            this.lblSothe.Text = "Mã danh mục";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(282, 48);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(1250, 53);
+            this.comboBox1.TabIndex = 88;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textBox1.Location = new System.Drawing.Point(282, 107);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(1250, 50);
+            this.textBox1.TabIndex = 95;
             // 
             // guna2Panel3
             // 
@@ -603,162 +760,7 @@ namespace Nhom3_QLTV
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(1736, 626);
             this.dataGridView1.TabIndex = 83;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(282, 48);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(1250, 53);
-            this.comboBox1.TabIndex = 88;
-            // 
-            // lblSothe
-            // 
-            this.lblSothe.AutoSize = true;
-            this.lblSothe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSothe.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSothe.Location = new System.Drawing.Point(4, 45);
-            this.lblSothe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblSothe.Name = "lblSothe";
-            this.lblSothe.Size = new System.Drawing.Size(271, 59);
-            this.lblSothe.TabIndex = 33;
-            this.lblSothe.Text = "Mã danh mục";
-            // 
-            // lblTenDG
-            // 
-            this.lblTenDG.AutoSize = true;
-            this.lblTenDG.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTenDG.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenDG.Location = new System.Drawing.Point(4, 104);
-            this.lblTenDG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTenDG.Name = "lblTenDG";
-            this.lblTenDG.Size = new System.Drawing.Size(271, 56);
-            this.lblTenDG.TabIndex = 34;
-            this.lblTenDG.Text = "Mã tài liệu";
-            // 
-            // lblNgaycap
-            // 
-            this.lblNgaycap.AutoSize = true;
-            this.lblNgaycap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNgaycap.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgaycap.Location = new System.Drawing.Point(4, 160);
-            this.lblNgaycap.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNgaycap.Name = "lblNgaycap";
-            this.lblNgaycap.Size = new System.Drawing.Size(271, 56);
-            this.lblNgaycap.TabIndex = 35;
-            this.lblNgaycap.Text = "Tên tài liệu";
-            // 
-            // lblNghe
-            // 
-            this.lblNghe.AutoSize = true;
-            this.lblNghe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNghe.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNghe.Location = new System.Drawing.Point(4, 216);
-            this.lblNghe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNghe.Name = "lblNghe";
-            this.lblNghe.Size = new System.Drawing.Size(271, 59);
-            this.lblNghe.TabIndex = 36;
-            this.lblNghe.Text = "Loại tài liệu";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(271, 45);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "Thông tin chi tiết";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(4, 275);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(271, 83);
-            this.label4.TabIndex = 81;
-            this.label4.Text = "Tác giả";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(282, 219);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(1250, 53);
-            this.comboBox3.TabIndex = 92;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox4, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox3, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblNghe, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lblNgaycap, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblTenDG, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblSothe, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 2);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(925, 358);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(282, 278);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(1250, 53);
-            this.comboBox4.TabIndex = 94;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textBox1.Location = new System.Drawing.Point(282, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1250, 50);
-            this.textBox1.TabIndex = 95;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textBox3.Location = new System.Drawing.Point(282, 163);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(1250, 50);
-            this.textBox3.TabIndex = 97;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // frmDMSach
             // 
@@ -785,6 +787,8 @@ namespace Nhom3_QLTV
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingnavDG)).EndInit();
@@ -792,8 +796,6 @@ namespace Nhom3_QLTV
             this.bindingnavDG.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

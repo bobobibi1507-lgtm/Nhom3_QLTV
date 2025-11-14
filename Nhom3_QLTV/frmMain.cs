@@ -62,7 +62,7 @@ namespace Nhom3_QLTV
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            status2.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            status2.Text = System.DateTime.Now.ToString();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -115,6 +115,8 @@ namespace Nhom3_QLTV
         {
             status1.Text = "Xem hoặc thêm mới tác giả!";
             frmDMTG frmDMTG = new frmDMTG();
+            frmDMTG.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width);
+            frmDMTG.Height = (int)(Screen.PrimaryScreen.WorkingArea.Height * 0.85);
             frmDMTG.ShowDialog();
             status1.Text = "Ready!";
         }
@@ -123,6 +125,8 @@ namespace Nhom3_QLTV
         {
             status1.Text = "Xem hoặc thêm mới tác giả!";
             frmDMTG frmDMTG = new frmDMTG();
+            frmDMTG.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width);
+            frmDMTG.Height = (int)(Screen.PrimaryScreen.WorkingArea.Height * 0.85);
             frmDMTG.ShowDialog();
             status1.Text = "Ready!";
         }
@@ -145,6 +149,11 @@ namespace Nhom3_QLTV
             frmDMSach.Height = (int)(Screen.PrimaryScreen.WorkingArea.Height * 0.85);
             frmDMSach.ShowDialog();
             status1.Text = "Ready!";
+        }
+
+        private void status2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

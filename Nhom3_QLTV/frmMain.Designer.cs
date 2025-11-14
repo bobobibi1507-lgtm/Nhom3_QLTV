@@ -52,9 +52,7 @@
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.đóngChươngTrìnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.độcGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -73,13 +71,20 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.status1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.status2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đóngChươngTrìnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.guna2ContextMenuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -101,7 +106,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.menuStrip1.Size = new System.Drawing.Size(2879, 78);
+            this.menuStrip1.Size = new System.Drawing.Size(1562, 78);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -142,7 +147,7 @@
             this.danhMụcToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.danhMụcToolStripMenuItem1.ForeColor = System.Drawing.Color.DarkRed;
             this.danhMụcToolStripMenuItem1.Name = "danhMụcToolStripMenuItem1";
-            this.danhMụcToolStripMenuItem1.Size = new System.Drawing.Size(300, 58);
+            this.danhMụcToolStripMenuItem1.Size = new System.Drawing.Size(281, 58);
             this.danhMụcToolStripMenuItem1.Text = "Danh mục";
             // 
             // độcGiảToolStripMenuItem1
@@ -181,7 +186,7 @@
             this.tàiLiệuToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.tàiLiệuToolStripMenuItem1.ForeColor = System.Drawing.Color.DarkRed;
             this.tàiLiệuToolStripMenuItem1.Name = "tàiLiệuToolStripMenuItem1";
-            this.tàiLiệuToolStripMenuItem1.Size = new System.Drawing.Size(359, 60);
+            this.tàiLiệuToolStripMenuItem1.Size = new System.Drawing.Size(290, 60);
             this.tàiLiệuToolStripMenuItem1.Text = "Tài liệu";
             this.tàiLiệuToolStripMenuItem1.Click += new System.EventHandler(this.tàiLiệuToolStripMenuItem1_Click);
             // 
@@ -301,28 +306,10 @@
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(226, 58);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             // 
-            // đăngXuấtToolStripMenuItem
-            // 
-            this.đăngXuấtToolStripMenuItem.ForeColor = System.Drawing.Color.DarkRed;
-            this.đăngXuấtToolStripMenuItem.Image = global::Nhom3_QLTV.Properties.Resources.login___1_;
-            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(377, 62);
-            this.đăngXuấtToolStripMenuItem.Text = "Đăng nhập";
-            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
-            // 
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
             this.toolStripSeparator11.Size = new System.Drawing.Size(374, 6);
-            // 
-            // đóngChươngTrìnhToolStripMenuItem
-            // 
-            this.đóngChươngTrìnhToolStripMenuItem.ForeColor = System.Drawing.Color.DarkRed;
-            this.đóngChươngTrìnhToolStripMenuItem.Image = global::Nhom3_QLTV.Properties.Resources.logout;
-            this.đóngChươngTrìnhToolStripMenuItem.Name = "đóngChươngTrìnhToolStripMenuItem";
-            this.đóngChươngTrìnhToolStripMenuItem.Size = new System.Drawing.Size(377, 62);
-            this.đóngChươngTrìnhToolStripMenuItem.Text = "Đăng xuất";
-            this.đóngChươngTrìnhToolStripMenuItem.Click += new System.EventHandler(this.đóngChươngTrìnhToolStripMenuItem_Click);
             // 
             // danhMụcToolStripMenuItem
             // 
@@ -342,39 +329,41 @@
             // 
             this.độcGiảToolStripMenuItem.ForeColor = System.Drawing.Color.DarkRed;
             this.độcGiảToolStripMenuItem.Name = "độcGiảToolStripMenuItem";
-            this.độcGiảToolStripMenuItem.Size = new System.Drawing.Size(359, 62);
+            this.độcGiảToolStripMenuItem.Size = new System.Drawing.Size(311, 62);
             this.độcGiảToolStripMenuItem.Text = "Độc giả";
             this.độcGiảToolStripMenuItem.Click += new System.EventHandler(this.độcGiảToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(356, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(308, 6);
             // 
             // tácGiảToolStripMenuItem
             // 
             this.tácGiảToolStripMenuItem.ForeColor = System.Drawing.Color.DarkRed;
             this.tácGiảToolStripMenuItem.Name = "tácGiảToolStripMenuItem";
-            this.tácGiảToolStripMenuItem.Size = new System.Drawing.Size(359, 62);
+            this.tácGiảToolStripMenuItem.Size = new System.Drawing.Size(311, 62);
             this.tácGiảToolStripMenuItem.Text = "Tác giả";
             this.tácGiảToolStripMenuItem.Click += new System.EventHandler(this.tácGiảToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(356, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(308, 6);
             // 
             // tàiLiệuToolStripMenuItem
             // 
             this.tàiLiệuToolStripMenuItem.ForeColor = System.Drawing.Color.DarkRed;
             this.tàiLiệuToolStripMenuItem.Name = "tàiLiệuToolStripMenuItem";
-            this.tàiLiệuToolStripMenuItem.Size = new System.Drawing.Size(359, 62);
+            this.tàiLiệuToolStripMenuItem.Size = new System.Drawing.Size(311, 62);
             this.tàiLiệuToolStripMenuItem.Text = "Tài liệu";
             this.tàiLiệuToolStripMenuItem.Click += new System.EventHandler(this.tàiLiệuToolStripMenuItem_Click);
             // 
             // mượnTrảToolStripMenuItem
             // 
             this.mượnTrảToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.toolStripSeparator15,
             this.quảnLýMượnTrảToolStripMenuItem,
             this.toolStripSeparator3,
             this.bạnĐọcTạiChỗToolStripMenuItem});
@@ -388,8 +377,8 @@
             // 
             this.quảnLýMượnTrảToolStripMenuItem.ForeColor = System.Drawing.Color.DarkRed;
             this.quảnLýMượnTrảToolStripMenuItem.Name = "quảnLýMượnTrảToolStripMenuItem";
-            this.quảnLýMượnTrảToolStripMenuItem.Size = new System.Drawing.Size(508, 62);
-            this.quảnLýMượnTrảToolStripMenuItem.Text = "Quản lý mượn trả";
+            this.quảnLýMượnTrảToolStripMenuItem.Size = new System.Drawing.Size(465, 62);
+            this.quảnLýMượnTrảToolStripMenuItem.Text = "Trả sách";
             // 
             // toolStripSeparator3
             // 
@@ -451,7 +440,7 @@
             this.guna2ControlBox2.FillColor = System.Drawing.Color.DarkRed;
             this.guna2ControlBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox2.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(2749, 0);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1432, 0);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(62, 64);
             this.guna2ControlBox2.TabIndex = 1;
@@ -464,7 +453,7 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.DarkRed;
             this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(2817, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1500, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(62, 61);
             this.guna2ControlBox1.TabIndex = 0;
@@ -480,34 +469,14 @@
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 78);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(2879, 46);
+            this.toolStrip1.Size = new System.Drawing.Size(1562, 46);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::Nhom3_QLTV.Properties.Resources.login___1_;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(46, 40);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripSeparator14
             // 
             this.toolStripSeparator14.Name = "toolStripSeparator14";
-            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 46);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::Nhom3_QLTV.Properties.Resources.logout;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(46, 40);
-            this.toolStripButton2.Text = "toolStripButton2";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 50);
             // 
             // statusStrip1
             // 
@@ -515,10 +484,13 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.status1,
-            this.status2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 872);
+            this.status2,
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2,
+            this.toolStripStatusLabel3});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 679);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(2879, 42);
+            this.statusStrip1.Size = new System.Drawing.Size(1562, 42);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
@@ -527,7 +499,7 @@
             // 
             this.status1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.status1.Name = "status1";
-            this.status1.Size = new System.Drawing.Size(1318, 32);
+            this.status1.Size = new System.Drawing.Size(1386, 32);
             this.status1.Spring = true;
             this.status1.Text = "Ready!";
             this.status1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -539,17 +511,86 @@
             this.status2.Name = "status2";
             this.status2.Size = new System.Drawing.Size(67, 32);
             this.status2.Text = "Time";
+            this.status2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.status2.Click += new System.EventHandler(this.status2_Click);
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 32);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::Nhom3_QLTV.Properties.Resources.login___1_;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(46, 44);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::Nhom3_QLTV.Properties.Resources.logout;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(46, 44);
+            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // đăngXuấtToolStripMenuItem
+            // 
+            this.đăngXuấtToolStripMenuItem.ForeColor = System.Drawing.Color.DarkRed;
+            this.đăngXuấtToolStripMenuItem.Image = global::Nhom3_QLTV.Properties.Resources.login___1_;
+            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(377, 62);
+            this.đăngXuấtToolStripMenuItem.Text = "Đăng nhập";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
+            // 
+            // đóngChươngTrìnhToolStripMenuItem
+            // 
+            this.đóngChươngTrìnhToolStripMenuItem.ForeColor = System.Drawing.Color.DarkRed;
+            this.đóngChươngTrìnhToolStripMenuItem.Image = global::Nhom3_QLTV.Properties.Resources.logout;
+            this.đóngChươngTrìnhToolStripMenuItem.Name = "đóngChươngTrìnhToolStripMenuItem";
+            this.đóngChươngTrìnhToolStripMenuItem.Size = new System.Drawing.Size(377, 62);
+            this.đóngChươngTrìnhToolStripMenuItem.Text = "Đăng xuất";
+            this.đóngChươngTrìnhToolStripMenuItem.Click += new System.EventHandler(this.đóngChươngTrìnhToolStripMenuItem_Click);
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(0, 32);
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(27, 32);
+            this.toolStripStatusLabel3.Text = "0";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.ForeColor = System.Drawing.Color.DarkRed;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(465, 62);
+            this.toolStripMenuItem2.Text = "Mượn sách";
+            // 
+            // toolStripSeparator15
+            // 
+            this.toolStripSeparator15.Name = "toolStripSeparator15";
+            this.toolStripSeparator15.Size = new System.Drawing.Size(462, 6);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(2879, 914);
+            this.ClientSize = new System.Drawing.Size(1562, 721);
             this.ContextMenuStrip = this.guna2ContextMenuStrip1;
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
@@ -560,6 +601,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
@@ -628,5 +670,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator15;
     }
 }
