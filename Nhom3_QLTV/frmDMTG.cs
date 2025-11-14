@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Nhom3_QLTV
 {
-    public partial class frmDMDG : Form
+    public partial class frmDMTG : Form
     {
-        public frmDMDG()
+        public frmDMTG()
         {
             InitializeComponent();
         }
 
-        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
+        private void guna2ControlBox1TG_Click(object sender, EventArgs e)
         {
 
         }
