@@ -92,6 +92,12 @@
     <Compile Include="frmDMSach.Designer.cs">
       <DependentUpon>frmDMSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDMTailieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDMTailieu.Designer.cs">
+      <DependentUpon>frmDMTailieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDMTG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDMSach.resx">
       <DependentUpon>frmDMSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDMTailieu.resx">
+      <DependentUpon>frmDMTailieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDMTG.resx">
       <DependentUpon>frmDMTG.cs</DependentUpon>

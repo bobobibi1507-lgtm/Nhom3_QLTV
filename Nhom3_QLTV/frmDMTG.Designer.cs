@@ -617,6 +617,7 @@
             // 
             this.toolStripTextBox1.AccessibleName = "Position";
             this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(65, 39);
             this.toolStripTextBox1.Text = "0";
@@ -672,7 +673,7 @@
             this.btnLuuDG.ShadowDecoration.Enabled = true;
             this.btnLuuDG.Size = new System.Drawing.Size(250, 50);
             this.btnLuuDG.TabIndex = 24;
-            this.btnLuuDG.Text = "Lưu";
+            this.btnLuuDG.Text = "Xuất";
             // 
             // btnDongDG
             // 

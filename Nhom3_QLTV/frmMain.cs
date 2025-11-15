@@ -134,7 +134,7 @@ namespace Nhom3_QLTV
         private void tàiLiệuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             status1.Text = "Xem hoặc thêm mới tài liệu!";
-            frmDMSach frmDMSach = new frmDMSach();
+            frmDMTailieu frmDMSach = new frmDMTailieu();
             frmDMSach.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width);
             frmDMSach.Height = (int)(Screen.PrimaryScreen.WorkingArea.Height * 0.85);
             frmDMSach.ShowDialog();
@@ -144,7 +144,7 @@ namespace Nhom3_QLTV
         private void tàiLiệuToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             status1.Text = "Xem hoặc thêm mới tài liệu!";
-            frmDMSach frmDMSach = new frmDMSach();
+            frmDMTailieu frmDMSach = new frmDMTailieu();
             frmDMSach.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width);
             frmDMSach.Height = (int)(Screen.PrimaryScreen.WorkingArea.Height * 0.85);
             frmDMSach.ShowDialog();
