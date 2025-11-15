@@ -16,5 +16,10 @@ namespace Nhom3_QLTV
         {
             InitializeComponent();
         }
+
+        private void btnDongDG_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

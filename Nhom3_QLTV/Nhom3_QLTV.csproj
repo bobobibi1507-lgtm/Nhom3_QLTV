@@ -136,6 +136,11 @@
     <Compile Include="frmUserAccount.Designer.cs">
       <DependentUpon>frmUserAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="qlbhDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qlbhDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DMPhieuMuon.resx">
       <DependentUpon>DMPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +203,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="qlbhDataSet.xsc">
+      <DependentUpon>qlbhDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="qlbhDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>qlbhDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qlbhDataSet.xss">
+      <DependentUpon>qlbhDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\bgBK.png" />
   </ItemGroup>
   <ItemGroup>
@@ -256,6 +272,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wall-clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reader %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stack-of-books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\writer %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\writer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

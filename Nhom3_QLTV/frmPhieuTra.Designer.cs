@@ -439,6 +439,7 @@
             this.btnDongDG.Size = new System.Drawing.Size(250, 50);
             this.btnDongDG.TabIndex = 22;
             this.btnDongDG.Text = "Đóng";
+            this.btnDongDG.Click += new System.EventHandler(this.btnDongDG_Click);
             // 
             // guna2Panel2
             // 
