@@ -59,6 +59,8 @@
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1TL.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -312,7 +314,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.bindingnavDG.Location = new System.Drawing.Point(594, 32);
+            this.bindingnavDG.Location = new System.Drawing.Point(594, 22);
             this.bindingnavDG.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingnavDG.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingnavDG.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -320,7 +322,7 @@
             this.bindingnavDG.Name = "bindingnavDG";
             this.bindingnavDG.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.bindingnavDG.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingnavDG.Size = new System.Drawing.Size(364, 40);
+            this.bindingnavDG.Size = new System.Drawing.Size(364, 50);
             this.bindingnavDG.TabIndex = 25;
             this.bindingnavDG.Text = "bindingNaviDG";
             // 
@@ -444,6 +446,8 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.guna2Panel2.Controls.Add(this.label1);
+            this.guna2Panel2.Controls.Add(this.guna2DateTimePicker1);
             this.guna2Panel2.Controls.Add(this.guna2GradientButton3);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 324);
@@ -492,6 +496,34 @@
             this.guna2DragControl1.TargetControl = this.guna2GradientPanel1TL;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
+            // guna2DateTimePicker1
+            // 
+            this.guna2DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.guna2DateTimePicker1.Checked = true;
+            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
+            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(258, 12);
+            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(334, 51);
+            this.guna2DateTimePicker1.TabIndex = 75;
+            this.guna2DateTimePicker1.Value = new System.DateTime(2025, 11, 15, 15, 19, 20, 54);
+            this.guna2DateTimePicker1.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(-4, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(222, 45);
+            this.label1.TabIndex = 76;
+            this.label1.Text = "Ngày thực trả";
+            // 
             // frmPhieuTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -516,6 +548,7 @@
             this.bindingnavDG.ResumeLayout(false);
             this.bindingnavDG.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -553,5 +586,7 @@
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
     }
 }

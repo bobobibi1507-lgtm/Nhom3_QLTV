@@ -21,5 +21,10 @@ namespace Nhom3_QLTV
         {
             this.Close();
         }
+
+        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

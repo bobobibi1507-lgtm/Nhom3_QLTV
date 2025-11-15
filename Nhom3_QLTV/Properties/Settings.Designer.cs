@@ -33,5 +33,16 @@ namespace Nhom3_QLTV.Properties {
                 return ((string)(this["qlbhConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-8EI4770R;Initial Catalog=CSDL_TV;Integrated Security=True;Trus" +
+            "tServerCertificate=True")]
+        public string CSDL_TVConnectionString {
+            get {
+                return ((string)(this["CSDL_TVConnectionString"]));
+            }
+        }
     }
 }

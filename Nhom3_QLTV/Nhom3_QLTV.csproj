@@ -62,6 +62,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CSDL_TVDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CSDL_TVDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DMPhieuMuon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +193,17 @@
     <EmbeddedResource Include="frmlogin.resx">
       <DependentUpon>frmlogin.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CSDL_TVDataSet.xsc">
+      <DependentUpon>CSDL_TVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CSDL_TVDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CSDL_TVDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CSDL_TVDataSet.xss">
+      <DependentUpon>CSDL_TVDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
