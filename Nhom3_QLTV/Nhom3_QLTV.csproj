@@ -110,6 +110,12 @@
     <Compile Include="frmNhapPM.Designer.cs">
       <DependentUpon>frmNhapPM.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPhieuTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhieuTra.Designer.cs">
+      <DependentUpon>frmPhieuTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmlogin.cs">
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhapPM.resx">
       <DependentUpon>frmNhapPM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuTra.resx">
+      <DependentUpon>frmPhieuTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserAccount.resx">
       <DependentUpon>frmUserAccount.cs</DependentUpon>
