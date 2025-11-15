@@ -711,7 +711,7 @@
             this.toolStripButton3,
             this.toolStripButton4,
             this.toolStripSeparator3});
-            this.bindingNavigator1.Location = new System.Drawing.Point(1482, 18);
+            this.bindingNavigator1.Location = new System.Drawing.Point(1482, 8);
             this.bindingNavigator1.MoveFirstItem = this.toolStripButton1;
             this.bindingNavigator1.MoveLastItem = this.toolStripButton4;
             this.bindingNavigator1.MoveNextItem = this.toolStripButton3;
@@ -719,7 +719,7 @@
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.bindingNavigator1.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigator1.Size = new System.Drawing.Size(364, 40);
+            this.bindingNavigator1.Size = new System.Drawing.Size(364, 50);
             this.bindingNavigator1.TabIndex = 19;
             this.bindingNavigator1.Text = "bindingNaviDG";
             // 
@@ -773,7 +773,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.bindingnavDG.Location = new System.Drawing.Point(319, 18);
+            this.bindingnavDG.Location = new System.Drawing.Point(319, 8);
             this.bindingnavDG.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingnavDG.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingnavDG.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -781,7 +781,7 @@
             this.bindingnavDG.Name = "bindingnavDG";
             this.bindingnavDG.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.bindingnavDG.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingnavDG.Size = new System.Drawing.Size(364, 40);
+            this.bindingnavDG.Size = new System.Drawing.Size(364, 50);
             this.bindingnavDG.TabIndex = 18;
             this.bindingnavDG.Text = "bindingNaviDG";
             // 
