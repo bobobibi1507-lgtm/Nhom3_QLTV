@@ -186,7 +186,7 @@
             this.textBox4.Location = new System.Drawing.Point(282, 48);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(1250, 50);
-            this.textBox4.TabIndex = 99;
+            this.textBox4.TabIndex = 1;
             // 
             // textBox3
             // 
@@ -195,7 +195,7 @@
             this.textBox3.Location = new System.Drawing.Point(282, 160);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(1250, 50);
-            this.textBox3.TabIndex = 97;
+            this.textBox3.TabIndex = 3;
             // 
             // label1
             // 
@@ -252,7 +252,7 @@
             this.textBox1.Location = new System.Drawing.Point(282, 104);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(1250, 50);
-            this.textBox1.TabIndex = 95;
+            this.textBox1.TabIndex = 2;
             // 
             // tableLayoutPanel2
             // 

@@ -58,6 +58,7 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2GradientPanel1TL.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -104,7 +105,7 @@
             this.lblDMS.Location = new System.Drawing.Point(0, 0);
             this.lblDMS.Margin = new System.Windows.Forms.Padding(4);
             this.lblDMS.Name = "lblDMS";
-            this.lblDMS.Size = new System.Drawing.Size(160, 52);
+            this.lblDMS.Size = new System.Drawing.Size(1482, 52);
             this.lblDMS.TabIndex = 0;
             this.lblDMS.Text = "Phiếu trả";
             // 
@@ -484,6 +485,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(1482, 674);
             this.dataGridView1.TabIndex = 88;
             // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.guna2GradientPanel1TL;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
             // frmPhieuTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -496,6 +503,7 @@
             this.Controls.Add(this.guna2GradientPanel1TL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPhieuTra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPhieuTra";
             this.guna2GradientPanel1TL.ResumeLayout(false);
             this.guna2GradientPanel1TL.PerformLayout();
@@ -543,5 +551,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

@@ -209,7 +209,7 @@
             this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.Size = new System.Drawing.Size(1248, 24);
-            this.guna2ComboBox1.TabIndex = 79;
+            this.guna2ComboBox1.TabIndex = 4;
             // 
             // label1
             // 
@@ -286,7 +286,7 @@
             this.dtpNgaycap.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgaycap.Name = "dtpNgaycap";
             this.dtpNgaycap.Size = new System.Drawing.Size(1248, 45);
-            this.dtpNgaycap.TabIndex = 41;
+            this.dtpNgaycap.TabIndex = 3;
             this.dtpNgaycap.Value = new System.DateTime(2025, 10, 23, 11, 9, 34, 224);
             // 
             // guna2TextBox1
@@ -307,7 +307,7 @@
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.Size = new System.Drawing.Size(1246, 46);
-            this.guna2TextBox1.TabIndex = 45;
+            this.guna2TextBox1.TabIndex = 1;
             // 
             // guna2TextBox2
             // 
@@ -327,7 +327,7 @@
             this.guna2TextBox2.PlaceholderText = "";
             this.guna2TextBox2.SelectedText = "";
             this.guna2TextBox2.Size = new System.Drawing.Size(1246, 46);
-            this.guna2TextBox2.TabIndex = 46;
+            this.guna2TextBox2.TabIndex = 2;
             // 
             // tableLayoutPanel2
             // 
