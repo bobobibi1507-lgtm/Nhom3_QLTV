@@ -21,5 +21,10 @@ namespace Nhom3_QLTV
         {
 
         }
+
+        private void lblNgaycap_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
