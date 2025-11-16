@@ -509,7 +509,7 @@
             this.toolStripSeparator14});
             this.toolStrip1.Location = new System.Drawing.Point(0, 78);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1562, 46);
+            this.toolStrip1.Size = new System.Drawing.Size(1562, 50);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -519,8 +519,8 @@
             this.toolStripButton1.Image = global::Nhom3_QLTV.Properties.Resources.login___1_;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(46, 40);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(46, 44);
+            this.toolStripButton1.Text = "Đăng nhập";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
@@ -529,8 +529,8 @@
             this.toolStripButton2.Image = global::Nhom3_QLTV.Properties.Resources.logout;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(46, 40);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(46, 44);
+            this.toolStripButton2.Text = "Đăng xuất";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripSeparator16
@@ -544,8 +544,8 @@
             this.toolStripButton3.Image = global::Nhom3_QLTV.Properties.Resources.stack_of_books;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(46, 40);
-            this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(46, 44);
+            this.toolStripButton3.Text = "Tài liệu";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton4
@@ -554,8 +554,8 @@
             this.toolStripButton4.Image = global::Nhom3_QLTV.Properties.Resources.reader;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(46, 40);
-            this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(46, 44);
+            this.toolStripButton4.Text = "Độc giả";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripButton5
@@ -564,8 +564,9 @@
             this.toolStripButton5.Image = global::Nhom3_QLTV.Properties.Resources.pen;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(46, 40);
-            this.toolStripButton5.Text = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(46, 44);
+            this.toolStripButton5.Text = "Tác giả";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripSeparator14
             // 

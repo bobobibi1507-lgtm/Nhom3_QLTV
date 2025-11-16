@@ -215,5 +215,15 @@ namespace Nhom3_QLTV
             frmDMSach.ShowDialog();
             status1.Text = "Ready!";
         }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            status1.Text = "Xem hoặc thêm mới tác giả!";
+            frmDMTG frmDMTG = new frmDMTG();
+            frmDMTG.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width);
+            frmDMTG.Height = (int)(Screen.PrimaryScreen.WorkingArea.Height * 0.85);
+            frmDMTG.ShowDialog();
+            status1.Text = "Ready!";
+        }
     }
 }
