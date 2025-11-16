@@ -357,35 +357,35 @@
             this.độcGiảToolStripMenuItem.ForeColor = System.Drawing.Color.DarkRed;
             this.độcGiảToolStripMenuItem.Image = global::Nhom3_QLTV.Properties.Resources.reader;
             this.độcGiảToolStripMenuItem.Name = "độcGiảToolStripMenuItem";
-            this.độcGiảToolStripMenuItem.Size = new System.Drawing.Size(363, 62);
+            this.độcGiảToolStripMenuItem.Size = new System.Drawing.Size(311, 62);
             this.độcGiảToolStripMenuItem.Text = "Độc giả";
             this.độcGiảToolStripMenuItem.Click += new System.EventHandler(this.độcGiảToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(360, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(308, 6);
             // 
             // tácGiảToolStripMenuItem
             // 
             this.tácGiảToolStripMenuItem.ForeColor = System.Drawing.Color.DarkRed;
             this.tácGiảToolStripMenuItem.Image = global::Nhom3_QLTV.Properties.Resources.pen;
             this.tácGiảToolStripMenuItem.Name = "tácGiảToolStripMenuItem";
-            this.tácGiảToolStripMenuItem.Size = new System.Drawing.Size(363, 62);
+            this.tácGiảToolStripMenuItem.Size = new System.Drawing.Size(311, 62);
             this.tácGiảToolStripMenuItem.Text = "Tác giả";
             this.tácGiảToolStripMenuItem.Click += new System.EventHandler(this.tácGiảToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(360, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(308, 6);
             // 
             // tàiLiệuToolStripMenuItem
             // 
             this.tàiLiệuToolStripMenuItem.ForeColor = System.Drawing.Color.DarkRed;
             this.tàiLiệuToolStripMenuItem.Image = global::Nhom3_QLTV.Properties.Resources.stack_of_books;
             this.tàiLiệuToolStripMenuItem.Name = "tàiLiệuToolStripMenuItem";
-            this.tàiLiệuToolStripMenuItem.Size = new System.Drawing.Size(363, 62);
+            this.tàiLiệuToolStripMenuItem.Size = new System.Drawing.Size(311, 62);
             this.tàiLiệuToolStripMenuItem.Text = "Tài liệu";
             this.tàiLiệuToolStripMenuItem.Click += new System.EventHandler(this.tàiLiệuToolStripMenuItem_Click);
             // 
@@ -546,6 +546,7 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(46, 40);
             this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton4
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraEditors.TableLayout;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +40,7 @@ namespace Nhom3_QLTV
             LoadDM();
             dscomTruong();
             LoadListTG();
+            LoadTrangThai();
 
         }
 
@@ -48,6 +50,7 @@ namespace Nhom3_QLTV
             comTruong.Items.Add("MaDMTL");
             comTruong.Items.Add("TenDMTL");
             comTruong.Items.Add("TenTheLoai");
+            comTruong.Items.Add("TenTG");
 
         }
 
@@ -112,7 +115,7 @@ namespace Nhom3_QLTV
         {
             dtgocCT.Clear();
 
-            sql = "SELECT tl.MaTL, tt.TenTT FROM TaiLieu tl, TrangThai tt WHERE tl.MaDMTL = @MaDMTL and tl.MaTT = tt.MaTT";
+            sql = "SELECT * FROM TaiLieu tl, TrangThai tt WHERE tl.MaDMTL = @MaDMTL and tl.MaTT = tt.MaTT";
             daCT = new SqlDataAdapter(sql, conn);
             daCT.SelectCommand.Parameters.AddWithValue("@MaDMTL", maDM);
 
@@ -135,11 +138,13 @@ namespace Nhom3_QLTV
         }
         private void NapCT_CT()
         {
-                 if (dgvDMTL.CurrentRow != null && dgvDMTL.CurrentRow.Cells["MaDMTL"].Value != null)
+            if (dgvCTTL.CurrentRow == null)
             {
-                txtMaTL.Text ="";
+                txtMaTL.Text = "";
                 cbTrangThai.Text = "";
+                return;
             }
+
             var maTL = dgvCTTL.CurrentRow.Cells["MaTL"].Value;
             var trangThai = dgvCTTL.CurrentRow.Cells["TenTT"].Value;
 
@@ -171,6 +176,19 @@ namespace Nhom3_QLTV
             NapCT_CT();
         }
         
+        private void LoadTrangThai ()
+        {
+            string sql = "select MaTT, TenTT from TrangThai";
+            SqlDataAdapter daTT = new SqlDataAdapter(sql, conn);
+            DataTable dtTT = new DataTable();
+            daTT.Fill(dtTT);
+
+            cbTrangThai.DataSource = dtTT;
+            cbTrangThai.DisplayMember = "TenTT";
+            cbTrangThai.ValueMember = "MaTT";
+            cbTrangThai.SelectedIndex = -1;
+
+        }
         private void LoadTG (string chuoiTG)
         {
            
@@ -267,7 +285,47 @@ namespace Nhom3_QLTV
 
         private void btnAddDM_Click(object sender, EventArgs e)
         {
-            
+            string newMaDM = "DM001";
+            // Tạo mã danh mục tài liệu mới
+            if (dtgocDM.Rows.Count > 0)
+            {
+                // Lấy mã danh mục tài liệu lớn nhất hiện có
+                string lastMaDM = dtgocDM.AsEnumerable()
+                    .Select(row => row.Field<string>("MaDMTL"))
+                    .OrderByDescending(ma => ma)
+                    .FirstOrDefault();
+                // Tăng số cuối cùng lên 1 để tạo mã mới
+                int number = int.Parse(lastMaDM.Substring(2)) + 1;
+                newMaDM = "DM" + number.ToString("D3");
+            }
+            // Thêm danh mục tài liệu mới vào cơ sở dữ liệu
+            string sqlInsert = "INSERT INTO DMTL(MaDMTL, TenDMTL, MaTheLoai) VALUES (@MaDMTL, @TenDMTL, @MaTheLoai)";
+            SqlCommand cmdInsert = new SqlCommand(sqlInsert, conn);
+            cmdInsert.Parameters.AddWithValue("@MaDMTL", newMaDM);
+            cmdInsert.Parameters.AddWithValue("@TenDMTL", ""); // hoặc giá trị mặc định
+            cmdInsert.Parameters.AddWithValue("@MaTheLoai", cbLoaiTL.SelectedValue.ToString());
+            cmdInsert.ExecuteNonQuery();
+
+            // Cập nhật lại DataTable gốc và BindingSource
+            DataRow dataRow = dtgocDM.NewRow();
+            dataRow["MaDMTL"] = newMaDM;
+            dataRow["TenDMTL"] = "";
+            dataRow["MaTheLoai"] = cbLoaiTL.SelectedValue.ToString();
+            dtgocDM.Rows.Add(dataRow);
+
+            dtDM = dtgocDM.Copy();
+            bsDM.DataSource = dtDM;
+            bsDM.Position = bsDM.Find("MaDMTL", newMaDM);
+            // Cập nhật DataGridView và chi tiết
+            dtCT.Clear();
+            bsCT.DataSource = dtCT;
+            dgvCTTL.DataSource = bsCT;
+            // Chuyển đến dòng mới trong DataGridView
+            NapCT_DM();
+            NapCT_CT();
+
+            MessageBox.Show("Nhập thông tin danh mục tài liệu mới, nhấn nút cập nhật và nhập chi tiết tài liệu!");
+            cbMaDM.Focus();
         }
 
         private void btnFilter_Click(object sender, EventArgs e)
@@ -275,16 +333,40 @@ namespace Nhom3_QLTV
             try
             {
                 string trg = comTruong.Text;
-                string gt = ComGT.Text;
+                string gt = ComGT.Text.Trim();
 
-                dtDM = dtgocDM.Clone();
-
-                // Lọc dữ liệu
-                foreach (DataRow row in dtgocDM.Rows)
+                if (string.IsNullOrEmpty(gt))
                 {
-                    if (row[trg].ToString().Contains(gt))
+                    dtDM = dtgocDM.Copy();
+                }
+                else if (trg == "TenTG")
+                {
+                    // Lọc theo tác giả
+                    dtDM = dtgocDM.Clone();
+                    foreach (DataRow row in dtgocDM.Rows)
                     {
-                        dtDM.Rows.Add(row.ItemArray);
+                        string maDMTL = row["MaDMTL"].ToString();
+
+                        sql = @"SELECT COUNT(*) FROM DMTL_TG dtg
+                        INNER JOIN TacGia tg ON dtg.MaTG = tg.MaTG
+                        WHERE dtg.MaDMTL = @MaDMTL AND tg.TenTG LIKE @TenTG";
+                        SqlCommand cmd = new SqlCommand(sql, conn);
+                        cmd.Parameters.AddWithValue("@MaDMTL", maDMTL);
+                        cmd.Parameters.AddWithValue("@TenTG", "%" + gt + "%");
+
+                        int count = (int)cmd.ExecuteScalar();
+                        if (count > 0)
+                            dtDM.Rows.Add(row.ItemArray);
+                    }
+                }
+                else
+                {
+                    // Lọc theo các trường còn lại
+                    dtDM = dtgocDM.Clone();
+                    foreach (DataRow row in dtgocDM.Rows)
+                    {
+                        if (row[trg].ToString().Contains(gt))
+                            dtDM.Rows.Add(row.ItemArray);
                     }
                 }
 
@@ -292,7 +374,6 @@ namespace Nhom3_QLTV
                 dgvDMTL.DataSource = bsDM;
                 NapCT_DM();
                 NapCT_CT();
-            
             }
             catch (Exception ex)
             {
@@ -300,16 +381,36 @@ namespace Nhom3_QLTV
             }
         }
 
+
         private void comTruong_SelectedIndexChanged(object sender, EventArgs e)
         {
-            sql = "SELECT DISTINCT " + comTruong.Text + " FROM DMTL, LoaiTL where DMTL.MaTheLoai=LoaiTL.MaTheLoai";
+            string field = comTruong.Text;
             DataTable com = new DataTable();
+
+            if (field == "TenTG")
+            {
+                // Lấy danh sách tác giả của tất cả DMTL
+                sql = @"SELECT DISTINCT tg.TenTG 
+                FROM TacGia tg
+                INNER JOIN DMTL_TG dtg ON tg.MaTG = dtg.MaTG";
+            }
+            else
+            {
+                // Lấy các trường từ DMTL/LoaiTL
+                sql = $@"SELECT DISTINCT dm.{field} 
+                 FROM DMTL dm
+                 INNER JOIN LoaiTL ltl ON dm.MaTheLoai = ltl.MaTheLoai";
+            }
+
             daDM = new SqlDataAdapter(sql, conn);
             daDM.Fill(com);
+
             ComGT.DataSource = com;
-            ComGT.DisplayMember = comTruong.Text;
-            ComGT.ValueMember = comTruong.Text;
+            ComGT.DisplayMember = field;
+            ComGT.ValueMember = field;
+            ComGT.SelectedIndex = -1;
         }
+
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
@@ -324,6 +425,247 @@ namespace Nhom3_QLTV
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi làm mới dữ liệu: " + ex.Message);
+            }
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAddTL_Click(object sender, EventArgs e)
+        {
+            if(string .IsNullOrWhiteSpace(txtMaTL.Text))
+            {
+                MessageBox.Show("Nhập mã tài liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            string maTLMoi = txtMaTL.Text.Trim();
+            if (dtCT.Rows.Cast<DataRow>().Any(r => r["MaTL"].ToString() == maTLMoi))
+            {
+                MessageBox.Show("Mã tài liệu đã tồn tại trong danh sách chi tiết!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            // kiểm tra trùng trong csdl
+            SqlCommand checkcmd = new SqlCommand("SELECT COUNT(*) FROM TaiLieu WHERE MaTL = @MaTL", conn);
+            checkcmd.Parameters.AddWithValue("@MaTL", maTLMoi);
+            int count = (int)checkcmd.ExecuteScalar();
+            if (count > 0)
+            {
+                MessageBox.Show("Mã tài liệu đã tồn tại trong cơ sở dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+
+            DataRow newrow = dtCT.NewRow();
+            newrow["MaTL"] = txtMaTL.Text;
+            newrow["MaTT"] = cbTrangThai.SelectedValue;
+            newrow["TenTT"] = cbTrangThai.Text;
+            dtCT.Rows.Add(newrow);
+
+            bsCT.DataSource = dtCT;
+            dgvCTTL.DataSource = bsCT;
+
+            txtMaTL.Clear();
+            cbTrangThai.SelectedIndex = -1;
+            txtMaTL.Focus();
+
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string maDMTL = cbMaDM.Text;
+            string tenDMTL = txtTenTL.Text;
+            string maTheLoai = cbLoaiTL.SelectedValue.ToString();
+
+            SqlCommand checkcmd = new SqlCommand("SELECT COUNT(*) FROM DMTL WHERE MaDMTL = @MaDMTL", conn);
+            checkcmd.Parameters.AddWithValue("@MaDMTL", maDMTL);
+            int count = (int)checkcmd.ExecuteScalar();
+
+            if(count == 0)
+            {
+                SqlCommand cmdDM = new SqlCommand("INSERT INTO DMTL (MaDMTL, TenDMTL, MaTheLoai) VALUES (@MaDMTL, @TenDMTL, @MaTheLoai)", conn);
+                cmdDM.Parameters.AddWithValue("@MaDMTL", maDMTL);
+                cmdDM.Parameters.AddWithValue("@TenDMTL", tenDMTL);
+                cmdDM.Parameters.AddWithValue("@MaTheLoai", maTheLoai);
+                cmdDM.ExecuteNonQuery();
+            }
+            else
+            {
+                SqlCommand cmdDM = new SqlCommand("UPDATE DMTL SET TenDMTL = @TenDMTL, MaTheLoai = @MaTheLoai WHERE MaDMTL = @MaDMTL", conn);
+                cmdDM.Parameters.AddWithValue("@MaDMTL", maDMTL);
+                cmdDM.Parameters.AddWithValue("@TenDMTL", tenDMTL);
+                cmdDM.Parameters.AddWithValue("@MaTheLoai", maTheLoai);
+                cmdDM.ExecuteNonQuery();
+            }
+
+            // Cập nhật chi tiết tài liệu
+            foreach(DataRow row in dtCT.Rows)
+            {
+                string maTL = row["MaTL"].ToString();
+                string maTT = row["MaTT"].ToString();
+
+                SqlCommand checkTLcmd = new SqlCommand("SELECT COUNT(*) FROM TaiLieu WHERE MaTL = @MaTL", conn);
+                checkTLcmd.Parameters.AddWithValue("@MaTL", maTL);
+                int tlCount = (int)checkTLcmd.ExecuteScalar();
+
+                if (tlCount == 0)
+                {
+                    SqlCommand cmdTL = new SqlCommand("INSERT INTO TaiLieu (MaTL, MaDMTL, MaTT) VALUES (@MaTL, @MaDMTL, @MaTT)", conn);
+                    cmdTL.Parameters.AddWithValue("@MaTL", maTL);
+                    cmdTL.Parameters.AddWithValue("@MaDMTL", maDMTL);
+                    cmdTL.Parameters.AddWithValue("@MaTT", maTT);
+                    cmdTL.ExecuteNonQuery();
+                }
+                else
+                {
+                    SqlCommand cmdTL = new SqlCommand("UPDATE TaiLieu SET MaDMTL = @MaDMTL, MaTT = @MaTT WHERE MaTL = @MaTL", conn);
+                    cmdTL.Parameters.AddWithValue("@MaTL", maTL);
+                    cmdTL.Parameters.AddWithValue("@MaDMTL", maDMTL);
+                    cmdTL.Parameters.AddWithValue("@MaTT", maTT);
+                    cmdTL.ExecuteNonQuery();
+                }
+                }
+            MessageBox.Show("Cập nhật danh mục tài liệu và chi tiết thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoadDM();
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chỉnh sửa thông tin danh mục tài liệu và chi tiết trong các ô nhập liệu, sau đó nhấn nút Cập nhật để lưu thay đổi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+       private void btnDel_Click(object sender, EventArgs e)
+{
+    try
+    {
+        // ======= ƯU TIÊN XÓA DÒNG ĐANG CHỌN Ở CHI TIẾT (dgvCTTL) =======
+        if (dgvCTTL.CurrentRow != null && dgvCTTL.CurrentRow.Index >= 0)
+        {
+            string maTL = dgvCTTL.CurrentRow.Cells["MaTL"].Value?.ToString();
+            string maDMTL = cbMaDM.Text;
+
+            if (string.IsNullOrEmpty(maTL))
+            {
+                MessageBox.Show("Không tìm thấy mã tài liệu để xóa.", "Lỗi");
+                return;
+            }
+
+            if (MessageBox.Show($"Bạn có chắc muốn xóa tài liệu {maTL} ?",
+                                "Xác nhận",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Warning) == DialogResult.No)
+                return;
+
+            // Xóa trong DB
+            using (var cmd = new SqlCommand("DELETE FROM TaiLieu WHERE MaTL = @MaTL", conn))
+            {
+                cmd.Parameters.AddWithValue("@MaTL", maTL);
+                cmd.ExecuteNonQuery();
+            }
+
+            // Xóa trong DataTable
+            var row = dtCT.Rows.Cast<DataRow>()
+                               .FirstOrDefault(r => r["MaTL"].ToString() == maTL);
+            if (row != null) dtCT.Rows.Remove(row);
+
+            LoadCT(maDMTL);   // cập nhật lại lưới CT
+
+            MessageBox.Show("Đã xóa tài liệu.");
+            return;
+        }
+
+
+        // ======= NẾU KHÔNG CHỌN CHI TIẾT → XÓA DANH MỤC (dgvDMTL) =======
+        if (dgvDMTL.CurrentRow != null && dgvDMTL.CurrentRow.Index >= 0)
+        {
+            string maDMTL = dgvDMTL.CurrentRow.Cells["MaDMTL"].Value?.ToString();
+
+            if (string.IsNullOrEmpty(maDMTL))
+            {
+                MessageBox.Show("Không tìm thấy mã danh mục để xóa.");
+                return;
+            }
+
+            if (MessageBox.Show($"Xóa danh mục {maDMTL} ?",
+                                "Xác nhận",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Warning) == DialogResult.No)
+                return;
+
+            // Xóa liên quan trước (tác giả, tài liệu)
+            using (var tran = conn.BeginTransaction())
+            {
+                try
+                {
+                    using (var cmd1 = new SqlCommand(
+                        "DELETE FROM DMTL_TG WHERE MaDMTL=@MaDMTL", conn, tran))
+                    {
+                        cmd1.Parameters.AddWithValue("@MaDMTL", maDMTL);
+                        cmd1.ExecuteNonQuery();
+                    }
+
+                    using (var cmd2 = new SqlCommand(
+                        "DELETE FROM TaiLieu WHERE MaDMTL=@MaDMTL", conn, tran))
+                    {
+                        cmd2.Parameters.AddWithValue("@MaDMTL", maDMTL);
+                        cmd2.ExecuteNonQuery();
+                    }
+
+                    using (var cmd3 = new SqlCommand(
+                        "DELETE FROM DMTL WHERE MaDMTL=@MaDMTL", conn, tran))
+                    {
+                        cmd3.Parameters.AddWithValue("@MaDMTL", maDMTL);
+                        cmd3.ExecuteNonQuery();
+                    }
+
+                    tran.Commit();
+                }
+                catch
+                {
+                    tran.Rollback();
+                    throw;
+                }
+            }
+
+            LoadDM();
+            MessageBox.Show("Đã xóa danh mục.");
+
+            return;
+        }
+
+
+        // ======= KHÔNG CHỌN DÒNG NÀO =======
+        MessageBox.Show("Hãy chọn dòng cần xóa.");
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show("Lỗi khi xóa: " + ex.Message);
+    }
+}
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chỉnh sửa thông tin danh mục tài liệu và chi tiết trong các ô nhập liệu, sau đó nhấn nút Cập nhật để lưu thay đổi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void cbTrangThai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (dgvCTTL.CurrentRow != null)
+            {
+                string maTL = dgvCTTL.CurrentRow.Cells["MaTL"].Value.ToString();
+
+                DataRow row = dtCT.AsEnumerable()
+                                   .FirstOrDefault(r => r.RowState != DataRowState.Deleted &&
+                                                        r.Field<string>("MaTL") == maTL);
+                if (row != null && cbTrangThai.SelectedValue != null)
+                {
+                    row["MaTT"] = cbTrangThai.SelectedValue;
+                    row["TenTT"] = cbTrangThai.Text;
+                }
             }
         }
 

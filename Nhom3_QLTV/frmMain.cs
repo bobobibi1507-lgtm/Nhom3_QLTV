@@ -198,6 +198,16 @@ namespace Nhom3_QLTV
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
+            status1.Text = "Xem hoặc thêm mới độc giả!";
+            frmDMDG frmDMDG = new frmDMDG();
+            frmDMDG.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width);
+            frmDMDG.Height = (int)(Screen.PrimaryScreen.WorkingArea.Height * 0.85);
+            frmDMDG.ShowDialog();
+            status1.Text = "Ready!";
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
             status1.Text = "Xem hoặc thêm mới tài liệu!";
             frmDMTailieu frmDMSach = new frmDMTailieu();
             frmDMSach.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width);
