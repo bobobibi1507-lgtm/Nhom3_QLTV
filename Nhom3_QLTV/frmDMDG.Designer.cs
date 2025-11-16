@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2DragControl1DG = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2GradientPanel1DG = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -55,11 +58,6 @@
             this.btnNaplaiDG = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label6DG = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.grdDMDG = new System.Windows.Forms.DataGridView();
-            this.SoThe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cSDLTVDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cSDL_TVDataSet = new Nhom3_QLTV.CSDL_TVDataSet();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -84,6 +82,11 @@
             this.docGiaTableAdapter = new Nhom3_QLTV.CSDL_TVDataSetTableAdapters.DocGiaTableAdapter();
             this.docGiaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.docGiaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.grdDMDG = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.SoThe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2GradientPanel1DG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -92,7 +95,6 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdDMDG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cSDLTVDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cSDL_TVDataSet)).BeginInit();
             this.guna2Panel3.SuspendLayout();
@@ -102,6 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.docGiaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.docGiaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.docGiaBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDMDG)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2DragControl1DG
@@ -520,59 +523,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1478, 586);
             this.guna2Panel1.TabIndex = 17;
             // 
-            // grdDMDG
-            // 
-            this.grdDMDG.AllowUserToAddRows = false;
-            this.grdDMDG.AllowUserToDeleteRows = false;
-            this.grdDMDG.AutoGenerateColumns = false;
-            this.grdDMDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdDMDG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SoThe,
-            this.TenDG,
-            this.NgayCap,
-            this.MaCV});
-            this.grdDMDG.DataSource = this.cSDLTVDataSetBindingSource;
-            this.grdDMDG.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdDMDG.Location = new System.Drawing.Point(0, 75);
-            this.grdDMDG.Name = "grdDMDG";
-            this.grdDMDG.RowHeadersWidth = 82;
-            this.grdDMDG.RowTemplate.Height = 33;
-            this.grdDMDG.Size = new System.Drawing.Size(1478, 430);
-            this.grdDMDG.TabIndex = 80;
-            this.grdDMDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDMDG_CellClick);
-            // 
-            // SoThe
-            // 
-            this.SoThe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SoThe.DataPropertyName = "SoThe";
-            this.SoThe.HeaderText = "Số thẻ";
-            this.SoThe.MinimumWidth = 10;
-            this.SoThe.Name = "SoThe";
-            // 
-            // TenDG
-            // 
-            this.TenDG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenDG.DataPropertyName = "TenDG";
-            this.TenDG.HeaderText = "Tên độc giả";
-            this.TenDG.MinimumWidth = 10;
-            this.TenDG.Name = "TenDG";
-            // 
-            // NgayCap
-            // 
-            this.NgayCap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NgayCap.DataPropertyName = "NgayCap";
-            this.NgayCap.HeaderText = "Ngày cấp";
-            this.NgayCap.MinimumWidth = 10;
-            this.NgayCap.Name = "NgayCap";
-            // 
-            // MaCV
-            // 
-            this.MaCV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaCV.DataPropertyName = "MaCV";
-            this.MaCV.HeaderText = "Chức vụ";
-            this.MaCV.MinimumWidth = 10;
-            this.MaCV.Name = "MaCV";
-            // 
             // cSDLTVDataSetBindingSource
             // 
             this.cSDLTVDataSetBindingSource.DataSource = this.cSDL_TVDataSet;
@@ -613,7 +563,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.bindingnavDG.Location = new System.Drawing.Point(592, 32);
+            this.bindingnavDG.Location = new System.Drawing.Point(592, 22);
             this.bindingnavDG.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingnavDG.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingnavDG.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -621,7 +571,7 @@
             this.bindingnavDG.Name = "bindingnavDG";
             this.bindingnavDG.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.bindingnavDG.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingnavDG.Size = new System.Drawing.Size(364, 40);
+            this.bindingnavDG.Size = new System.Drawing.Size(364, 50);
             this.bindingnavDG.TabIndex = 25;
             this.bindingnavDG.Text = "bindingNaviDG";
             // 
@@ -874,6 +824,100 @@
             this.docGiaBindingSource2.DataMember = "DocGia";
             this.docGiaBindingSource2.DataSource = this.cSDL_TVDataSet;
             // 
+            // grdDMDG
+            // 
+            this.grdDMDG.AllowUserToAddRows = false;
+            this.grdDMDG.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.grdDMDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.grdDMDG.AutoGenerateColumns = false;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDMDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.grdDMDG.ColumnHeadersHeight = 35;
+            this.grdDMDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.grdDMDG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SoThe,
+            this.TenDG,
+            this.NgayCap,
+            this.MaCV});
+            this.grdDMDG.DataSource = this.cSDLTVDataSetBindingSource;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MistyRose;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdDMDG.DefaultCellStyle = dataGridViewCellStyle6;
+            this.grdDMDG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdDMDG.GridColor = System.Drawing.Color.Black;
+            this.grdDMDG.Location = new System.Drawing.Point(0, 75);
+            this.grdDMDG.Name = "grdDMDG";
+            this.grdDMDG.RowHeadersVisible = false;
+            this.grdDMDG.RowHeadersWidth = 82;
+            this.grdDMDG.RowTemplate.Height = 33;
+            this.grdDMDG.Size = new System.Drawing.Size(1478, 430);
+            this.grdDMDG.TabIndex = 80;
+            this.grdDMDG.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.grdDMDG.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.grdDMDG.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.grdDMDG.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.grdDMDG.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.grdDMDG.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.grdDMDG.ThemeStyle.GridColor = System.Drawing.Color.Black;
+            this.grdDMDG.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.DarkRed;
+            this.grdDMDG.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.grdDMDG.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grdDMDG.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.grdDMDG.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.grdDMDG.ThemeStyle.HeaderStyle.Height = 35;
+            this.grdDMDG.ThemeStyle.ReadOnly = false;
+            this.grdDMDG.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.grdDMDG.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.grdDMDG.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.grdDMDG.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.grdDMDG.ThemeStyle.RowsStyle.Height = 33;
+            this.grdDMDG.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.MistyRose;
+            this.grdDMDG.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // SoThe
+            // 
+            this.SoThe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SoThe.DataPropertyName = "SoThe";
+            this.SoThe.HeaderText = "Số thẻ";
+            this.SoThe.MinimumWidth = 10;
+            this.SoThe.Name = "SoThe";
+            // 
+            // TenDG
+            // 
+            this.TenDG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenDG.DataPropertyName = "TenDG";
+            this.TenDG.HeaderText = "Tên độc giả";
+            this.TenDG.MinimumWidth = 10;
+            this.TenDG.Name = "TenDG";
+            // 
+            // NgayCap
+            // 
+            this.NgayCap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NgayCap.DataPropertyName = "NgayCap";
+            this.NgayCap.HeaderText = "Ngày cấp";
+            this.NgayCap.MinimumWidth = 10;
+            this.NgayCap.Name = "NgayCap";
+            // 
+            // MaCV
+            // 
+            this.MaCV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaCV.DataPropertyName = "MaCV";
+            this.MaCV.HeaderText = "Chức vụ";
+            this.MaCV.MinimumWidth = 10;
+            this.MaCV.Name = "MaCV";
+            // 
             // frmDMDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -900,7 +944,6 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdDMDG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cSDLTVDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cSDL_TVDataSet)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
@@ -912,6 +955,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.docGiaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.docGiaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.docGiaBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDMDG)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -961,16 +1005,16 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private Guna.UI2.WinForms.Guna2GradientButton btnLuuDG;
         private Guna.UI2.WinForms.Guna2GradientButton btnDongDG;
-        private System.Windows.Forms.DataGridView grdDMDG;
         private System.Windows.Forms.BindingSource cSDLTVDataSetBindingSource;
         private CSDL_TVDataSet cSDL_TVDataSet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoThe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayCap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaCV;
         private System.Windows.Forms.BindingSource docGiaBindingSource;
         private CSDL_TVDataSetTableAdapters.DocGiaTableAdapter docGiaTableAdapter;
         private System.Windows.Forms.BindingSource docGiaBindingSource1;
         private System.Windows.Forms.BindingSource docGiaBindingSource2;
+        private Guna.UI2.WinForms.Guna2DataGridView grdDMDG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoThe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayCap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaCV;
     }
 }

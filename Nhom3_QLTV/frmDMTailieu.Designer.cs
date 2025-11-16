@@ -98,6 +98,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dgvDMTL = new System.Windows.Forms.DataGridView();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.cSDL_TVDataSet = new Nhom3_QLTV.CSDL_TVDataSet();
+            this.cSDLTVDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guna2GradientPanel1TL.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -112,6 +114,8 @@
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTTL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDMTL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cSDL_TVDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cSDLTVDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1TL
@@ -792,7 +796,7 @@
             this.toolStripButton3,
             this.toolStripButton4,
             this.toolStripSeparator3});
-            this.bindingNavigator1.Location = new System.Drawing.Point(1482, 8);
+            this.bindingNavigator1.Location = new System.Drawing.Point(1482, 18);
             this.bindingNavigator1.MoveFirstItem = this.toolStripButton1;
             this.bindingNavigator1.MoveLastItem = this.toolStripButton4;
             this.bindingNavigator1.MoveNextItem = this.toolStripButton3;
@@ -800,14 +804,14 @@
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.bindingNavigator1.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigator1.Size = new System.Drawing.Size(364, 50);
+            this.bindingNavigator1.Size = new System.Drawing.Size(364, 40);
             this.bindingNavigator1.TabIndex = 19;
             this.bindingNavigator1.Text = "bindingNaviDG";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(70, 44);
+            this.toolStripLabel1.Size = new System.Drawing.Size(70, 34);
             this.toolStripLabel1.Text = "of {0}";
             this.toolStripLabel1.ToolTipText = "Total number of items";
             // 
@@ -817,7 +821,7 @@
             this.toolStripButton1.Image = global::Nhom3_QLTV.Properties.Resources.left;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton1.Size = new System.Drawing.Size(46, 44);
+            this.toolStripButton1.Size = new System.Drawing.Size(46, 34);
             this.toolStripButton1.Text = "Move first";
             // 
             // toolStripButton2
@@ -826,13 +830,13 @@
             this.toolStripButton2.Image = global::Nhom3_QLTV.Properties.Resources.arrow;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton2.Size = new System.Drawing.Size(46, 44);
+            this.toolStripButton2.Size = new System.Drawing.Size(46, 34);
             this.toolStripButton2.Text = "Move previous";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 50);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 40);
             // 
             // toolStripTextBox1
             // 
@@ -847,7 +851,7 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 50);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 40);
             // 
             // toolStripButton3
             // 
@@ -855,7 +859,7 @@
             this.toolStripButton3.Image = global::Nhom3_QLTV.Properties.Resources.play_button;
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton3.Size = new System.Drawing.Size(46, 44);
+            this.toolStripButton3.Size = new System.Drawing.Size(46, 34);
             this.toolStripButton3.Text = "Move next";
             // 
             // toolStripButton4
@@ -864,13 +868,13 @@
             this.toolStripButton4.Image = global::Nhom3_QLTV.Properties.Resources.nextfirst;
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton4.Size = new System.Drawing.Size(46, 44);
+            this.toolStripButton4.Size = new System.Drawing.Size(46, 34);
             this.toolStripButton4.Text = "Move last";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 50);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 40);
             // 
             // bindingnavDG
             // 
@@ -890,7 +894,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.bindingnavDG.Location = new System.Drawing.Point(319, 8);
+            this.bindingnavDG.Location = new System.Drawing.Point(319, 18);
             this.bindingnavDG.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingnavDG.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingnavDG.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -898,14 +902,14 @@
             this.bindingnavDG.Name = "bindingnavDG";
             this.bindingnavDG.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.bindingnavDG.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingnavDG.Size = new System.Drawing.Size(364, 50);
+            this.bindingnavDG.Size = new System.Drawing.Size(364, 40);
             this.bindingnavDG.TabIndex = 18;
             this.bindingnavDG.Text = "bindingNaviDG";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(70, 44);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(70, 34);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -915,7 +919,7 @@
             this.bindingNavigatorMoveFirstItem.Image = global::Nhom3_QLTV.Properties.Resources.left;
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(46, 44);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(46, 34);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             this.bindingNavigatorMoveFirstItem.Click += new System.EventHandler(this.bindingNavigatorMoveFirstItem_Click);
             // 
@@ -925,13 +929,13 @@
             this.bindingNavigatorMovePreviousItem.Image = global::Nhom3_QLTV.Properties.Resources.arrow;
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(46, 44);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(46, 34);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 50);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 40);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -946,7 +950,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 50);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 40);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -954,7 +958,7 @@
             this.bindingNavigatorMoveNextItem.Image = global::Nhom3_QLTV.Properties.Resources.play_button;
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(46, 44);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(46, 34);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -963,13 +967,13 @@
             this.bindingNavigatorMoveLastItem.Image = global::Nhom3_QLTV.Properties.Resources.nextfirst;
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(46, 44);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(46, 34);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 50);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 40);
             // 
             // btnXuat
             // 
@@ -1079,7 +1083,11 @@
             // 
             // dgvDMTL
             // 
+            this.dgvDMTL.AllowUserToAddRows = false;
+            this.dgvDMTL.AllowUserToDeleteRows = false;
+            this.dgvDMTL.AutoGenerateColumns = false;
             this.dgvDMTL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDMTL.DataSource = this.cSDLTVDataSetBindingSource;
             this.dgvDMTL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDMTL.Location = new System.Drawing.Point(3, 48);
             this.dgvDMTL.Name = "dgvDMTL";
@@ -1093,6 +1101,16 @@
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.guna2GradientPanel1TL;
             this.guna2DragControl1.UseTransparentDrag = true;
+            // 
+            // cSDL_TVDataSet
+            // 
+            this.cSDL_TVDataSet.DataSetName = "CSDL_TVDataSet";
+            this.cSDL_TVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cSDLTVDataSetBindingSource
+            // 
+            this.cSDLTVDataSetBindingSource.DataSource = this.cSDL_TVDataSet;
+            this.cSDLTVDataSetBindingSource.Position = 0;
             // 
             // frmDMTailieu
             // 
@@ -1130,6 +1148,8 @@
             this.tableLayoutPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTTL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDMTL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cSDL_TVDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cSDLTVDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1205,5 +1225,7 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
+        private System.Windows.Forms.BindingSource cSDLTVDataSetBindingSource;
+        private CSDL_TVDataSet cSDL_TVDataSet;
     }
 }
