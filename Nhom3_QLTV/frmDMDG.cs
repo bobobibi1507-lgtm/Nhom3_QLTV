@@ -113,8 +113,7 @@ namespace Nhom3_QLTV
 
         private void frmDMDG_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'cSDL_TVDataSet.DocGia' table. You can move, or remove it, as needed.
-            this.docGiaTableAdapter.Fill(this.cSDL_TVDataSet.DocGia);
+            
             str = "Data Source=LAPTOP-8EI4770R; " + "Initial Catalog=CSDL_TV;" + "Integrated Security=True";
             conn.ConnectionString = str;
             conn.Open();
