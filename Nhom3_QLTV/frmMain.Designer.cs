@@ -313,7 +313,7 @@
             this.hệThốngToolStripMenuItem.ForeColor = System.Drawing.Color.Goldenrod;
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(226, 58);
-            this.hệThốngToolStripMenuItem.Text = "Hệ thống";
+            this.hệThốngToolStripMenuItem.Text = "&Hệ thống";
             // 
             // đăngXuấtToolStripMenuItem
             // 
@@ -350,7 +350,7 @@
             this.danhMụcToolStripMenuItem.ForeColor = System.Drawing.Color.Goldenrod;
             this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
             this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(239, 58);
-            this.danhMụcToolStripMenuItem.Text = "Danh mục";
+            this.danhMụcToolStripMenuItem.Text = "&Danh mục";
             // 
             // độcGiảToolStripMenuItem
             // 
@@ -400,7 +400,7 @@
             this.mượnTrảToolStripMenuItem.ForeColor = System.Drawing.Color.Goldenrod;
             this.mượnTrảToolStripMenuItem.Name = "mượnTrảToolStripMenuItem";
             this.mượnTrảToolStripMenuItem.Size = new System.Drawing.Size(227, 58);
-            this.mượnTrảToolStripMenuItem.Text = "Mượn trả";
+            this.mượnTrảToolStripMenuItem.Text = "&Mượn trả";
             // 
             // toolStripMenuItem2
             // 
@@ -438,7 +438,7 @@
             this.báoCáoToolStripMenuItem.ForeColor = System.Drawing.Color.Goldenrod;
             this.báoCáoToolStripMenuItem.Name = "báoCáoToolStripMenuItem";
             this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(196, 58);
-            this.báoCáoToolStripMenuItem.Text = "Báo cáo";
+            this.báoCáoToolStripMenuItem.Text = "&Báo cáo";
             // 
             // dSMượnQuáHạnChưaTrảToolStripMenuItem
             // 
@@ -466,7 +466,7 @@
             this.trợGiúpToolStripMenuItem.ForeColor = System.Drawing.Color.Goldenrod;
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
             this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(210, 58);
-            this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
+            this.trợGiúpToolStripMenuItem.Text = "&Trợ giúp";
             // 
             // guna2ControlBox2
             // 
@@ -509,7 +509,7 @@
             this.toolStripSeparator14});
             this.toolStrip1.Location = new System.Drawing.Point(0, 78);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1562, 50);
+            this.toolStrip1.Size = new System.Drawing.Size(1562, 46);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
