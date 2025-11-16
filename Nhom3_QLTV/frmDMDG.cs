@@ -244,7 +244,7 @@ namespace Nhom3_QLTV
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(txtSoThe.Text))
+            if (string.IsNullOrWhiteSpace(txtSoThe.Text))
             {
                 MessageBox.Show("Số thẻ không được để trống!");
                 txtSoThe.Focus();
@@ -255,6 +255,20 @@ namespace Nhom3_QLTV
             {
                 if (addnewflag)
                 {
+                    string checkSql = "SELECT COUNT(*) FROM DocGia WHERE SoThe = @SoThe";
+                    SqlCommand checkCmd = new SqlCommand(checkSql, conn);
+                    checkCmd.Parameters.AddWithValue("@SoThe", txtSoThe.Text);
+
+                    int count = (int)checkCmd.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Số thẻ này đã tồn tại. Vui lòng nhập số khác!",
+                                        "Cảnh báo",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Warning);
+                        return;  // Dừng luôn, không cho insert
+                    }
                     sql = @"INSERT INTO DocGia (SoThe, TenDG, NgayCap, MaCV) 
                     VALUES (@SoThe, @TenDG, @NgayCap, @MaCV)";
 
@@ -287,11 +301,11 @@ namespace Nhom3_QLTV
                         cmd.Parameters.Add("@MaCV", SqlDbType.VarChar).Value = DBNull.Value;
                     else
                         cmd.Parameters.Add("@MaCV", SqlDbType.VarChar).Value = cbChucVu.SelectedValue;
-                    int rows =cmd.ExecuteNonQuery();
+                    int rows = cmd.ExecuteNonQuery();
                     if (rows > 0)
                         MessageBox.Show("Đã cập nhật thông tin độc giả!");
                     else
-                        MessageBox.Show("Không tìm thấy hàng hóa để cập nhật!");                    
+                        MessageBox.Show("Không tìm thấy hàng hóa để cập nhật!");
                 }
                 LoadData();
                 addnewflag = false;

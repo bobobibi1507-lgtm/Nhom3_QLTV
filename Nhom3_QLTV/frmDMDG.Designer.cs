@@ -613,7 +613,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.bindingnavDG.Location = new System.Drawing.Point(592, 22);
+            this.bindingnavDG.Location = new System.Drawing.Point(592, 32);
             this.bindingnavDG.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingnavDG.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingnavDG.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -621,14 +621,14 @@
             this.bindingnavDG.Name = "bindingnavDG";
             this.bindingnavDG.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.bindingnavDG.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingnavDG.Size = new System.Drawing.Size(364, 50);
+            this.bindingnavDG.Size = new System.Drawing.Size(364, 40);
             this.bindingnavDG.TabIndex = 25;
             this.bindingnavDG.Text = "bindingNaviDG";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(70, 44);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(70, 34);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -638,7 +638,7 @@
             this.bindingNavigatorMoveFirstItem.Image = global::Nhom3_QLTV.Properties.Resources.left;
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(46, 44);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(46, 34);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -647,14 +647,14 @@
             this.bindingNavigatorMovePreviousItem.Image = global::Nhom3_QLTV.Properties.Resources.arrow;
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(46, 44);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(46, 34);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             this.bindingNavigatorMovePreviousItem.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 50);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 40);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -669,7 +669,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 50);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 40);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -677,7 +677,7 @@
             this.bindingNavigatorMoveNextItem.Image = global::Nhom3_QLTV.Properties.Resources.play_button;
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(46, 44);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(46, 34);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -686,13 +686,13 @@
             this.bindingNavigatorMoveLastItem.Image = global::Nhom3_QLTV.Properties.Resources.nextfirst;
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(46, 44);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(46, 34);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 50);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 40);
             // 
             // btnLuuDG
             // 
