@@ -12,35 +12,57 @@ namespace Nhom3_QLTV
 {
     public partial class frmMain : Form
     {
+        public bool IsAuthenticated { get; set; } = false;
+        public string CurrentUser { get; set; } = "";
+        public string CurrentRole { get; set; } = "";
+
         public frmMain()
         {
             InitializeComponent();
         }
-
-        private void dSDanhMụcTàiLiệuMượnVềđọcTạiChốToolStripMenuItem_Click(object sender, EventArgs e)
+        private void LockMainInterface()
         {
+            // Khóa toàn bộ menu và nút chức năng
+            foreach (ToolStripMenuItem item in menuStrip1.Items)
+            {
+                if (item.Text != "&Hệ thống")
+                {
+                    item.Enabled = false;
+                }
+            }
 
+            // Khóa toàn bộ toolstrip trừ 2 nút đầu tiên
+            for (int i = 0; i < toolStrip1.Items.Count; i++)
+            {
+                toolStrip1.Items[i].Enabled = (i == 0 || i == 1); // chỉ giữ lại 2 nút đầu
+            }
+
+            status1.Text = "Vui lòng đăng nhập để sử dụng chức năng!";
         }
 
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        private void UnlockMainInterface()
         {
+            // Mở toàn bộ menu
+            foreach (ToolStripMenuItem item in menuStrip1.Items)
+            {
+                item.Enabled = true;
+            }
 
+            // Mở toàn bộ toolstrip
+            foreach (ToolStripItem item in toolStrip1.Items)
+            {
+                item.Enabled = true;
+            }
+
+            status1.Text = $"Xin chào: {CurrentUser} ({CurrentRole})";
+
+
+        }        private void frmMain_Load(object sender, EventArgs e)
+        {
+            LockMainInterface();
         }
 
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ControlBox2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void đóngChươngTrìnhToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -49,15 +71,21 @@ namespace Nhom3_QLTV
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           status1.Text = "Đăng nhập đi!";
-            frmlogin frmlogin = new frmlogin();
-            frmlogin.ShowDialog();
+            status1.Text = "Đăng ngập tài khoản của bạn";
+            frmlogin loginForm = new frmlogin(this); // truyền frmMain vào
+            loginForm.ShowDialog();
+
+            if (IsAuthenticated)
+            {
+                UnlockMainInterface(); // mở khóa chức năng
+            }
+
             status1.Text = "Ready!";
         }
 
         private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -68,15 +96,19 @@ namespace Nhom3_QLTV
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             status1.Text = "Đăng nhập đi!";
-            frmlogin frmlogin = new frmlogin();
+            frmlogin frmlogin = new frmlogin(this);
             frmlogin.ShowDialog();
+            if (IsAuthenticated)
+            {
+                UnlockMainInterface(); // mở khóa chức năng
+            }
             status1.Text = "Ready!";
         }
 
         private void đăngXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             status1.Text = "Đăng nhập đi!";
-            frmlogin frmlogin = new frmlogin();
+            frmlogin frmlogin = new frmlogin(this);
             frmlogin.ShowDialog();
             status1.Text = "Ready!";
         }
@@ -151,11 +183,6 @@ namespace Nhom3_QLTV
             status1.Text = "Ready!";
         }
 
-        private void status2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             status1.Text = "Xem hoặc thêm mới phiếu mượn!";
@@ -215,15 +242,7 @@ namespace Nhom3_QLTV
             frmDMSach.ShowDialog();
             status1.Text = "Ready!";
         }
-
-        private void toolStripButton5_Click(object sender, EventArgs e)
-        {
-            status1.Text = "Xem hoặc thêm mới tác giả!";
-            frmDMTG frmDMTG = new frmDMTG();
-            frmDMTG.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width);
-            frmDMTG.Height = (int)(Screen.PrimaryScreen.WorkingArea.Height * 0.85);
-            frmDMTG.ShowDialog();
-            status1.Text = "Ready!";
-        }
     }
 }
+
+

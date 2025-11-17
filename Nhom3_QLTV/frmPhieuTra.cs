@@ -53,7 +53,7 @@ namespace Nhom3_QLTV
             // Khởi tạo ComboBox chọn trường lọc
             comTentrgPT.Items.Clear();
             comTentrgPT.Items.AddRange(new string[] {
-        "MaPM","SoThe","MaTL","TenDMTL","TenTT","NgayMuon","HanTra","NgayThucTra"
+        "MaPM","SoThe","MaTL","TenDMTL","TenTT","NgayMuon","HanTra"
     });
             comTentrgPT.SelectedIndex = 0;
             comGTPT.DataSource = null;
@@ -139,8 +139,7 @@ namespace Nhom3_QLTV
                         return "PhieuMuon.NgayMuon";
                     case "HanTra":
                         return "PhieuMuon.HanTra";
-                    case "NgayThucTra":
-                        return "CTPM.NgayThucTra";
+                   
                     default:
                         return shortName;
                 }
@@ -163,7 +162,7 @@ namespace Nhom3_QLTV
         JOIN TaiLieu ON CTPM.MaTL = TaiLieu.MaTL 
         JOIN DMTL ON TaiLieu.MaDMTL = DMTL.MaDMTL 
         join TrangThai TT on TaiLieu.MaTT = TT.MaTT
-        WHERE CTPM.NgayThucTra IS NOT NULL
+      
         ORDER BY {fullColumn}";
 
             try

@@ -79,6 +79,7 @@
             this.btnlogin.Size = new System.Drawing.Size(274, 68);
             this.btnlogin.TabIndex = 4;
             this.btnlogin.Text = "ĐĂNG NHẬP";
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // txtpassword
             // 
@@ -102,7 +103,6 @@
             this.txtpassword.SelectedText = "";
             this.txtpassword.Size = new System.Drawing.Size(505, 76);
             this.txtpassword.TabIndex = 2;
-            this.txtpassword.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
             // label1
             // 
@@ -114,7 +114,6 @@
             this.label1.Size = new System.Drawing.Size(512, 54);
             this.label1.TabIndex = 13;
             this.label1.Text = "ĐĂNG NHẬP NGƯỜI DÙNG";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtusername
             // 
@@ -138,7 +137,6 @@
             this.txtusername.SelectedText = "";
             this.txtusername.Size = new System.Drawing.Size(505, 76);
             this.txtusername.TabIndex = 1;
-            this.txtusername.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // guna2Panel2
             // 
@@ -148,7 +146,6 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(696, 301);
             this.guna2Panel2.TabIndex = 12;
-            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
             // guna2Panel1
             // 
@@ -195,13 +192,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Nhom3_QLTV.Properties.Resources.bgBK;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1536, 1102);
+            this.ClientSize = new System.Drawing.Size(1536, 1183);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmlogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmlogin_Load);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
