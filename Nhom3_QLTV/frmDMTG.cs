@@ -18,6 +18,8 @@ namespace Nhom3_QLTV
         SqlConnection conn = new SqlConnection();
         SqlDataAdapter da = new SqlDataAdapter();
         DataTable dt = new DataTable();
+        BindingSource bsTG = new BindingSource();
+
         string sql, str;
         Boolean addnewFlag = false;
 
@@ -32,28 +34,19 @@ namespace Nhom3_QLTV
 
         private void frmDMTG_Load(object sender, EventArgs e)
         {
-            str = "Data Source=LAPTOP-8EI4770R; " + "Initial Catalog=CSDL_TV;" + "Integrated Security=True";
-
+            str = "Data Source=LAPTOP-8EI4770R; Initial Catalog=CSDL_TV; Integrated Security=True";
             conn.ConnectionString = str;
             conn.Open();
-            // nạp bảng độc giả
-            sql = "select MaTG, TenTG, NamSinh from TacGia";
-            da = new SqlDataAdapter(sql, conn);
-            da.Fill(dt);
-            grdTG.DataSource = dt;
-            // kết nối binding navigator
 
-            BindingSource bsTG = new BindingSource();
-            bsTG.DataSource = dt;
+            Naplaitg(); // nạp dữ liệu lần đầu
 
-            grdTG.DataSource = bsTG;
-            this.bsTG.BindingSource = bsTG;
+            grdTG.DataSource = bsTG; // DataGridView bind với BindingSource
+            bdTG.BindingSource = bsTG; // BindingNavigator bind với BindingSource
+
             txtMaTG.DataBindings.Clear();
             txtMaTG.DataBindings.Add("Text", bsTG, "MaTG");
-
             txtTenTG.DataBindings.Clear();
             txtTenTG.DataBindings.Add("Text", bsTG, "TenTG");
-
             txtNamSinh.DataBindings.Clear();
             txtNamSinh.DataBindings.Add("Text", bsTG, "NamSinh");
 
@@ -110,7 +103,6 @@ namespace Nhom3_QLTV
         private void btnCapnhatTG_Click(object sender, EventArgs e)
         {
 
-            // Kiểm tra nhập liệu cơ bản
             if (string.IsNullOrWhiteSpace(txtMaTG.Text))
             {
                 MessageBox.Show("Mã tác giả không được để trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -127,27 +119,22 @@ namespace Nhom3_QLTV
 
             try
             {
-                if (addnewFlag) // === THÊM MỚI ===
+                if (addnewFlag) // thêm mới
                 {
-                    // Kiểm tra trùng mã
                     string checkSql = "SELECT COUNT(*) FROM TacGia WHERE MaTG = @MaTG";
                     using (SqlCommand checkCmd = new SqlCommand(checkSql, conn))
                     {
                         checkCmd.Parameters.AddWithValue("@MaTG", txtMaTG.Text);
                         int count = (int)checkCmd.ExecuteScalar();
-
                         if (count > 0)
                         {
-                            MessageBox.Show("Mã tác giả đã tồn tại. Vui lòng nhập mã khác!", "Cảnh báo",
-                                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Mã tác giả đã tồn tại!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             txtMaTG.Focus();
                             return;
                         }
                     }
 
-                    // Thêm mới
-                    string sql = @"INSERT INTO TacGia (MaTG, TenTG, NamSinh) 
-                           VALUES (@MaTG, @TenTG, @NamSinh)";
+                    string sql = "INSERT INTO TacGia (MaTG, TenTG, NamSinh) VALUES (@MaTG, @TenTG, @NamSinh)";
                     using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
                         cmd.Parameters.AddWithValue("@MaTG", txtMaTG.Text.Trim());
@@ -158,33 +145,29 @@ namespace Nhom3_QLTV
 
                     MessageBox.Show("Đã thêm tác giả mới!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else // === CẬP NHẬT ===
+                else // cập nhật
                 {
-                    // Cập nhật thông tin tác giả
-                    string sql = @"UPDATE TacGia 
-                           SET TenTG = @TenTG, NamSinh = @NamSinh 
-                           WHERE MaTG = @MaTG";
+                    string sql = "UPDATE TacGia SET TenTG=@TenTG, NamSinh=@NamSinh WHERE MaTG=@MaTG";
                     using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
                         cmd.Parameters.AddWithValue("@MaTG", txtMaTG.Text.Trim());
                         cmd.Parameters.AddWithValue("@TenTG", txtTenTG.Text.Trim());
                         cmd.Parameters.AddWithValue("@NamSinh", txtNamSinh.Text.Trim());
-
-                        int rows = cmd.ExecuteNonQuery();
-
-                        if (rows > 0)
-                            MessageBox.Show("Đã cập nhật thông tin tác giả!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else
-                            MessageBox.Show("Không tìm thấy tác giả để cập nhật!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        cmd.ExecuteNonQuery();
                     }
+
+                    MessageBox.Show("Đã cập nhật thông tin tác giả!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                // Cập nhật lại lưới dữ liệu
+
+                // Reload dữ liệu
                 Naplaitg();
 
-                // Reset trạng thái
+                // **Đặt BindingSource tới dòng vừa thao tác**
+                bsTG.Position = bsTG.Find("MaTG", txtMaTG.Text);
+
                 addnewFlag = false;
                 txtMaTG.Enabled = true;
-                ClearTextBoxes(); // Hàm xóa trắng các ô nhập
+                // **Không gọi NapCTtg() nữa**, TextBox sẽ tự động cập nhật nhờ DataBindings
             }
             catch (Exception ex)
             {
@@ -285,16 +268,18 @@ namespace Nhom3_QLTV
         {
             try
             {
-                sql = "select MaTG, TenTG, NamSinh  from TacGia";
+                sql = "SELECT MaTG, TenTG, NamSinh FROM TacGia";
                 da = new SqlDataAdapter(sql, conn);
-                dt.Clear();
-                da.Fill(dt);
-                grdTG.DataSource = dt;
-                NapCTtg();
+                DataTable dt1 = new DataTable();
+                da.Fill(dt1);
+
+                bsTG.DataSource = dt1; // cập nhật BindingSource
+                if (bsTG.Count > 0)
+                    NapCTtg();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Có lỗi cần xử lý" + ex.Message);
+                MessageBox.Show("Có lỗi cần xử lý: " + ex.Message);
             }
         }
 

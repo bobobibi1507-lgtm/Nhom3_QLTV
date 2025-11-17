@@ -394,12 +394,17 @@ namespace Nhom3_QLTV
                 FROM TacGia tg
                 INNER JOIN DMTL_TG dtg ON tg.MaTG = dtg.MaTG";
             }
+            else if (field == "TenTheLoai")
+            {
+                sql = @"SELECT DISTINCT ltl.TenTheLoai
+            FROM DMTL dm
+            INNER JOIN LoaiTL ltl ON dm.MaTheLoai = ltl.MaTheLoai";
+            }
             else
             {
-                // Lấy các trường từ DMTL/LoaiTL
                 sql = $@"SELECT DISTINCT dm.{field} 
-                 FROM DMTL dm
-                 INNER JOIN LoaiTL ltl ON dm.MaTheLoai = ltl.MaTheLoai";
+             FROM DMTL dm
+             INNER JOIN LoaiTL ltl ON dm.MaTheLoai = ltl.MaTheLoai";
             }
 
             daDM = new SqlDataAdapter(sql, conn);

@@ -514,75 +514,109 @@ namespace Nhom3_QLTV
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (bsPM.Current == null)
+            {
+                MessageBox.Show("Vui lòng chọn phiếu mượn để cập nhật!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             SqlTransaction tran = null;
 
             try
             {
                 tran = conn.BeginTransaction();
 
-                // --- Cập nhật PHIEUMUON ---
-                SqlCommand cmdPM = new SqlCommand();
-                cmdPM.Connection = conn;
-                cmdPM.Transaction = tran;
-                cmdPM.CommandText = @"UPDATE PHIEUMUON 
-                              SET SoThe=@SoThe, MaKM=@MaKM, NgayMuon=@NgayMuon, HanTra=@HanTra 
-                              WHERE MaPM=@MaPM";
+                DataRowView drvPM = (DataRowView)bsPM.Current;
+                string maPM = drvPM["MaPM"].ToString();
 
-                foreach (DataRow row in dtPM.Rows)
+                // --- Cập nhật PHIEUMUON ---
+                SqlCommand cmdPM = new SqlCommand(@"
+            UPDATE PHIEUMUON 
+            SET SoThe=@SoThe, MaKM=@MaKM, NgayMuon=@NgayMuon, HanTra=@HanTra 
+            WHERE MaPM=@MaPM", conn, tran);
+                cmdPM.Parameters.AddWithValue("@MaPM", maPM);
+                cmdPM.Parameters.AddWithValue("@SoThe", cbTenDG.SelectedValue.ToString());
+                cmdPM.Parameters.AddWithValue("@MaKM", cbKM.SelectedValue.ToString());
+                cmdPM.Parameters.AddWithValue("@NgayMuon", dtpNM.Value);
+                cmdPM.Parameters.AddWithValue("@HanTra", dtpHT.Value);
+                cmdPM.ExecuteNonQuery();
+
+                // --- Lấy danh sách MaTL cũ từ DB ---
+                List<string> dsMaTL_Cu = new List<string>();
+                SqlCommand cmdGetOld = new SqlCommand("SELECT MaTL FROM CTPM WHERE MaPM=@MaPM", conn, tran);
+                cmdGetOld.Parameters.AddWithValue("@MaPM", maPM);
+                using (SqlDataReader reader = cmdGetOld.ExecuteReader())
                 {
-                    cmdPM.Parameters.Clear();
-                    cmdPM.Parameters.AddWithValue("@MaPM", row["MaPM"]);
-                    cmdPM.Parameters.AddWithValue("@SoThe", row["SoThe"]);
-                    cmdPM.Parameters.AddWithValue("@MaKM", row["MaKM"]);
-                    cmdPM.Parameters.AddWithValue("@NgayMuon", row["NgayMuon"]);
-                    cmdPM.Parameters.AddWithValue("@HanTra", row["HanTra"]);
-                    cmdPM.ExecuteNonQuery();
+                    while (reader.Read())
+                        dsMaTL_Cu.Add(reader["MaTL"].ToString());
                 }
 
-                // --- Cập nhật / thêm CTPM ---
-                SqlCommand cmdCTPM = new SqlCommand();
-                cmdCTPM.Connection = conn;
-                cmdCTPM.Transaction = tran;
-                cmdCTPM.CommandText = @"IF NOT EXISTS (SELECT 1 FROM CTPM WHERE MaPM=@MaPM AND MaTL=@MaTL)
-                                INSERT INTO CTPM (MaPM, MaTL) VALUES (@MaPM, @MaTL)";
-
-                // --- Cập nhật trạng thái TaiLieu ---
-                SqlCommand cmdTL = new SqlCommand();
-                cmdTL.Connection = conn;
-                cmdTL.Transaction = tran;
-                cmdTL.CommandText = @"UPDATE TaiLieu SET MaTT=@MaTT WHERE MaTL=@MaTL";
-
-                foreach (DataRow row in dtCTPM.Rows)
+                // --- Xóa những MaTL cũ mà người dùng đã xóa ---
+                foreach (string maTL in dsMaTL_Cu)
                 {
-                    // Thêm CTPM nếu chưa có
-                    cmdCTPM.Parameters.Clear();
-                    cmdCTPM.Parameters.AddWithValue("@MaPM", row["MaPM"]);
-                    cmdCTPM.Parameters.AddWithValue("@MaTL", row["MaTL"]);
-                    cmdCTPM.ExecuteNonQuery();
-
-                    // Cập nhật trạng thái TaiLieu
-                    if (row["MaTT"] != DBNull.Value)
+                    bool conTrongCTPM = dtCTPM.AsEnumerable()
+                        .Any(r => r.RowState != DataRowState.Deleted && r["MaTL"].ToString() == maTL);
+                    if (!conTrongCTPM)
                     {
-                        cmdTL.Parameters.Clear();
-                        cmdTL.Parameters.AddWithValue("@MaTT", row["MaTT"]);
-                        cmdTL.Parameters.AddWithValue("@MaTL", row["MaTL"]);
-                        cmdTL.ExecuteNonQuery();
+                        SqlCommand cmdDel = new SqlCommand(
+                            "DELETE FROM CTPM WHERE MaPM=@MaPM AND MaTL=@MaTL", conn, tran);
+                        cmdDel.Parameters.AddWithValue("@MaPM", maPM);
+                        cmdDel.Parameters.AddWithValue("@MaTL", maTL);
+                        cmdDel.ExecuteNonQuery();
+
+                        // Cập nhật trạng thái tài liệu về "Có sẵn"
+                        SqlCommand cmdUpdateAv = new SqlCommand(
+                            "UPDATE TaiLieu SET MaTT='Av' WHERE MaTL=@MaTL", conn, tran);
+                        cmdUpdateAv.Parameters.AddWithValue("@MaTL", maTL);
+                        cmdUpdateAv.ExecuteNonQuery();
                     }
                 }
 
-                tran.Commit();
-                MessageBox.Show("Cập nhật dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // --- Thêm hoặc giữ những MaTL mới ---
+                foreach (DataRow row in dtCTPM.Rows)
+                {
+                    if (row.RowState == DataRowState.Deleted) continue; // Bỏ qua row đã xóa
 
-                // Làm mới lại dữ liệu từ DB
+                    string maTL = row["MaTL"].ToString();
+
+                    // Kiểm tra tồn tại
+                    SqlCommand cmdCheck = new SqlCommand(
+                        "SELECT COUNT(*) FROM CTPM WHERE MaPM=@MaPM AND MaTL=@MaTL", conn, tran);
+                    cmdCheck.Parameters.AddWithValue("@MaPM", maPM);
+                    cmdCheck.Parameters.AddWithValue("@MaTL", maTL);
+                    int count = (int)cmdCheck.ExecuteScalar();
+
+                    if (count == 0)
+                    {
+                        SqlCommand cmdInsert = new SqlCommand(
+                            "INSERT INTO CTPM(MaPM, MaTL) VALUES(@MaPM, @MaTL)", conn, tran);
+                        cmdInsert.Parameters.AddWithValue("@MaPM", maPM);
+                        cmdInsert.Parameters.AddWithValue("@MaTL", maTL);
+                        cmdInsert.ExecuteNonQuery();
+                    }
+
+                    // Cập nhật trạng thái tài liệu là "Bor"
+                    SqlCommand cmdUpdateBor = new SqlCommand(
+                        "UPDATE TaiLieu SET MaTT='Bor' WHERE MaTL=@MaTL", conn, tran);
+                    cmdUpdateBor.Parameters.AddWithValue("@MaTL", maTL);
+                    cmdUpdateBor.ExecuteNonQuery();
+                }
+
+                tran.Commit();
+
+                MessageBox.Show("Cập nhật phiếu mượn và chi tiết thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // --- Làm mới dữ liệu từ DB ---
                 LoadPM();
+
             }
             catch (Exception ex)
             {
-                if (tran != null)
-                    tran.Rollback();
+                tran?.Rollback();
                 MessageBox.Show("Lỗi khi cập nhật dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void cbTT_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -602,7 +636,7 @@ namespace Nhom3_QLTV
             {
                 tran = conn.BeginTransaction();
 
-                // 1. Kiểm tra có đang chọn dòng CTPM không
+                // 1. Nếu đang chọn dòng chi tiết phiếu mượn (CTPM)
                 if (bsCTPM.Current != null)
                 {
                     DataRowView drv = (DataRowView)bsCTPM.Current;
@@ -613,28 +647,42 @@ namespace Nhom3_QLTV
                         $"Bạn có chắc muốn xóa tài liệu {maTL} khỏi phiếu mượn {maPM} không?",
                         "Xác nhận xóa",
                         MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Question);
+                        MessageBoxIcon.Question
+                    );
 
                     if (dr == DialogResult.Yes)
                     {
                         // Xóa chi tiết phiếu mượn
-                        SqlCommand cmdDelCTPM = new SqlCommand("DELETE FROM CTPM WHERE MaPM=@MaPM AND MaTL=@MaTL", conn, tran);
+                        SqlCommand cmdDelCTPM = new SqlCommand(
+                            "DELETE FROM CTPM WHERE MaPM=@MaPM AND MaTL=@MaTL",
+                            conn, tran
+                        );
                         cmdDelCTPM.Parameters.AddWithValue("@MaPM", maPM);
                         cmdDelCTPM.Parameters.AddWithValue("@MaTL", maTL);
                         cmdDelCTPM.ExecuteNonQuery();
 
                         // Cập nhật trạng thái tài liệu về "Có sẵn"
-                        SqlCommand cmdUpdateTL = new SqlCommand("UPDATE TaiLieu SET MaTT='Av' WHERE MaTL=@MaTL", conn, tran);
+                        SqlCommand cmdUpdateTL = new SqlCommand(
+                            "UPDATE TaiLieu SET MaTT='Av' WHERE MaTL=@MaTL",
+                            conn, tran
+                        );
                         cmdUpdateTL.Parameters.AddWithValue("@MaTL", maTL);
                         cmdUpdateTL.ExecuteNonQuery();
 
                         tran.Commit();
 
+                        // Cập nhật giao diện
                         bsCTPM.RemoveCurrent();
-                        MessageBox.Show("Xóa chi tiết phiếu mượn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        MessageBox.Show(
+                            "Xóa chi tiết phiếu mượn thành công!",
+                            "Thông báo",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information
+                        );
                     }
                 }
-                // 2. Nếu không chọn CTPM, kiểm tra có đang chọn PM không
+                // 2. Nếu không chọn CTPM, kiểm tra có đang chọn phiếu mượn (PM)
                 else if (bsPM.Current != null)
                 {
                     DataRowView drv = (DataRowView)bsPM.Current;
@@ -644,13 +692,18 @@ namespace Nhom3_QLTV
                         $"Bạn có chắc muốn xóa phiếu mượn {maPM} và tất cả chi tiết của nó không?",
                         "Xác nhận xóa",
                         MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Question);
+                        MessageBoxIcon.Question
+                    );
 
                     if (dr == DialogResult.Yes)
                     {
                         // Lấy danh sách MaTL trong phiếu mượn để cập nhật trạng thái
-                        SqlCommand cmdGetTL = new SqlCommand("SELECT MaTL FROM CTPM WHERE MaPM=@MaPM", conn, tran);
+                        SqlCommand cmdGetTL = new SqlCommand(
+                            "SELECT MaTL FROM CTPM WHERE MaPM=@MaPM",
+                            conn, tran
+                        );
                         cmdGetTL.Parameters.AddWithValue("@MaPM", maPM);
+
                         List<string> dsMaTL = new List<string>();
                         using (SqlDataReader reader = cmdGetTL.ExecuteReader())
                         {
@@ -659,40 +712,67 @@ namespace Nhom3_QLTV
                         }
 
                         // Xóa tất cả chi tiết phiếu mượn
-                        SqlCommand cmdDelCTPM = new SqlCommand("DELETE FROM CTPM WHERE MaPM=@MaPM", conn, tran);
+                        SqlCommand cmdDelCTPM = new SqlCommand(
+                            "DELETE FROM CTPM WHERE MaPM=@MaPM",
+                            conn, tran
+                        );
                         cmdDelCTPM.Parameters.AddWithValue("@MaPM", maPM);
                         cmdDelCTPM.ExecuteNonQuery();
 
                         // Xóa phiếu mượn
-                        SqlCommand cmdDelPM = new SqlCommand("DELETE FROM PHIEUMUON WHERE MaPM=@MaPM", conn, tran);
+                        SqlCommand cmdDelPM = new SqlCommand(
+                            "DELETE FROM PHIEUMUON WHERE MaPM=@MaPM",
+                            conn, tran
+                        );
                         cmdDelPM.Parameters.AddWithValue("@MaPM", maPM);
                         cmdDelPM.ExecuteNonQuery();
 
                         // Cập nhật trạng thái các tài liệu về "Có sẵn"
                         foreach (string maTL in dsMaTL)
                         {
-                            SqlCommand cmdUpdateTL = new SqlCommand("UPDATE TaiLieu SET MaTT='Av' WHERE MaTL=@MaTL", conn, tran);
+                            SqlCommand cmdUpdateTL = new SqlCommand(
+                                "UPDATE TaiLieu SET MaTT='Av' WHERE MaTL=@MaTL",
+                                conn, tran
+                            );
                             cmdUpdateTL.Parameters.AddWithValue("@MaTL", maTL);
                             cmdUpdateTL.ExecuteNonQuery();
                         }
 
                         tran.Commit();
 
+                        // Cập nhật giao diện
                         bsPM.RemoveCurrent();
                         dtCTPM.Clear(); // Xóa chi tiết
-                        MessageBox.Show("Xóa phiếu mượn và tất cả chi tiết thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        MessageBox.Show(
+                            "Xóa phiếu mượn và tất cả chi tiết thành công!",
+                            "Thông báo",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information
+                        );
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng chọn phiếu mượn hoặc chi tiết phiếu mượn để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(
+                        "Vui lòng chọn phiếu mượn hoặc chi tiết phiếu mượn để xóa!",
+                        "Thông báo",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
                 }
             }
             catch (Exception ex)
             {
                 tran?.Rollback();
-                MessageBox.Show("Lỗi khi xóa: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    "Lỗi khi xóa: " + ex.Message,
+                    "Lỗi",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -707,6 +787,11 @@ namespace Nhom3_QLTV
 
             MessageBox.Show("Bạn có thể sửa thông tin phiếu mượn và chi tiết. Sau khi sửa xong bấm 'Cập nhật'.",
                             "Chỉnh sửa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void grdCTPM_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
 
         private void btnDongDG_Click(object sender, EventArgs e)

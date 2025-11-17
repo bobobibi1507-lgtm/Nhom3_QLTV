@@ -62,7 +62,7 @@
             this.btnXoadmtg = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnThemTG = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.bsTG = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bdTG = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -89,8 +89,8 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsTG)).BeginInit();
-            this.bsTG.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdTG)).BeginInit();
+            this.bdTG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdTG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cSDLTVDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cSDL_TVDataSet)).BeginInit();
@@ -561,7 +561,7 @@
             // 
             // guna2Panel3
             // 
-            this.guna2Panel3.Controls.Add(this.bsTG);
+            this.guna2Panel3.Controls.Add(this.bdTG);
             this.guna2Panel3.Controls.Add(this.btnLuuDG);
             this.guna2Panel3.Controls.Add(this.btnDongTG);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -570,15 +570,16 @@
             this.guna2Panel3.Size = new System.Drawing.Size(1386, 81);
             this.guna2Panel3.TabIndex = 87;
             // 
-            // bsTG
+            // bdTG
             // 
-            this.bsTG.AddNewItem = null;
-            this.bsTG.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.bsTG.CountItem = this.toolStripLabel1;
-            this.bsTG.DeleteItem = null;
-            this.bsTG.Dock = System.Windows.Forms.DockStyle.None;
-            this.bsTG.ImageScalingSize = new System.Drawing.Size(30, 30);
-            this.bsTG.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bdTG.AddNewItem = null;
+            this.bdTG.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bdTG.BindingSource = this.cSDLTVDataSetBindingSource;
+            this.bdTG.CountItem = this.toolStripLabel1;
+            this.bdTG.DeleteItem = null;
+            this.bdTG.Dock = System.Windows.Forms.DockStyle.None;
+            this.bdTG.ImageScalingSize = new System.Drawing.Size(30, 30);
+            this.bdTG.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
             this.toolStripSeparator1,
@@ -588,17 +589,17 @@
             this.toolStripButton3,
             this.toolStripButton4,
             this.toolStripSeparator3});
-            this.bsTG.Location = new System.Drawing.Point(546, 32);
-            this.bsTG.MoveFirstItem = this.toolStripButton1;
-            this.bsTG.MoveLastItem = this.toolStripButton4;
-            this.bsTG.MoveNextItem = this.toolStripButton3;
-            this.bsTG.MovePreviousItem = this.toolStripButton2;
-            this.bsTG.Name = "bsTG";
-            this.bsTG.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.bsTG.PositionItem = this.toolStripTextBox1;
-            this.bsTG.Size = new System.Drawing.Size(364, 40);
-            this.bsTG.TabIndex = 25;
-            this.bsTG.Text = "bindingNaviDG";
+            this.bdTG.Location = new System.Drawing.Point(546, 32);
+            this.bdTG.MoveFirstItem = this.toolStripButton1;
+            this.bdTG.MoveLastItem = this.toolStripButton4;
+            this.bdTG.MoveNextItem = this.toolStripButton3;
+            this.bdTG.MovePreviousItem = this.toolStripButton2;
+            this.bdTG.Name = "bdTG";
+            this.bdTG.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.bdTG.PositionItem = this.toolStripTextBox1;
+            this.bdTG.Size = new System.Drawing.Size(426, 40);
+            this.bdTG.TabIndex = 25;
+            this.bdTG.Text = "bindingNaviDG";
             // 
             // toolStripLabel1
             // 
@@ -637,7 +638,7 @@
             this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(65, 39);
-            this.toolStripTextBox1.Text = "0";
+            this.toolStripTextBox1.Text = "1";
             this.toolStripTextBox1.ToolTipText = "Current position";
             // 
             // toolStripSeparator2
@@ -844,9 +845,9 @@
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsTG)).EndInit();
-            this.bsTG.ResumeLayout(false);
-            this.bsTG.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdTG)).EndInit();
+            this.bdTG.ResumeLayout(false);
+            this.bdTG.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdTG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cSDLTVDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cSDL_TVDataSet)).EndInit();
@@ -885,7 +886,7 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnXoadmtg;
         private Guna.UI2.WinForms.Guna2GradientButton btnThemTG;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private System.Windows.Forms.BindingNavigator bsTG;
+        private System.Windows.Forms.BindingNavigator bdTG;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
