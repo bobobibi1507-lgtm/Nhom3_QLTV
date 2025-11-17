@@ -63,6 +63,8 @@
             this.btnThemTG = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.bdTG = new System.Windows.Forms.BindingNavigator(this.components);
+            this.cSDLTVDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cSDL_TVDataSet = new Nhom3_QLTV.CSDL_TVDataSet();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -78,8 +80,6 @@
             this.MaTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cSDLTVDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cSDL_TVDataSet = new Nhom3_QLTV.CSDL_TVDataSet();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -91,9 +91,9 @@
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdTG)).BeginInit();
             this.bdTG.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdTG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cSDLTVDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cSDL_TVDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTG)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -597,9 +597,19 @@
             this.bdTG.Name = "bdTG";
             this.bdTG.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.bdTG.PositionItem = this.toolStripTextBox1;
-            this.bdTG.Size = new System.Drawing.Size(426, 40);
+            this.bdTG.Size = new System.Drawing.Size(364, 40);
             this.bdTG.TabIndex = 25;
             this.bdTG.Text = "bindingNaviDG";
+            // 
+            // cSDLTVDataSetBindingSource
+            // 
+            this.cSDLTVDataSetBindingSource.DataSource = this.cSDL_TVDataSet;
+            this.cSDLTVDataSetBindingSource.Position = 0;
+            // 
+            // cSDL_TVDataSet
+            // 
+            this.cSDL_TVDataSet.DataSetName = "CSDL_TVDataSet";
+            this.cSDL_TVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // toolStripLabel1
             // 
@@ -805,16 +815,6 @@
             this.NamSinh.MinimumWidth = 10;
             this.NamSinh.Name = "NamSinh";
             // 
-            // cSDLTVDataSetBindingSource
-            // 
-            this.cSDLTVDataSetBindingSource.DataSource = this.cSDL_TVDataSet;
-            this.cSDLTVDataSetBindingSource.Position = 0;
-            // 
-            // cSDL_TVDataSet
-            // 
-            this.cSDL_TVDataSet.DataSetName = "CSDL_TVDataSet";
-            this.cSDL_TVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // frmDMTG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -848,9 +848,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdTG)).EndInit();
             this.bdTG.ResumeLayout(false);
             this.bdTG.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdTG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cSDLTVDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cSDL_TVDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTG)).EndInit();
             this.ResumeLayout(false);
 
         }
