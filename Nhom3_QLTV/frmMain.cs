@@ -1,7 +1,10 @@
-﻿using System;
+﻿using DevExpress.XtraCharts.Native;
+using DevExpress.XtraReports.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,10 +15,16 @@ namespace Nhom3_QLTV
 {
     public partial class frmMain : Form
     {
+
+        SqlConnection conn = new SqlConnection();
+        SqlDataAdapter da = new SqlDataAdapter();
+        DataTable dt = new DataTable();
+        
+        string str, sql;
         public bool IsAuthenticated { get; set; } = false;
         public string CurrentUser { get; set; } = "";
         public string CurrentRole { get; set; } = "";
-
+        public string CurrentUserName { get; set; } = "";
         public frmMain()
         {
             InitializeComponent();
@@ -57,9 +66,13 @@ namespace Nhom3_QLTV
             status1.Text = $"Xin chào: {CurrentUser} ({CurrentRole})";
 
 
-        }        private void frmMain_Load(object sender, EventArgs e)
+        }        
+        private void frmMain_Load(object sender, EventArgs e)
         {
+            
             LockMainInterface();
+            
+
         }
 
 
@@ -241,6 +254,92 @@ namespace Nhom3_QLTV
             frmDMSach.Height = (int)(Screen.PrimaryScreen.WorkingArea.Height * 0.85);
             frmDMSach.ShowDialog();
             status1.Text = "Ready!";
+        }
+
+        private void dSDanhMụcTàiLiệuMượnVềđọcTạiChốToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // 1. Tạo kết nối đúng
+                using (SqlConnection conn = new SqlConnection(
+                    @"Data Source=LAPTOP-8EI4770R; Initial Catalog=CSDL_TV; Integrated Security=True"))
+                {
+                    conn.Open();
+
+                    // 2. Tạo SQL
+                    string sql = "SELECT * FROM vDanhMucThongKe order by TenTheLoai";
+
+
+                    // 3. Tạo Adapter đúng
+                    SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+
+                    // 4. Nạp DataTable cho report
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    // 5. Tạo report
+                    rptDSLuotDoc rpt = new rptDSLuotDoc();
+                    rpt.DataSource = dt;
+
+                    // 6. Set ngày in
+                    rpt.rptngayin.Text =
+                        $"Hà Nội, ngày {DateTime.Now.Day} tháng {DateTime.Now.Month} năm {DateTime.Now.Year}";
+
+                    // 7. Người in từ CurrentUser
+                    rpt.rptNguoiIn.Text = this.CurrentUserName;
+
+
+                    // 8. Hiển thị preview
+                    rpt.ShowPreviewDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void dSMượnQuáHạnChưaTrảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // 1. Tạo kết nối đúng
+                using (SqlConnection conn = new SqlConnection(
+                    @"Data Source=LAPTOP-8EI4770R; Initial Catalog=CSDL_TV; Integrated Security=True"))
+                {
+                    conn.Open();
+
+                    // 2. Tạo SQL
+                    string sql = "SELECT * FROM DSQuaHanChucVu ORDER BY TenCV";
+
+
+                    // 3. Tạo Adapter đúng
+                    SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+
+                    // 4. Nạp DataTable cho report
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    // 5. Tạo report
+                    rptTacGia rpt = new rptTacGia();
+                    rpt.DataSource = dt;
+
+                    // 6. Set ngày in
+                    rpt.rptngayin.Text =
+                        $"Hà Nội, ngày {DateTime.Now.Day} tháng {DateTime.Now.Month} năm {DateTime.Now.Year}";
+
+                    // 7. Người in từ CurrentUser
+                    rpt.rptNguoiIn.Text = this.CurrentUserName;
+                    
+
+                    // 8. Hiển thị preview
+                    rpt.ShowPreviewDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
     }
 }

@@ -99,6 +99,7 @@
             this.txtpassword.Location = new System.Drawing.Point(114, 534);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(6);
             this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '*';
             this.txtpassword.PlaceholderText = "Mật khẩu";
             this.txtpassword.SelectedText = "";
             this.txtpassword.Size = new System.Drawing.Size(505, 76);

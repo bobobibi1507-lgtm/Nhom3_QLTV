@@ -40,17 +40,33 @@ namespace Nhom3_QLTV
 
             grdPT.DataSource = bd;
 
-            txtMaPM.DataBindings.Add("Text", bd, "MaPM");
-            txtMaTL.DataBindings.Add("Text", bd, "MaTL");
-            dtpHanTra.DataBindings.Add("Value", bd, "HanTra");
+            txtMaPM.DataBindings.Clear();
+            txtMaTL.DataBindings.Clear();
+            dtpHanTra.DataBindings.Clear();
+            dtNgayThucTra.DataBindings.Clear();
 
-            // **Bind DateTimePicker với BindingSource**
-            Binding bdNgayTra = new Binding("Value", bd, "NgayThucTra", true, DataSourceUpdateMode.OnPropertyChanged);
-            bdNgayTra.NullValue = DateTime.Today;
-            dtNgayThucTra.DataBindings.Add(bdNgayTra);
+            // 🔥 GẮN BINDING MỚI – CHUẨN, KHÔNG BAO GIỜ LỖI
+            txtMaPM.DataBindings.Add("Text", bd, "MaPM", true, DataSourceUpdateMode.Never);
+            txtMaTL.DataBindings.Add("Text", bd, "MaTL", true, DataSourceUpdateMode.Never);
+            dtpHanTra.DataBindings.Add("Value", bd, "HanTra", true, DataSourceUpdateMode.Never);
 
+            // ĐẶC BIỆT: DateTimePicker Ngày Trả KHÔNG ĐƯỢC UPDATE NGƯỢC
 
-            // Khởi tạo ComboBox chọn trường lọc
+            // Xóa Binding cũ
+            dtNgayThucTra.DataBindings.Clear();
+
+            // 🔥 Thêm đoạn Binding có Format xử lý NULL -- ĐẶT Ở ĐÂY
+            Binding b = new Binding("Value", bd, "NgayThucTra", true, DataSourceUpdateMode.Never);
+
+            b.Format += (s, ce) =>
+            {
+                if (ce.Value == DBNull.Value || ce.Value == null)
+                    ce.Value = DateTime.Now;
+            };
+
+            dtNgayThucTra.DataBindings.Add(b);
+
+            // ComboBox lọc
             comTentrgPT.Items.Clear();
             comTentrgPT.Items.AddRange(new string[] {
         "MaPM","SoThe","MaTL","TenDMTL","TenTT","NgayMuon","HanTra"
@@ -139,7 +155,7 @@ namespace Nhom3_QLTV
                         return "PhieuMuon.NgayMuon";
                     case "HanTra":
                         return "PhieuMuon.HanTra";
-                   
+
                     default:
                         return shortName;
                 }
@@ -266,15 +282,21 @@ namespace Nhom3_QLTV
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            currentMaPhieuMuon = txtMaPM.Text;
+            currentMaTaiLieu = txtMaTL.Text;
             if (grdPT.CurrentRow == null)
             {
                 MessageBox.Show("Vui lòng chọn một bản ghi!");
                 return;
             }
 
+            // 🔥 Luôn cập nhật lại khóa chính
+            currentMaPhieuMuon = txtMaPM.Text;
+            currentMaTaiLieu = txtMaTL.Text;
+
             if (!isAddingNgayTra && !isEditingNgayTra)
             {
-                MessageBox.Show("Vui lòng chọn [Thêm ngày trả] hoặc [Sửa ngày trả] trước!");
+                MessageBox.Show("Vui lòng chọn [Thêm] hoặc [Sửa] ngày trả trước!");
                 return;
             }
 
@@ -283,58 +305,50 @@ namespace Nhom3_QLTV
                 if (conn.State != ConnectionState.Open)
                     conn.Open();
 
-                // === TỰ ĐỘNG ĐẶT MaTT = 'Av' KHI TRẢ SÁCH ===
-                string maTT_Available = "Av";  // ← Mã trạng thái "Có sẵn"
-
-                int rowsCTPM = 0;
-                int rowsTaiLieu = 0;
+                string maTT_Available = "Av";
+                int rowsCTPM = 0, rowsTaiLieu = 0;
 
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     cmd.Connection = conn;
 
-                    // === 1. CẬP NHẬT NGÀY TRẢ TRONG CTPM ===
+                    // --- 1. Cập nhật Ngày Thực Trả ---
                     if (isAddingNgayTra)
                     {
-                        cmd.CommandText = "UPDATE CTPM SET NgayThucTra = @NgayThucTra " +
-                                          "WHERE MaPM = @MaPM AND MaTL = @MaTL AND NgayThucTra IS NULL";
+                        cmd.CommandText =
+                            "UPDATE CTPM SET NgayThucTra=@NgayThucTra " +
+                            "WHERE MaPM=@MaPM AND MaTL=@MaTL AND NgayThucTra IS NULL";
                     }
-                    else // isEditingNgayTra
+                    else
                     {
-                        cmd.CommandText = "UPDATE CTPM SET NgayThucTra = @NgayThucTra " +
-                                          "WHERE MaPM = @MaPM AND MaTL = @MaTL";
+                        cmd.CommandText =
+                            "UPDATE CTPM SET NgayThucTra=@NgayThucTra " +
+                            "WHERE MaPM=@MaPM AND MaTL=@MaTL";
                     }
 
-                    cmd.Parameters.Clear();
                     cmd.Parameters.AddWithValue("@NgayThucTra", dtNgayThucTra.Value);
                     cmd.Parameters.AddWithValue("@MaPM", currentMaPhieuMuon);
                     cmd.Parameters.AddWithValue("@MaTL", currentMaTaiLieu);
 
                     rowsCTPM = cmd.ExecuteNonQuery();
 
-                    // === 2. TỰ ĐỘNG CẬP NHẬT MaTT = 'Av' TRONG TaiLieu ===
+                    // --- 2. Cập nhật trạng thái tài liệu ---
                     cmd.Parameters.Clear();
-                    cmd.CommandText = "UPDATE TaiLieu SET MaTT = @MaTT_Available WHERE MaTL = @MaTL";
-                    cmd.Parameters.AddWithValue("@MaTT_Available", maTT_Available);
+                    cmd.CommandText = "UPDATE TaiLieu SET MaTT=@Av WHERE MaTL=@MaTL";
+                    cmd.Parameters.AddWithValue("@Av", maTT_Available);
                     cmd.Parameters.AddWithValue("@MaTL", currentMaTaiLieu);
 
                     rowsTaiLieu = cmd.ExecuteNonQuery();
                 }
 
-                // === KIỂM TRA KẾT QUẢ ===
-                if (rowsCTPM > 0 || rowsTaiLieu > 0)
+                if (rowsCTPM > 0)
                 {
-                    MessageBox.Show("Đã trả sách thành công!\nTài liệu đã được đánh dấu 'Có sẵn' (Av).",
-                                    "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    
-
+                    MessageBox.Show("Cập nhật ngày trả thành công!");
                     NapLaipt();
                 }
                 else
                 {
-                    MessageBox.Show("Không thể cập nhật: Kiểm tra MaPM, MaTL hoặc trạng thái!",
-                                    "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không tìm thấy bản ghi để cập nhật!");
                 }
 
                 isAddingNgayTra = false;
@@ -342,8 +356,7 @@ namespace Nhom3_QLTV
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi hệ thống: " + ex.Message, "Lỗi",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi cập nhật: " + ex.Message);
             }
         }
 
@@ -374,11 +387,17 @@ namespace Nhom3_QLTV
 
         private void btnHuyTra_Click(object sender, EventArgs e)
         {
+            currentMaPhieuMuon = txtMaPM.Text;
+            currentMaTaiLieu = txtMaTL.Text;
             if (grdPT.CurrentRow == null)
             {
                 MessageBox.Show("Vui lòng chọn phiếu mượn!");
                 return;
             }
+
+            // 🔥 Luôn cập nhật khóa chính
+            currentMaPhieuMuon = txtMaPM.Text;
+            currentMaTaiLieu = txtMaTL.Text;
 
             var cellValue = grdPT.CurrentRow.Cells["NgayThucTra"].Value;
             if (cellValue == null || cellValue == DBNull.Value)
@@ -387,8 +406,8 @@ namespace Nhom3_QLTV
                 return;
             }
 
-            if (MessageBox.Show("Bạn có chắc muốn xóa ngày thực trả?\nTài liệu sẽ được coi là CHƯA TRẢ.",
-                "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
+            if (MessageBox.Show("Bạn có chắc muốn xóa ngày trả?",
+                "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
             {
                 return;
             }
@@ -398,54 +417,42 @@ namespace Nhom3_QLTV
                 if (conn.State != ConnectionState.Open)
                     conn.Open();
 
-                // === KHÔI PHỤC MaTT VỀ 'Bor' (Đang mượn) ===
-                string maTTDangMuon = "Bor";  // ← Mã trạng thái "Đang mượn"
-
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     cmd.Connection = conn;
 
-                    // 1. XÓA NGÀY TRẢ
-                    cmd.CommandText = "UPDATE CTPM SET NgayThucTra = NULL WHERE MaPM = @MaPM AND MaTL = @MaTL";
+                    // --- 1. Xóa ngày trả ---
+                    cmd.CommandText =
+                        "UPDATE CTPM SET NgayThucTra=NULL WHERE MaPM=@MaPM AND MaTL=@MaTL";
                     cmd.Parameters.AddWithValue("@MaPM", currentMaPhieuMuon);
                     cmd.Parameters.AddWithValue("@MaTL", currentMaTaiLieu);
                     int rowsCTPM = cmd.ExecuteNonQuery();
 
-                    // 2. KHÔI PHỤC MaTT VỀ 'Bor'
+                    // --- 2. Khôi phục trạng thái ---
                     cmd.Parameters.Clear();
-                    cmd.CommandText = "UPDATE TaiLieu SET MaTT = @MaTTDangMuon WHERE MaTL = @MaTL";
-                    cmd.Parameters.AddWithValue("@MaTTDangMuon", maTTDangMuon);
+                    cmd.CommandText =
+                        "UPDATE TaiLieu SET MaTT='Bor' WHERE MaTL=@MaTL";
                     cmd.Parameters.AddWithValue("@MaTL", currentMaTaiLieu);
                     int rowsTaiLieu = cmd.ExecuteNonQuery();
 
-                    // === KIỂM TRA KẾT QUẢ ===
-                    if (rowsCTPM > 0 || rowsTaiLieu > 0)
+                    if (rowsCTPM > 0)
                     {
-                        MessageBox.Show("Đã xóa ngày trả và khôi phục trạng thái 'Đang mượn' thành công!",
-                                        "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        // Cập nhật giao diện
-                        grdPT.CurrentRow.Cells["NgayThucTra"].Value = DBNull.Value;
-                        dtNgayThucTra.CustomFormat = " --/--/---- ";
-                        
-
-                        NapLaipt(); // Tải lại dữ liệu
+                        MessageBox.Show("Đã xóa ngày trả và khôi phục trạng thái!");
+                        NapLaipt();
                     }
                     else
                     {
-                        MessageBox.Show("Không thể xóa: Kiểm tra MaPM, MaTL!");
+                        MessageBox.Show("Không thể xóa ngày trả!");
                     }
                 }
-
-                isAddingNgayTra = false;
-                isEditingNgayTra = false;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi xóa: " + ex.Message, "Lỗi",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi xóa: " + ex.Message);
             }
 
+            isAddingNgayTra = false;
+            isEditingNgayTra = false;
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -458,6 +465,7 @@ namespace Nhom3_QLTV
             this.Close();
         }
 
-       
     }
 }
+
+

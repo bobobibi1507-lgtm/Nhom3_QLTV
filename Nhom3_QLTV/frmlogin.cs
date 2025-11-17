@@ -37,24 +37,26 @@ namespace Nhom3_QLTV
             try
             {
                 conn.Open();
-                string sql = "SELECT VaiTro FROM TaiKhoan WHERE TaiKhoan = @Username AND MatKhau = @Password";
+                string sql = "SELECT VaiTro, TenTaiKhoan FROM TaiKhoan WHERE TaiKhoan = @Username AND MatKhau = @Password";
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@Username", username);
                     cmd.Parameters.AddWithValue("@Password", password);
 
-                    object roleObj = cmd.ExecuteScalar();
-                    if (roleObj != null)
+                    using (SqlDataReader dr = cmd.ExecuteReader())
                     {
-                        // Đăng nhập thành công
-                        mainForm.IsAuthenticated = true;
-                        mainForm.CurrentUser = username;
-                        mainForm.CurrentRole = roleObj.ToString();
-                        this.Close(); // đóng form login
-                    }
-                    else
-                    {
-                        MessageBox.Show("Sai tài khoản hoặc mật khẩu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (dr.Read())
+                        {
+                            mainForm.IsAuthenticated = true;
+                            mainForm.CurrentUser = username;                    // username đăng nhập
+                            mainForm.CurrentRole = dr["VaiTro"].ToString();     // vai trò
+                            mainForm.CurrentUserName = dr["TenTaiKhoan"].ToString(); // tên tài khoản thực
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sai tài khoản hoặc mật khẩu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
