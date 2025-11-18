@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraCharts.Native;
+using DevExpress.XtraReports;
 using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,15 @@ namespace Nhom3_QLTV
         public frmMain()
         {
             InitializeComponent();
+            InitForm();
+
         }
+
+        private void InitForm()
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
         private void LockMainInterface()
         {
             // Khóa toàn bộ menu và nút chức năng
@@ -96,10 +105,7 @@ namespace Nhom3_QLTV
             status1.Text = "Ready!";
         }
 
-        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
 
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -258,39 +264,41 @@ namespace Nhom3_QLTV
 
         private void dSDanhMụcTàiLiệuMượnVềđọcTạiChốToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
             try
             {
-                // 1. Tạo kết nối đúng
                 using (SqlConnection conn = new SqlConnection(
                     @"Data Source=LAPTOP-8EI4770R; Initial Catalog=CSDL_TV; Integrated Security=True"))
                 {
                     conn.Open();
 
-                    // 2. Tạo SQL
-                    string sql = "SELECT * FROM vDanhMucThongKe order by TenTheLoai";
+                    // 2. SQL có điều kiện lọc
+
+                    string sql = @"
+                    SELECT * 
+                    FROM vDanhMucThongKe v
+                   
+                    ORDER BY v.TenTheLoai";
 
 
-                    // 3. Tạo Adapter đúng
+
+
                     SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+                    
 
-                    // 4. Nạp DataTable cho report
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
-                    // 5. Tạo report
+                    // Tạo report
                     rptDSLuotDoc rpt = new rptDSLuotDoc();
                     rpt.DataSource = dt;
-
-                    // 6. Set ngày in
-                    rpt.rptngayin.Text =
-                        $"Hà Nội, ngày {DateTime.Now.Day} tháng {DateTime.Now.Month} năm {DateTime.Now.Year}";
-
-                    // 7. Người in từ CurrentUser
+                    
                     rpt.rptNguoiIn.Text = this.CurrentUserName;
+                    
+                    rpt.rptngayin.Text = $"Hà Nội, ngày {DateTime.Now.Day} tháng {DateTime.Now.Month} năm {DateTime.Now.Year}";
 
+                    rpt.ShowPreview();
 
-                    // 8. Hiển thị preview
-                    rpt.ShowPreviewDialog();
                 }
             }
             catch (Exception ex)

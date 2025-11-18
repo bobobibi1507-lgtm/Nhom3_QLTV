@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel1TL = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lblDMS = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -58,6 +58,8 @@
             this.txtMaTL = new System.Windows.Forms.TextBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.bdPhieuTra = new System.Windows.Forms.BindingNavigator(this.components);
+            this.cSDLTVDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cSDL_TVDataSet = new Nhom3_QLTV.CSDL_TVDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -84,8 +86,6 @@
             this.NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HanTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayThucTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cSDLTVDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cSDL_TVDataSet = new Nhom3_QLTV.CSDL_TVDataSet();
             this.guna2GradientPanel1TL.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -93,10 +93,10 @@
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdPhieuTra)).BeginInit();
             this.bdPhieuTra.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdPT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cSDLTVDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cSDL_TVDataSet)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdPT)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1TL
@@ -136,7 +136,7 @@
             this.lblDMS.Location = new System.Drawing.Point(0, 0);
             this.lblDMS.Margin = new System.Windows.Forms.Padding(4);
             this.lblDMS.Name = "lblDMS";
-            this.lblDMS.Size = new System.Drawing.Size(160, 52);
+            this.lblDMS.Size = new System.Drawing.Size(1444, 52);
             this.lblDMS.TabIndex = 0;
             this.lblDMS.Text = "Phiếu trả";
             // 
@@ -497,7 +497,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.bdPhieuTra.Location = new System.Drawing.Point(575, 32);
+            this.bdPhieuTra.Location = new System.Drawing.Point(575, 22);
             this.bdPhieuTra.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bdPhieuTra.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bdPhieuTra.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -505,14 +505,24 @@
             this.bdPhieuTra.Name = "bdPhieuTra";
             this.bdPhieuTra.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.bdPhieuTra.PositionItem = this.bindingNavigatorPositionItem;
-            this.bdPhieuTra.Size = new System.Drawing.Size(364, 40);
+            this.bdPhieuTra.Size = new System.Drawing.Size(364, 50);
             this.bdPhieuTra.TabIndex = 25;
             this.bdPhieuTra.Text = "bindingNaviDG";
+            // 
+            // cSDLTVDataSetBindingSource
+            // 
+            this.cSDLTVDataSetBindingSource.DataSource = this.cSDL_TVDataSet;
+            this.cSDLTVDataSetBindingSource.Position = 0;
+            // 
+            // cSDL_TVDataSet
+            // 
+            this.cSDL_TVDataSet.DataSetName = "CSDL_TVDataSet";
+            this.cSDL_TVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(70, 34);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(70, 44);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -522,7 +532,7 @@
             this.bindingNavigatorMoveFirstItem.Image = global::Nhom3_QLTV.Properties.Resources.left;
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(46, 34);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(46, 44);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -531,13 +541,13 @@
             this.bindingNavigatorMovePreviousItem.Image = global::Nhom3_QLTV.Properties.Resources.arrow;
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(46, 34);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(46, 44);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 40);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 50);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -546,13 +556,13 @@
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 39);
-            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.Text = "1";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 40);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 50);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -560,7 +570,7 @@
             this.bindingNavigatorMoveNextItem.Image = global::Nhom3_QLTV.Properties.Resources.play_button;
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(46, 34);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(46, 44);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -569,13 +579,13 @@
             this.bindingNavigatorMoveLastItem.Image = global::Nhom3_QLTV.Properties.Resources.nextfirst;
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(46, 34);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(46, 44);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 40);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 50);
             // 
             // btnExport
             // 
@@ -749,17 +759,17 @@
             // 
             this.grdPT.AllowUserToAddRows = false;
             this.grdPT.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.grdPT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.grdPT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grdPT.AutoGenerateColumns = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdPT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdPT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grdPT.ColumnHeadersHeight = 27;
             this.grdPT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.grdPT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -772,14 +782,14 @@
             this.HanTra,
             this.NgayThucTra});
             this.grdPT.DataSource = this.cSDLTVDataSetBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdPT.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdPT.DefaultCellStyle = dataGridViewCellStyle3;
             this.grdPT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdPT.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.grdPT.Location = new System.Drawing.Point(0, 422);
@@ -885,16 +895,6 @@
             this.NgayThucTra.Name = "NgayThucTra";
             this.NgayThucTra.ReadOnly = true;
             // 
-            // cSDLTVDataSetBindingSource
-            // 
-            this.cSDLTVDataSetBindingSource.DataSource = this.cSDL_TVDataSet;
-            this.cSDLTVDataSetBindingSource.Position = 0;
-            // 
-            // cSDL_TVDataSet
-            // 
-            this.cSDL_TVDataSet.DataSetName = "CSDL_TVDataSet";
-            this.cSDL_TVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // frmPhieuTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -922,10 +922,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdPhieuTra)).EndInit();
             this.bdPhieuTra.ResumeLayout(false);
             this.bdPhieuTra.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdPT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cSDLTVDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cSDL_TVDataSet)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdPT)).EndInit();
             this.ResumeLayout(false);
 
         }
