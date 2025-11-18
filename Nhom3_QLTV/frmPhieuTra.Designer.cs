@@ -497,7 +497,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.bdPhieuTra.Location = new System.Drawing.Point(575, 22);
+            this.bdPhieuTra.Location = new System.Drawing.Point(575, 32);
             this.bdPhieuTra.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bdPhieuTra.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bdPhieuTra.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -505,7 +505,7 @@
             this.bdPhieuTra.Name = "bdPhieuTra";
             this.bdPhieuTra.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.bdPhieuTra.PositionItem = this.bindingNavigatorPositionItem;
-            this.bdPhieuTra.Size = new System.Drawing.Size(364, 50);
+            this.bdPhieuTra.Size = new System.Drawing.Size(364, 40);
             this.bdPhieuTra.TabIndex = 25;
             this.bdPhieuTra.Text = "bindingNaviDG";
             // 
@@ -522,7 +522,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(70, 44);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(70, 34);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -532,7 +532,7 @@
             this.bindingNavigatorMoveFirstItem.Image = global::Nhom3_QLTV.Properties.Resources.left;
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(46, 44);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(46, 34);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -541,13 +541,13 @@
             this.bindingNavigatorMovePreviousItem.Image = global::Nhom3_QLTV.Properties.Resources.arrow;
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(46, 44);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(46, 34);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 50);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 40);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -562,7 +562,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 50);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 40);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -570,7 +570,7 @@
             this.bindingNavigatorMoveNextItem.Image = global::Nhom3_QLTV.Properties.Resources.play_button;
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(46, 44);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(46, 34);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -579,13 +579,13 @@
             this.bindingNavigatorMoveLastItem.Image = global::Nhom3_QLTV.Properties.Resources.nextfirst;
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(46, 44);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(46, 34);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 50);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 40);
             // 
             // btnExport
             // 
@@ -763,14 +763,14 @@
             this.grdPT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grdPT.AutoGenerateColumns = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Brown;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdPT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.grdPT.ColumnHeadersHeight = 27;
+            this.grdPT.ColumnHeadersHeight = 35;
             this.grdPT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.grdPT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaPM,
@@ -784,9 +784,9 @@
             this.grdPT.DataSource = this.cSDLTVDataSetBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MistyRose;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdPT.DefaultCellStyle = dataGridViewCellStyle3;
@@ -807,19 +807,19 @@
             this.grdPT.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.grdPT.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.grdPT.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.grdPT.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.grdPT.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Brown;
             this.grdPT.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.grdPT.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grdPT.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.grdPT.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.grdPT.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.grdPT.ThemeStyle.HeaderStyle.Height = 27;
+            this.grdPT.ThemeStyle.HeaderStyle.Height = 35;
             this.grdPT.ThemeStyle.ReadOnly = true;
             this.grdPT.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.grdPT.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.grdPT.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grdPT.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.grdPT.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.grdPT.ThemeStyle.RowsStyle.Height = 33;
-            this.grdPT.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.grdPT.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.MistyRose;
             this.grdPT.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.grdPT.SelectionChanged += new System.EventHandler(this.grdPT_SelectionChanged);
             // 

@@ -264,7 +264,7 @@ namespace Nhom3_QLTV
 
         private void dSDanhMụcTàiLiệuMượnVềđọcTạiChốToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            status1.Text = "In báo cáo!";
             try
             {
                 using (SqlConnection conn = new SqlConnection(
@@ -305,10 +305,22 @@ namespace Nhom3_QLTV
             {
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
+            status1.Text = "Ready!";
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            status1.Text = "Xem hoặc thêm mới tác giả!";
+            frmDMTG frmDMTG = new frmDMTG();
+            frmDMTG.Width = (int)(Screen.PrimaryScreen.WorkingArea.Width);
+            frmDMTG.Height = (int)(Screen.PrimaryScreen.WorkingArea.Height * 0.85);
+            frmDMTG.ShowDialog();
+            status1.Text = "Ready!";
         }
 
         private void dSMượnQuáHạnChưaTrảToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            status1.Text = "In báo cáo!";
             try
             {
                 // 1. Tạo kết nối đúng
@@ -348,6 +360,7 @@ namespace Nhom3_QLTV
             {
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
+            status1.Text = "Ready!";
         }
     }
 }

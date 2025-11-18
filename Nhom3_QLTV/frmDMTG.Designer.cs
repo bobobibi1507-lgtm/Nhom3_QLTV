@@ -645,6 +645,7 @@
             // 
             this.toolStripTextBox1.AccessibleName = "Position";
             this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(65, 39);
             this.toolStripTextBox1.Text = "1";
@@ -735,16 +736,15 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.grdTG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grdTG.AutoGenerateColumns = false;
-            this.grdTG.BackgroundColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Brown;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdTG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.grdTG.ColumnHeadersHeight = 27;
+            this.grdTG.ColumnHeadersHeight = 35;
             this.grdTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.grdTG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaTG,
@@ -753,14 +753,14 @@
             this.grdTG.DataSource = this.cSDLTVDataSetBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MistyRose;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdTG.DefaultCellStyle = dataGridViewCellStyle3;
             this.grdTG.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdTG.GridColor = System.Drawing.Color.DarkRed;
+            this.grdTG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.grdTG.Location = new System.Drawing.Point(0, 404);
             this.grdTG.Name = "grdTG";
             this.grdTG.RowHeadersVisible = false;
@@ -773,21 +773,21 @@
             this.grdTG.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.grdTG.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.grdTG.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.grdTG.ThemeStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.grdTG.ThemeStyle.GridColor = System.Drawing.Color.DarkRed;
-            this.grdTG.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.DarkRed;
+            this.grdTG.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.grdTG.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.grdTG.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Brown;
             this.grdTG.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.grdTG.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grdTG.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.grdTG.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.grdTG.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.grdTG.ThemeStyle.HeaderStyle.Height = 27;
+            this.grdTG.ThemeStyle.HeaderStyle.Height = 35;
             this.grdTG.ThemeStyle.ReadOnly = false;
             this.grdTG.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.grdTG.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.grdTG.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grdTG.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.grdTG.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.grdTG.ThemeStyle.RowsStyle.Height = 33;
-            this.grdTG.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.grdTG.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.MistyRose;
             this.grdTG.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.grdTG.SelectionChanged += new System.EventHandler(this.grdTG_SelectionChanged);
             // 

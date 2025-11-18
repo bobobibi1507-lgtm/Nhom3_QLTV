@@ -570,7 +570,7 @@
             this.grdDMDG.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.grdDMDG.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.grdDMDG.ThemeStyle.GridColor = System.Drawing.Color.Black;
-            this.grdDMDG.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.DarkRed;
+            this.grdDMDG.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Brown;
             this.grdDMDG.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.grdDMDG.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdDMDG.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
@@ -579,7 +579,7 @@
             this.grdDMDG.ThemeStyle.ReadOnly = false;
             this.grdDMDG.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.grdDMDG.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.grdDMDG.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.grdDMDG.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.grdDMDG.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.grdDMDG.ThemeStyle.RowsStyle.Height = 33;
             this.grdDMDG.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.MistyRose;

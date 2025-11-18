@@ -100,6 +100,7 @@ namespace Nhom3_QLTV
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.DarkRed;
             this.menuStrip1.ContextMenuStrip = this.guna2ContextMenuStrip1;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(36, 36);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hệThốngToolStripMenuItem,
@@ -110,7 +111,7 @@ namespace Nhom3_QLTV
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.menuStrip1.Size = new System.Drawing.Size(1562, 78);
+            this.menuStrip1.Size = new System.Drawing.Size(2015, 78);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -477,7 +478,7 @@ namespace Nhom3_QLTV
             this.guna2ControlBox1.FillColor = System.Drawing.Color.DarkRed;
             this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1500, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1953, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(62, 61);
             this.guna2ControlBox1.TabIndex = 0;
@@ -496,7 +497,7 @@ namespace Nhom3_QLTV
             this.toolStripSeparator14});
             this.toolStrip1.Location = new System.Drawing.Point(0, 78);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1562, 46);
+            this.toolStrip1.Size = new System.Drawing.Size(2015, 46);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -553,6 +554,7 @@ namespace Nhom3_QLTV
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(46, 40);
             this.toolStripButton5.Text = "Tác giả";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripSeparator14
             // 
@@ -569,9 +571,9 @@ namespace Nhom3_QLTV
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel3});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 679);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 783);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1562, 42);
+            this.statusStrip1.Size = new System.Drawing.Size(2015, 42);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -579,7 +581,7 @@ namespace Nhom3_QLTV
             // 
             this.status1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.status1.Name = "status1";
-            this.status1.Size = new System.Drawing.Size(1453, 32);
+            this.status1.Size = new System.Drawing.Size(1906, 32);
             this.status1.Spring = true;
             this.status1.Text = "Ready!";
             this.status1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -621,7 +623,7 @@ namespace Nhom3_QLTV
             this.guna2ControlBox2.FillColor = System.Drawing.Color.DarkRed;
             this.guna2ControlBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox2.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1432, 0);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1885, 0);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(62, 64);
             this.guna2ControlBox2.TabIndex = 1;
@@ -630,8 +632,9 @@ namespace Nhom3_QLTV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackgroundImage = global::Nhom3_QLTV.Properties.Resources.bgBK;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1562, 721);
+            this.ClientSize = new System.Drawing.Size(2015, 825);
             this.ContextMenuStrip = this.guna2ContextMenuStrip1;
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);

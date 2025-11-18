@@ -277,7 +277,7 @@ namespace Nhom3_QLTV
             DataTable dt1 = new DataTable();
             da.Fill(dt1);
             rpt.DataSource = dt1;
-            rpt.rptDKLoc.Text = "Điều kiện lọc: " + comTentrgTG.Text + " = " + comGTTG.Text;
+            //rpt.rptDKLoc.Text = "Điều kiện lọc: " + comTentrgTG.Text + " = " + comGTTG.Text;
             rpt.rptngayin.Text = string.Format("Hà Nội, ngày {0} tháng {1} năm {2}", DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
             rpt.DataSource = dt1;
             rpt.ShowPreview();
